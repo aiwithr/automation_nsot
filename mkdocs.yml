@@ -186,6 +186,7 @@ nav:
   - NSoT-এর কোর প্রিন্সিপাল এবং Nautobot: nsot_core.md
   - Nautobot ইনস্টলেশন: installation.md
   - Nautobot ডেটা মডেল - নেটওয়ার্কের যোগসুত্র: datamodel.md
+  - UI দিয়ে ডেটা এন্ট্রি: ui_organization.md
   - বইটা এখনো লেখা চলছে: status.md
 #     - কৃতজ্ঞতা এবং বাড়তি রিডিং: courtesy.md
 # #    - কেন বইটা লিখতে চাইলাম?: why-writing.md
