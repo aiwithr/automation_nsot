@@ -1,0 +1,1997 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="রোড টু হাইটেক ইন্ডাস্ট্রি:আইএসপি অটোমেশন ২">
+      
+      
+        <meta name="author" content="রকিবুল হাসান">
+      
+      
+        <link rel="canonical" href="https://aiwithr.github.io/automation_nsot/connectivity_adv/">
+      
+      
+        <link rel="prev" href="../ui_organization/">
+      
+      
+        <link rel="next" href="../fivethousands/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>কানেক্টিভিটি এবং এডভান্সড ফিচার - আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=SiyamRupali:300,300i,400,400i,700,700i%7CSiyamRupali:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"SiyamRupali";--md-code-font:"SiyamRupali"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#custom-fields-" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" class="md-header__button md-logo" aria-label="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              কানেক্টিভিটি এবং এডভান্সড ফিচার
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/raqueeb/mltraining/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    raqueeb/mltraining
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" class="md-nav__button md-logo" aria-label="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/raqueeb/mltraining/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    raqueeb/mltraining
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ১ মিলিয়ন ইন্টারনেট গ্রাহক
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    পেছনের দর্শন
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    পেছনের দর্শন
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কৃত্রিম বুদ্ধিমত্তা ও নেটওয়ার্ক অটোমেশনের রাস্তা
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    নেটওয়ার্ক সোর্স অফ ট্রুথ (NSoT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dedication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    উৎসর্গ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contents2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    বইয়ের সম্ভাব্য চ্যাপ্টার স্ট্রাকচার NSoT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot_scale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কেন NSoT ছাড়া স্কেল করা অসম্ভব
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../two_states/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ইনটেন্ডেড স্টেট বনাম অ্যাকচুয়াল স্টেট
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot_core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NSoT-এর কোর প্রিন্সিপাল এবং Nautobot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ইনস্টলেশন
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datamodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ডেটা মডেল - নেটওয়ার্কের যোগসুত্র
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui_organization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI দিয়ে ডেটা এন্ট্রি
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কানেক্টিভিটি এবং এডভান্সড ফিচার
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কানেক্টিভিটি এবং এডভান্সড ফিচার
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#custom-fields-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Fields - নিজস্ব ডেটা ট্র্যাকিং
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Fields - নিজস্ব ডেটা ট্র্যাকিং">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সমস্যা ১: ওয়ারেন্টি ট্র্যাকিং
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সমস্যা ২: বিল্ডিং নাম ট্র্যাকিং
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-custom-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        আরো কিছু Useful Custom Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tags - সহজ ক্যাটেগরাইজেশন
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tags - সহজ ক্যাটেগরাইজেশন">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        কেন ট্যাগ দরকার?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ট্যাগ তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ডিভাইসে ট্যাগ যোগ করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ট্যাগ দিয়ে ফিল্টারিং
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ট্যাগ এর প্র্যাক্টিক্যাল ব্যবহার
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saved-filters-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saved Filters - কমন কোয়েরি সেভ করা
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Saved Filters - কমন কোয়েরি সেভ করা">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saved-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        একটা Saved Filter তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-saved-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        আরো কিছু Useful Saved Filters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-management-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Management এবং Permissions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Management এবং Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Groups তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নতুন ইউজার তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissions টেস্ট করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fivethousands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ছোট আইএসপি সেটআপ (৫ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiftythousands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    মিডিয়াম আইএসপি সেটআপ (৫০ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API এবং অটোমেশনের শুরু
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv_automation_lac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    এডভান্সড অটোমেশন এবং ১ লক্ষ কাস্টমারের পথে
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mil_customers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ১ মিলিয়ন গ্রাহকের আইএসপি
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    বইটা এখনো লেখা চলছে
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#custom-fields-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Fields - নিজস্ব ডেটা ট্র্যাকিং
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Fields - নিজস্ব ডেটা ট্র্যাকিং">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সমস্যা ১: ওয়ারেন্টি ট্র্যাকিং
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সমস্যা ২: বিল্ডিং নাম ট্র্যাকিং
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-custom-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        আরো কিছু Useful Custom Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tags - সহজ ক্যাটেগরাইজেশন
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tags - সহজ ক্যাটেগরাইজেশন">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        কেন ট্যাগ দরকার?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ট্যাগ তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ডিভাইসে ট্যাগ যোগ করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ট্যাগ দিয়ে ফিল্টারিং
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ট্যাগ এর প্র্যাক্টিক্যাল ব্যবহার
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saved-filters-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saved Filters - কমন কোয়েরি সেভ করা
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Saved Filters - কমন কোয়েরি সেভ করা">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saved-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        একটা Saved Filter তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-saved-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        আরো কিছু Useful Saved Filters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-management-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Management এবং Permissions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Management এবং Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Groups তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নতুন ইউজার তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissions টেস্ট করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>কানেক্টিভিটি এবং এডভান্সড ফিচার</h1>
+
+<p>আগের চ্যাপ্টারে আমরা বেসিক ডেটা এন্ট্রি শিখলাম - লোকেশন, ডিভাইস, আইপি, ভিল্যান, ক্যাবল। SkyNets Bangladesh এর NOC টিম এখন দৈনন্দিন কাজে Nautobot ব্যবহার শুরু করেছে। কিন্তু কিছুদিন পরেই তারা বুঝতে পারল বেসিক ফিচারগুলো যথেষ্ট না। </p>
+<p>তাদের টিম লিডার জাহাঙ্গীর সাহেব একটা মিটিং ডাকলেন। সমস্যাগুলো শুনলেন:</p>
+<p><strong>আসিফ (NOC টেকনিশিয়ান):</strong> "স্যার, আমাদের ১০০+ ডিভাইস আছে। কোনটার ওয়ারেন্টি কবে শেষ হবে মনে রাখা অসম্ভব। গত সপ্তাহে একটা সুইচ নষ্ট হলো - তখন খুঁজে দেখলাম ওয়ারেন্টি ৬ মাস আগেই শেষ!"</p>
+<p><strong>করিম (ফিল্ড টেকনিশিয়ান):</strong> "আমাকে বলা হয় 'বিল্ডিং সি তে গিয়ে সুইচ চেক করো'। কিন্তু Nautobot এ বিল্ডিং নাম নেই। সব সুইচের নাম SW-DN-MIR-ACC-০১, ০২, ০৩... কোনটা কোথায় বুঝি না!"</p>
+<p><strong>রফিক (ম্যানেজার):</strong> "আমার শুধু ডেটা দেখার দরকার। কিন্তু admin একাউন্ট দিয়ে লগইন করতে হয়। ভুলে কিছু ডিলিট করে দিলে সমস্যা!"</p>
+<p>জাহাঙ্গীর সাহেব বললেন, "চিন্তা নেই। Nautobot এ এসবের সমাধান আছে। চলুন দেখি কীভাবে।"</p>
+<p>এই চ্যাপ্টারে আমরা Nautobot এর এডভান্সড ফিচারগুলো দেখব যা দিয়ে সিস্টেমকে নিজের মতো কাস্টমাইজ করা যায়।</p>
+<hr />
+<h3 id="custom-fields-">Custom Fields - নিজস্ব ডেটা ট্র্যাকিং<a class="headerlink" href="#custom-fields-" title="Permanent link">&para;</a></h3>
+<p>Nautobot এ অনেক built-in ফিল্ড আছে - name, location, serial number, status। কিন্তু প্রতিটা অর্গানাইজেশনের নিজস্ব কিছু ডেটা ট্র্যাক করার দরকার হয় যা স্ট্যান্ডার্ড ফিল্ডে নেই। এজন্যই Custom Fields।</p>
+<h4 id="_1">সমস্যা ১: ওয়ারেন্টি ট্র্যাকিং<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>আসিফের সমস্যাটা solve করি। প্রতিটা ডিভাইসের ওয়ারেন্টি কবে শেষ হবে সেটা ট্র্যাক করতে হবে।</p>
+<p><strong>Extras → Custom Fields</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<p>একটা ফর্ম আসবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Label: Warranty Expiry Date
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Key: warranty_expiry_date
+</span></code></pre></div>
+<p><code>Label</code> হলো যেটা UI তে দেখাবে। <code>Key</code> হলো ডেটাবেসে যেভাবে স্টোর হবে। সাধারণত Label টাইপ করলে Key অটোমেটিক জেনারেট হয়ে যায়।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Group Name: Procurement
+</span></code></pre></div>
+<p>Group Name দিয়ে related ফিল্ডগুলো একসাথে গ্রুপ করা যায়। এটা অপশনাল কিন্তু organize করার জন্য ভালো।</p>
+<p>এখন সবচেয়ে ইম্পর্ট্যান্ট পার্ট:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Content Types: dcim | device
+</span></code></pre></div>
+<p>এখানে বলে দিতে হবে এই ফিল্ড কোথায় দেখাবে। ড্রপডাউনে অনেক অপশন দেখবেন - dcim | device, dcim | rack, ipam | ip address ইত্যাদি। আমরা চাই শুধু ডিভাইসে দেখাক, তাই <code>dcim | device</code> সিলেক্ট করুন।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Type: Date
+</span></code></pre></div>
+<p>এটা একটা ডেট ফিল্ড। অন্যান্য টাইপ আছে:</p>
+<ul>
+<li>Text (সাধারণ টেক্সট)</li>
+<li>Integer (পূর্ণসংখ্যা)</li>
+<li>Boolean (হ্যাঁ/না)</li>
+<li>Date (তারিখ)</li>
+<li>URL (ওয়েবসাইট লিংক)</li>
+<li>Selection (ড্রপডাউন সিলেকশন)</li>
+<li>Multiple Selection (একাধিক সিলেক্ট করা যায়)</li>
+<li>JSON (complex ডেটা)</li>
+</ul>
+<p>আমাদের ক্ষেত্রে Date ঠিক আছে।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Required: No
+</span></code></pre></div>
+<p>আনচেক রাখুন। মানে সব ডিভাইসে এটা দেওয়া বাধ্যতামূলক না। কারণ কিছু পুরোনো ডিভাইসের ওয়ারেন্টি ইতিমধ্যে শেষ হয়ে গেছে, কিছুতে হয়তো ওয়ারেন্টিই নেই।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Default: (খালি রাখুন)
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Description: Date when device warranty expires
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Help Text: Format: YYYY-MM-DD. Leave blank if no warranty.
+</span></code></pre></div>
+<p>Description হলো internal - এটা admin দের জন্য। Help Text হলো যেটা ইউজারকে গাইড করবে ফিল্ড পূরণ করার সময়।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Weight: 100
+</span></code></pre></div>
+<p>Weight যত কম, ফিল্ড তত উপরে দেখাবে। ডিফল্ট 100 ঠিক আছে।</p>
+<p>এখন <strong>Create</strong> ক্লিক করুন।</p>
+<p>Custom Field তৈরি হয়ে গেছে! এখন যেকোনো ডিভাইস এডিট করলে এই নতুন ফিল্ড দেখবেন।</p>
+<p>চলুন মিরপুর কোর রাউটারে যোগ করি:</p>
+<p><strong>Devices → Devices → R-DN-MIR-CORE-01</strong> এ যান। <strong>Edit</strong> বাটনে ক্লিক করুন।</p>
+<p>নিচের দিকে স্ক্রল করুন। <strong>Custom Fields</strong> নামে একটা সেকশন দেখবেন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Procurement
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  └── Warranty Expiry Date: [        ]
+</span></code></pre></div>
+<p>একটা ডেট পিকার দেখাবে। ক্লিক করুন এবং তারিখ সিলেক্ট করুন। ধরুন এই রাউটার কেনা হয়েছিল ডিসেম্বর ২০২২ এ, ৩ বছরের ওয়ারেন্টি। তাহলে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Warranty Expiry Date: 2025-12-31
+</span></code></pre></div>
+<p><strong>Update</strong> বাটনে ক্লিক করুন।</p>
+<p>এখন ডিভাইস ডিটেইল পেজে দেখবেন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Custom Fields
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  Warranty Expiry Date: 2025-12-31
+</span></code></pre></div>
+<p>চমৎকার! এখন সব ডিভাইসে ওয়ারেন্টি ডেট যোগ করুন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>SW-DN-MIR-DIST-01: 2026-06-15
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>SW-DN-MIR-ACC-01: 2025-03-20
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>SW-DN-MIR-ACC-02: 2025-03-20
+</span></code></pre></div>
+<p><strong>এখন ম্যাজিক দেখুন - ফিল্টারিং:</strong></p>
+<p>কিছুদিন পরে জাহাঙ্গীর সাহেব বললেন, "আমাকে একটা লিস্ট দাও - পরের তিন মাসে কোন ডিভাইসগুলোর ওয়ারেন্টি শেষ হবে। সেগুলোর জন্য AMC (Annual Maintenance Contract) রিনিউ করতে হবে।"</p>
+<p>আসিফ Nautobot খুলল:</p>
+<p><strong>Devices → Devices</strong> লিস্টে গেল। ডান দিকে <strong>Filters</strong> প্যানেল খুলল।</p>
+<p>নিচের দিকে স্ক্রল করলে <strong>Custom Fields</strong> সেকশন দেখবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Warranty Expiry Date
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  ├─ After: [        ]
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  └─ Before: [        ]
+</span></code></pre></div>
+<p>আজকের তারিখ ২০২৫-০২-০৯। তিন মাস পরে ২০২৫-০৫-০৯।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>After: 2025-02-09
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Before: 2025-05-09
+</span></code></pre></div>
+<p><strong>Apply</strong> করল।</p>
+<p>লিস্টে শুধু সেই ডিভাইসগুলো দেখাল যাদের ওয়ারেন্টি পরের তিন মাসে শেষ হবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>SW-DN-MIR-ACC-01 - Warranty: 2025-03-20 (৪০ দিন বাকি)
+</span></code></pre></div>
+<p>আসিফ এই লিস্ট <strong>Export</strong> বাটনে ক্লিক করে CSV ডাউনলোড করল। জাহাঙ্গীর সাহেবকে মেইল করে দিল। সমস্যা solved!</p>
+<h4 id="_2">সমস্যা ২: বিল্ডিং নাম ট্র্যাকিং<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>এখন করিমের সমস্যা solve করি। এক্সেস সুইচগুলো বিভিন্ন বিল্ডিংয়ে আছে। লোকেশন ফিল্ডে "Mirpur POP" আছে, কিন্তু exact বিল্ডিং নাম নেই।</p>
+<p>আরেকটা Custom Field তৈরি করি:</p>
+<p><strong>Extras → Custom Fields → + Add</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Label: Building Name
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Key: building_name
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Group Name: Location Details
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>Content Types: dcim | device
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>Type: Text
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>Required: No
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>Default: (খালি)
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>Description: Specific building or area where device is located
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>Help Text: e.g., &quot;Building A, Sector 12&quot; or &quot;Metro Tower, Floor 5&quot;
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>Validation Regex: (খালি রাখুন)
+</span></code></pre></div>
+<p>Validation Regex দিয়ে pattern চেক করানো যায়। যেমন শুধু "Building X" ফরম্যাট allow করতে চাইলে regex দিতে পারেন। আমাদের দরকার নেই এখন।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Weight: 110
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p>এখন এক্সেস সুইচগুলোতে বিল্ডিং নাম যোগ করুন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>SW-DN-MIR-ACC-01 → Edit
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>  Building Name: Building A, Sector 12
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>SW-DN-MIR-ACC-02 → Edit
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>  Building Name: Building B, Sector 12
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>SW-DN-MIR-ACC-03 → Edit
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>  Building Name: Building C, Sector 13
+</span></code></pre></div>
+<p>এখন করিমকে যদি বলা হয় "Building C তে যাও", সে Nautobot এ সার্চ করতে পারবে:</p>
+<p><strong>Devices → Devices</strong> লিস্টে গিয়ে উপরের সার্চ বক্সে টাইপ করবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Building C
+</span></code></pre></div>
+<p>গ্লোবাল সার্চ সব ফিল্ডে খুঁজবে, Custom Fields সহ। SW-DN-MIR-ACC-03 খুঁজে পাবে।</p>
+<p>অথবা ফিল্টার ব্যবহার করতে পারে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Filters প্যানেল → Custom Fields → Building Name
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>টাইপ করুন: Building C
+</span></code></pre></div>
+<p>শুধু সেই সুইচ দেখাবে।</p>
+<h4 id="useful-custom-fields">আরো কিছু Useful Custom Fields<a class="headerlink" href="#useful-custom-fields" title="Permanent link">&para;</a></h4>
+<p>SkyNets Bangladesh আরো কয়েকটা Custom Field তৈরি করেছে:</p>
+<p><strong>পাওয়ার কনজাম্পশন:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Label: Power Consumption (Watts)
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>Content Types: dcim | device
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>Type: Integer
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>Validation Minimum: 0
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>Validation Maximum: 10000
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>Description: Device power consumption in watts
+</span></code></pre></div>
+<p>এখন র্যাকের টোটাল পাওয়ার ক্যালকুলেট করা যায়। Rack A তে যদি ৫টা ডিভাইস থাকে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>R-DN-MIR-CORE-01: 85W
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>SW-DN-MIR-DIST-01: 45W
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>SW-DN-MIR-ACC-01: 25W
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>SW-DN-MIR-ACC-02: 25W
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>SW-DN-MIR-ACC-03: 25W
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>Total: 205W
+</span></code></pre></div>
+<p>UPS সাইজ করার জন্য এই ডেটা কাজে লাগে।</p>
+<p><strong>পারচেজ সোর্স:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Label: Purchase Source
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Content Types: dcim | device
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>Type: Selection
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>Choices:
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>  Local Vendor
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>  International Import
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>  Rental
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>  Donation
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>  Second Hand
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>Description: How this device was procured
+</span></code></pre></div>
+<p>এখন রিপোর্ট করতে পারবেন: "আমাদের ৬০% ডিভাইস লোকাল ভেন্ডর থেকে, ৩০% ইমপোর্ট, ১০% রেন্টাল।"</p>
+<p><strong>কাস্টমার কাউন্ট (এক্সেস সুইচের জন্য):</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Label: Approximate Customers
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>Content Types: dcim | device
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>Type: Integer
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>Description: Approximate number of customers served by this device
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>SW-DN-MIR-ACC-01: 280 customers
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>SW-DN-MIR-ACC-02: 310 customers
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>SW-DN-MIR-ACC-03: 265 customers
+</span></code></pre></div>
+<p>এখন জানেন কোন সুইচে বেশি লোড আছে।</p>
+<hr />
+<h3 id="tags-">Tags - সহজ ক্যাটেগরাইজেশন<a class="headerlink" href="#tags-" title="Permanent link">&para;</a></h3>
+<p>ট্যাগ হলো ডেটা ক্যাটেগরাইজ করার একটা সহজ উপায়। যেকোনো অবজেক্টে একাধিক ট্যাগ যোগ করা যায়।</p>
+<h4 id="_3">কেন ট্যাগ দরকার?<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>ধরুন আপনি জানতে চান:</p>
+<ul>
+<li>কোন ডিভাইসগুলো প্রোডাকশনে আছে?</li>
+<li>কোন ডিভাইসগুলো ক্রিটিক্যাল (যেগুলো down হলে বড় সমস্যা)?</li>
+<li>কোনগুলো এখন মেইনটেনেন্সে আছে?</li>
+</ul>
+<p>এসবের জন্য আলাদা আলাদা ফিল্ড তৈরি করা impractical। ট্যাগ দিয়ে সহজেই করা যায়।</p>
+<h4 id="_4">ট্যাগ তৈরি করা<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p><strong>Extras → Tags</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<p><strong>Production Tag:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Name: production
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>Color: 4caf50
+</span></code></pre></div>
+<p>Color একটা হেক্স কোড। অথবা Color Picker ব্যবহার করুন। সবুজ রঙ মানে "সব ঠিক আছে, চলছে"।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Description: Production/live equipment actively serving customers
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>Content Types: (খালি রাখুন)
+</span></code></pre></div>
+<p>Content Types খালি রাখলে সব ধরনের অবজেক্টে এই ট্যাগ ব্যবহার করা যাবে - ডিভাইস, আইপি, সার্কিট, সব জায়গায়।</p>
+<p><strong>Create and Add Another</strong> ক্লিক করুন (যদি আরো ট্যাগ তৈরি করতে চান)।</p>
+<p>একইভাবে আরো কয়েকটা:</p>
+<p><strong>Critical Tag:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>Name: critical
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>Color: f44336 (লাল)
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>Description: Critical infrastructure - failure causes major outage
+</span></code></pre></div>
+<p><strong>Backup Tag:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Name: backup
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>Color: 2196f3 (নীল)
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>Description: Backup/standby equipment
+</span></code></pre></div>
+<p><strong>End of Life Tag:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Name: end-of-life
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>Color: 9e9e9e (ধূসর)
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>Description: Equipment past end of life, replacement needed
+</span></code></pre></div>
+<p><strong>Maintenance Tag:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Name: maintenance
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>Color: ffeb3b (হলুদ)
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>Description: Currently under maintenance
+</span></code></pre></div>
+<p>এখন <strong>Extras → Tags</strong> লিস্টে পাঁচটা কালারফুল ট্যাগ দেখবেন।</p>
+<h4 id="_5">ডিভাইসে ট্যাগ যোগ করা<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p><strong>Devices → Devices → R-DN-MIR-CORE-01 → Edit</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Tags: (এখানে মাল্টিপল সিলেক্ট করা যায়)
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>  - production
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>  - critical
+</span></code></pre></div>
+<p>দুটো ট্যাগ সিলেক্ট করুন (Ctrl চেপে রাখুন বা ড্রপডাউনে ক্লিক করুন)।</p>
+<p><strong>Update</strong> করুন।</p>
+<p>ডিভাইস ডিটেইল পেজে এখন দুটো কালারফুল ব্যাজ দেখবেন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>Tags: [production] [critical]
+</span></code></pre></div>
+<p>সবুজ এবং লাল ব্যাজ।</p>
+<p>একইভাবে অন্যান্য ডিভাইসে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>SW-DN-MIR-DIST-01
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>  Tags: production
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>SW-DN-MIR-ACC-01
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>  Tags: production
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>R-DN-MIR-CORE-02 (যদি ব্যাকআপ রাউটার থাকে)
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>  Tags: backup
+</span></code></pre></div>
+<h4 id="_6">ট্যাগ দিয়ে ফিল্টারিং<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p><strong>Devices → Devices</strong> লিস্টে যান।</p>
+<p><strong>Filters</strong> প্যানেল খুলুন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>Tags: critical
+</span></code></pre></div>
+<p>শুধু critical ট্যাগ ওয়ালা ডিভাইস দেখাবে। SkyNets এর ক্ষেত্রে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>R-DN-MIR-CORE-01
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>R-DN-UTT-CORE-01
+</span></code></pre></div>
+<p>দুটো কোর রাউটার।</p>
+<p>মাল্টিপল ট্যাগ দিয়েও ফিল্টার করা যায়:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>Tags: production, critical
+</span></code></pre></div>
+<p>যেসব ডিভাইসে <strong>উভয়</strong> ট্যাগ আছে শুধু সেগুলো দেখাবে।</p>
+<h4 id="_7">ট্যাগ এর প্র্যাক্টিক্যাল ব্যবহার<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p><strong>Scenario 1: মেইনটেনেন্স উইন্ডো</strong></p>
+<p>মিরপুর কোর রাউটারে একটা ফার্মওয়্যার আপগ্রেড করতে হবে। রাত ২টায় কাজ শুরু হবে, ৪টায় শেষ।</p>
+<p>কাজ শুরুর আগে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>R-DN-MIR-CORE-01 → Edit
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>  Status: Offline (Active থেকে চেঞ্জ করুন)
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>  Tags: maintenance যোগ করুন
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>  Comments: &quot;Firmware upgrade in progress. Scheduled: 2025-02-10 02:00-04:00 AM. Contact: Asif +880 1712-345678&quot;
+</span></code></pre></div>
+<p>এখন যে কেউ Nautobot দেখলে বুঝবে এই রাউটার মেইনটেনেন্সে আছে।</p>
+<p>কাজ শেষ হলে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>Status: Active
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>Tags: maintenance রিমুভ করুন
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>Comments: &quot;Firmware upgraded to v7.12. Completed: 2025-02-10 03:45 AM&quot;
+</span></code></pre></div>
+<p><strong>Scenario 2: EOL (End of Life) ট্র্যাকিং</strong></p>
+<p>কিছু পুরোনো সুইচ আছে যেগুলো ৫ বছর হয়ে গেছে, রিপ্লেস করা দরকার:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>SW-DN-MIR-ACC-05 → Edit
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>  Tags: end-of-life যোগ করুন
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>  Comments: &quot;Purchased 2020. Frequent issues. Replacement budgeted for Q2 2025.&quot;
+</span></code></pre></div>
+<p>এখন বাজেট মিটিংয়ে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>Filters → Tags: end-of-life
+</span></code></pre></div>
+<p>সব EOL ডিভাইসের লিস্ট। Export করে Excel এ নিন, টোটাল রিপ্লেসমেন্ট কস্ট ক্যালকুলেট করুন।</p>
+<hr />
+<h3 id="saved-filters-">Saved Filters - কমন কোয়েরি সেভ করা<a class="headerlink" href="#saved-filters-" title="Permanent link">&para;</a></h3>
+<p>আসিফ প্রতিদিন সকালে Nautobot এ যায় এবং মিরপুর পপের সব এক্টিভ ডিভাইস চেক করে। প্রতিদিন একই ফিল্টার:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>Location: Mirpur POP
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>Status: Active
+</span></code></pre></div>
+<p>এটা প্রতিদিন সেট করা বিরক্তিকর। Saved Filter দিয়ে সহজ করা যায়।</p>
+<h4 id="saved-filter">একটা Saved Filter তৈরি করা<a class="headerlink" href="#saved-filter" title="Permanent link">&para;</a></h4>
+<p><strong>Devices → Devices</strong> লিস্টে যান।</p>
+<p>ফিল্টার সেট করুন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>Location: Mirpur POP
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>Status: Active
+</span></code></pre></div>
+<p><strong>Apply</strong> করুন। লিস্টে শুধু মিরপুরের এক্টিভ ডিভাইস দেখাবে।</p>
+<p>এখন উপরে ডান দিকে <strong>Save Filter</strong> বাটন দেখবেন। ক্লিক করুন।</p>
+<p>একটা ছোট ডায়ালগ বক্স:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Name: Mirpur Active Devices
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>Public: ☐ (আনচেক রাখুন)
+</span></code></pre></div>
+<p>Public চেক করলে অন্য ইউজাররাও এই ফিল্টার দেখবে। আনচেক থাকলে শুধু আপনি দেখবেন।</p>
+<p><strong>Save</strong> ক্লিক করুন।</p>
+<p>এখন পরের বার <strong>Devices → Devices</strong> লিস্টে গেলে উপরে <strong>Saved Filters</strong> নামে একটা ড্রপডাউন দেখবেন। ক্লিক করলে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>Saved Filters
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>  └── Mirpur Active Devices
+</span></code></pre></div>
+<p>এটা সিলেক্ট করলেই ফিল্টার অটোমেটিক্যালি এপ্লাই হয়ে যাবে। এক ক্লিকে কাজ শেষ!</p>
+<h4 id="useful-saved-filters">আরো কিছু Useful Saved Filters<a class="headerlink" href="#useful-saved-filters" title="Permanent link">&para;</a></h4>
+<p><strong>Critical Infrastructure:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>Tags: critical
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>Name: Critical Infrastructure Only
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>Public: Yes (সবাই দেখুক)
+</span></code></pre></div>
+<p><strong>Warranty Expiring Soon:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>Warranty Expiry Date:
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>  After: 2025-02-09 (আজ)
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>  Before: 2025-05-09 (৯০ দিন পরে)
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>Name: Warranty Expiring in 90 Days
+</span></code></pre></div>
+<p><strong>Access Switches - All Locations:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>Role: Access Switch
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>Status: Active
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>Name: All Active Access Switches
+</span></code></pre></div>
+<p><strong>Devices Under Maintenance:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>Tags: maintenance
+</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>Name: Currently Under Maintenance
+</span></code></pre></div>
+<p>এভাবে আপনার frequent queries সেভ করে রাখুন। সময় বাঁচবে এবং consistency থাকবে।</p>
+<hr />
+<h3 id="user-management-permissions">User Management এবং Permissions<a class="headerlink" href="#user-management-permissions" title="Permanent link">&para;</a></h3>
+<p>SkyNets Bangladesh এর তিন ধরনের ইউজার আছে:</p>
+<ol>
+<li><strong>NOC Team</strong> (জাহাঙ্গীর, আসিফ, রহিম): সবকিছু দেখতে এবং এডিট করতে পারবে</li>
+<li><strong>Field Operations</strong> (করিম, সালমান): শুধু ডিভাইস এবং ক্যাবল ম্যানেজ করবে</li>
+<li><strong>Management</strong> (রফিক সাহেব - CTO): শুধু রিপোর্ট দেখবে, কিছু এডিট করবে না</li>
+</ol>
+<p>প্রতিটা টিমের জন্য আলাদা permission লেভেল দরকার।</p>
+<h4 id="groups">Groups তৈরি করা<a class="headerlink" href="#groups" title="Permanent link">&para;</a></h4>
+<p>Nautobot এ Groups দিয়ে permissions ম্যানেজ করা হয়। একটা গ্রুপে permissions সেট করুন, তারপর ইউজারদের সেই গ্রুপে যোগ করুন।</p>
+<p>উপরের ডান কোণায় আপনার ইউজারনেম (admin) ক্লিক করুন → <strong>Admin</strong> সিলেক্ট করুন।</p>
+<p>Django Admin প্যানেলে চলে যাবেন। এখানে <strong>Groups</strong> দেখবেন। ক্লিক করুন।</p>
+<p><strong>+ Add Group</strong> বাটনে ক্লিক করুন।</p>
+<p><strong>Group 1: NOC Team</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>Name: NOC Team
+</span></code></pre></div>
+<p>এখন Permissions সিলেক্ট করতে হবে। নিচে একটা বড় বক্স দেখবেন <strong>Available permissions</strong> এবং <strong>Chosen permissions</strong>।</p>
+<p>বাম দিকে (Available) থেকে ডান দিকে (Chosen) মুভ করতে হবে যেগুলো দরকার।</p>
+<p>এটা একটু সময় সাপেক্ষ কারণ অনেক permissions আছে। আমরা ক্যাটেগরি অনুযায়ী দেখব:</p>
+<p><strong>DCIM - Device Permissions:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>dcim | device | Can view device
+</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>dcim | device | Can add device
+</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>dcim | device | Can change device
+</span></code></pre></div>
+<p>লক্ষ্য করুন "Can delete device" সিলেক্ট করছি না। NOC ডিভাইস ডিলিট করতে পারবে না (ভুল করে ডিলিট হয়ে যাওয়ার ভয়)।</p>
+<p><strong>DCIM - Cable Permissions:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>dcim | cable | Can view cable
+</span><span id="__span-50-2"><a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>dcim | cable | Can add cable
+</span><span id="__span-50-3"><a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>dcim | cable | Can change cable
+</span></code></pre></div>
+<p><strong>DCIM - Interface Permissions:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>dcim | interface | Can view interface
+</span><span id="__span-51-2"><a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>dcim | interface | Can change interface
+</span></code></pre></div>
+<p><strong>IPAM - IP Address Permissions:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>ipam | ip address | Can view IP address
+</span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>ipam | ip address | Can add IP address
+</span><span id="__span-52-3"><a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>ipam | ip address | Can change IP address
+</span></code></pre></div>
+<p><strong>IPAM - Prefix Permissions:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>ipam | prefix | Can view prefix
+</span><span id="__span-53-2"><a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>ipam | prefix | Can add prefix
+</span><span id="__span-53-3"><a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>ipam | prefix | Can change prefix
+</span></code></pre></div>
+<p><strong>Circuits - Limited Access:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>circuits | circuit | Can view circuit
+</span></code></pre></div>
+<p>শুধু view, add/change/delete না। কারণ সার্কিট যোগ/পরিবর্তন করা ম্যানেজমেন্ট লেভেলের কাজ।</p>
+<p><strong>Organization - Location (View Only):</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>Organization | location | Can view location
+</span></code></pre></div>
+<p>NOC লোকেশন দেখবে কিন্তু নতুন লোকেশন যোগ বা মুছবে না।</p>
+<p>এভাবে সব relevant permissions সিলেক্ট করুন। তারপর <strong>Save</strong> ক্লিক করুন।</p>
+<p><strong>Group 2: Field Operations</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>Name: Field Operations
+</span></code></pre></div>
+<p><strong>Permissions:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>dcim | device | Can view device
+</span><span id="__span-57-2"><a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>dcim | device | Can add device (নতুন এক্সেস সুইচ ইনস্টল করার পরে যোগ করবে)
+</span><span id="__span-57-3"><a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>dcim | device | Can change device (Comments আপডেট করবে)
+</span><span id="__span-57-4"><a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a>
+</span><span id="__span-57-5"><a id="__codelineno-57-5" name="__codelineno-57-5" href="#__codelineno-57-5"></a>dcim | cable | Can view cable
+</span><span id="__span-57-6"><a id="__codelineno-57-6" name="__codelineno-57-6" href="#__codelineno-57-6"></a>dcim | cable | Can add cable
+</span><span id="__span-57-7"><a id="__codelineno-57-7" name="__codelineno-57-7" href="#__codelineno-57-7"></a>dcim | cable | Can change cable
+</span><span id="__span-57-8"><a id="__codelineno-57-8" name="__codelineno-57-8" href="#__codelineno-57-8"></a>
+</span><span id="__span-57-9"><a id="__codelineno-57-9" name="__codelineno-57-9" href="#__codelineno-57-9"></a>dcim | interface | Can view interface
+</span><span id="__span-57-10"><a id="__codelineno-57-10" name="__codelineno-57-10" href="#__codelineno-57-10"></a>dcim | interface | Can change interface (পোর্ট enable/disable করবে)
+</span><span id="__span-57-11"><a id="__codelineno-57-11" name="__codelineno-57-11" href="#__codelineno-57-11"></a>
+</span><span id="__span-57-12"><a id="__codelineno-57-12" name="__codelineno-57-12" href="#__codelineno-57-12"></a>ipam | ip address | Can view IP address
+</span></code></pre></div>
+<p>লক্ষ্য করুন - IP address শুধু view, add/change না। ফিল্ড টিম আইপি এলোকেশন করবে না, NOC করবে।</p>
+<p><strong>Save</strong> করুন।</p>
+<p><strong>Group 3: Management</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>Name: Management
+</span></code></pre></div>
+<p><strong>Permissions:</strong></p>
+<p>সব জায়গায় শুধু <strong>Can view</strong> সিলেক্ট করুন। কোনো add/change/delete না।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>dcim | device | Can view device
+</span><span id="__span-59-2"><a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>dcim | cable | Can view cable
+</span><span id="__span-59-3"><a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>dcim | interface | Can view interface
+</span><span id="__span-59-4"><a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a>dcim | rack | Can view rack
+</span><span id="__span-59-5"><a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a>ipam | ip address | Can view IP address
+</span><span id="__span-59-6"><a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a>ipam | prefix | Can view prefix
+</span><span id="__span-59-7"><a id="__codelineno-59-7" name="__codelineno-59-7" href="#__codelineno-59-7"></a>ipam | vlan | Can view vlan
+</span><span id="__span-59-8"><a id="__codelineno-59-8" name="__codelineno-59-8" href="#__codelineno-59-8"></a>circuits | circuit | Can view circuit
+</span><span id="__span-59-9"><a id="__codelineno-59-9" name="__codelineno-59-9" href="#__codelineno-59-9"></a>circuits | provider | Can view provider
+</span><span id="__span-59-10"><a id="__codelineno-59-10" name="__codelineno-59-10" href="#__codelineno-59-10"></a>Organization | location | Can view location
+</span></code></pre></div>
+<p><strong>Save</strong> করুন।</p>
+<h4 id="_8">নতুন ইউজার তৈরি করা<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>এখন actual users তৈরি করি।</p>
+<p>Django Admin প্যানেলে <strong>Users</strong> এ যান। <strong>+ Add User</strong> ক্লিক করুন।</p>
+<p><strong>ইউজার: আসিফ (NOC Team)</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>Username: asif
+</span><span id="__span-60-2"><a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>Password: (একটা শক্তিশালী পাসওয়ার্ড দিন)
+</span><span id="__span-60-3"><a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>Password confirmation: (আবার টাইপ করুন)
+</span></code></pre></div>
+<p><strong>Save and continue editing</strong> ক্লিক করুন।</p>
+<p>এখন আরো ফিল্ড দেখাবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>Personal Info:
+</span><span id="__span-61-2"><a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>  First name: Asif
+</span><span id="__span-61-3"><a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a>  Last name: Rahman
+</span><span id="__span-61-4"><a id="__codelineno-61-4" name="__codelineno-61-4" href="#__codelineno-61-4"></a>  Email address: asif@skynets.bd
+</span><span id="__span-61-5"><a id="__codelineno-61-5" name="__codelineno-61-5" href="#__codelineno-61-5"></a>
+</span><span id="__span-61-6"><a id="__codelineno-61-6" name="__codelineno-61-6" href="#__codelineno-61-6"></a>Permissions:
+</span><span id="__span-61-7"><a id="__codelineno-61-7" name="__codelineno-61-7" href="#__codelineno-61-7"></a>  Active: ☑ (চেক করুন - না হলে লগইন করতে পারবে না)
+</span><span id="__span-61-8"><a id="__codelineno-61-8" name="__codelineno-61-8" href="#__codelineno-61-8"></a>  Staff status: ☑ (চেক করুন - এটা থাকলে Nautobot admin প্যানেলে access পাবে)
+</span><span id="__span-61-9"><a id="__codelineno-61-9" name="__codelineno-61-9" href="#__codelineno-61-9"></a>  Superuser status: ☐ (আনচেক - superuser শুধু আপনি থাকবেন)
+</span><span id="__span-61-10"><a id="__codelineno-61-10" name="__codelineno-61-10" href="#__codelineno-61-10"></a>
+</span><span id="__span-61-11"><a id="__codelineno-61-11" name="__codelineno-61-11" href="#__codelineno-61-11"></a>Groups:
+</span><span id="__span-61-12"><a id="__codelineno-61-12" name="__codelineno-61-12" href="#__codelineno-61-12"></a>  NOC Team (এখানে সিলেক্ট করুন)
+</span></code></pre></div>
+<p>Groups সেকশনে Available groups থেকে "NOC Team" সিলেক্ট করে ডান দিকে মুভ করুন।</p>
+<p><strong>Save</strong> ক্লিক করুন।</p>
+<p>একইভাবে আরো দুজন:</p>
+<p><strong>করিম (Field Operations):</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>Username: karim
+</span><span id="__span-62-2"><a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>First name: Karim
+</span><span id="__span-62-3"><a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>Last name: Uddin
+</span><span id="__span-62-4"><a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a>Email: karim@skynets.bd
+</span><span id="__span-62-5"><a id="__codelineno-62-5" name="__codelineno-62-5" href="#__codelineno-62-5"></a>Active: ☑
+</span><span id="__span-62-6"><a id="__codelineno-62-6" name="__codelineno-62-6" href="#__codelineno-62-6"></a>Staff status: ☑
+</span><span id="__span-62-7"><a id="__codelineno-62-7" name="__codelineno-62-7" href="#__codelineno-62-7"></a>Groups: Field Operations
+</span></code></pre></div>
+<p><strong>রফিক সাহেব (Management):</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>Username: rafiq
+</span><span id="__span-63-2"><a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a>First name: Rafiq
+</span><span id="__span-63-3"><a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a>Last name: Ahmed
+</span><span id="__span-63-4"><a id="__codelineno-63-4" name="__codelineno-63-4" href="#__codelineno-63-4"></a>Email: rafiq@skynets.bd
+</span><span id="__span-63-5"><a id="__codelineno-63-5" name="__codelineno-63-5" href="#__codelineno-63-5"></a>Active: ☑
+</span><span id="__span-63-6"><a id="__codelineno-63-6" name="__codelineno-63-6" href="#__codelineno-63-6"></a>Staff status: ☑
+</span><span id="__span-63-7"><a id="__codelineno-63-7" name="__codelineno-63-7" href="#__codelineno-63-7"></a>Groups: Management
+</span></code></pre></div>
+<h4 id="permissions">Permissions টেস্ট করা<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h4>
+<p>এখন লগআউট করুন admin থেকে। asif দিয়ে লগইন করুন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>Username: asif
+</span><span id="__span-64-2"><a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>Password: (যেটা দিয়েছিলেন)
+</span></code></pre></div>
+<p>লগইন করার পরে Nautobot হোম পেজে আসবেন।</p>
+<p><strong>Devices → Devices</strong> লিস্টে যান।</p>
+<p>একটা ডিভাইস ক্লিক করুন - দেখতে পারছেন।</p>
+<p><strong>Edit</strong> বাটন আছে - ক্লিক করুন, এডিট করতে পারছেন।</p>
+<p>কিন্তু <strong>Delete</strong> বাটন নেই! Permission নেই বলে।</p>
+<p><strong>Organization → Locations</strong> যান।</p>
+<p>লিস্ট দেখতে পারছেন। কিন্তু <strong>+ Add</strong> বাটন নেই। নতুন লোকেশন যোগ করতে পারবেন না।</p>
+<p>পারফেক্ট! Permission কাজ করছে।</p>
+<p>এখন লগআউট করুন। rafiq দিয়ে লগইন করুন (ম্যানেজমেন্ট গ্রুপ):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>Username: rafiq
+</span><span id="__span-65-2"><a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a>Password: ...
+</span></code></pre></div>
+<p>লগইন করার পরে:</p>
+<p><strong>Devices → Devices</strong> - লিস্ট দেখতে পারছেন।</p>
+<p>কিন্তু কোথাও <strong>Edit</strong>, <strong>Delete</strong>, <strong>+ Add</strong> কোনো বাটন নেই!</p>
+<p>সম্পূর্ণ রিড-অনলি। রফিক সাহেব শুধু রিপোর্ট দেখতে পারবেন, ভুল করে কিছু চেঞ্জ করতে পারবেন না।</p>
+<p>চমৎকার!</p>
+<hr />
+<p>SkyNets Bangladesh এখন Nautobot কে তাদের নিজস্ব প্রয়োজন অনুযায়ী সাজিয়ে ফেলেছে। আসিফের ওয়ারেন্টি ট্র্যাকিং সমস্যা solve হয়েছে। করিম এখন সহজেই বিল্ডিং নাম দিয়ে সুইচ খুঁজে পায়। রফিক সাহেব নিরাপদে রিপোর্ট দেখতে পারেন ভুলে কিছু চেঞ্জ হওয়ার ভয় ছাড়া।</p>
+<p>পরের চ্যাপ্টারে আমরা দেখব কীভাবে ৫ হাজার কাস্টমার থেকে ৫০ হাজার কাস্টমারে স্কেল করা যায়, কী কী চ্যালেঞ্জ আসে, এবং কীভাবে Nautobot সেই জার্নিতে সাহায্য করে।</p>
+<hr />
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ui_organization/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UI দিয়ে ডেটা এন্ট্রি">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                UI দিয়ে ডেটা এন্ট্রি
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../fivethousands/" class="md-footer__link md-footer__link--next" aria-label="Next: ছোট আইএসপি সেটআপ (৫ হাজার কাস্টমার)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                ছোট আইএসপি সেটআপ (৫ হাজার কাস্টমার)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      সৃজনশীল লাইসেন্সিং ২০২৩ - ২০২৬ &copy; রকিবুল হাসান
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/raqueeb" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://m.me/raqueeb" target="_blank" rel="noopener" title="m.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256.6 8C116.6 8 8 110.3 8 248.6c0 72.3 29.7 134.8 78.1 177.9 8.3 7.5 6.6 11.9 8 58.2.1 3.2 1 6.4 2.6 9.2s3.9 5.2 6.7 6.9 5.9 2.8 9.1 3 6.5-.3 9.5-1.6c52.9-23.2 53.6-25 62.6-22.6 153.2 42.2 319.4-55.9 319.4-231C504 110.3 396.6 8 256.6 8m149.2 185.1-73 115.6c-2.8 4.3-6.4 8.1-10.6 11s-9.1 4.8-14.1 5.8-10.3.8-15.3-.4-9.7-3.4-13.8-6.4l-58.1-43.5c-2.6-1.9-5.8-3-9-3s-6.4 1.1-9 3l-78.4 59.4c-10.5 7.9-24.2-4.6-17.1-15.7l73-115.6c2.8-4.3 6.4-8.1 10.6-11s9.1-4.8 14.1-5.8 10.3-.8 15.3.4 9.7 3.4 13.9 6.4l58.1 43.5c2.6 1.9 5.8 3 9 3s6.4-1.1 9-3l78.4-59.4c10.4-8 24.1 4.5 17.1 15.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="tel:+8801713095767" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157m-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6m101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/raqueeb" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/raqueeb/" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://instagram.com/raqueeb" target="_blank" rel="noopener" title="instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://facebook.com/raqueeb" target="_blank" rel="noopener" title="facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

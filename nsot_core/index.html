@@ -1,0 +1,1377 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="রোড টু হাইটেক ইন্ডাস্ট্রি:আইএসপি অটোমেশন ২">
+      
+      
+        <meta name="author" content="রকিবুল হাসান">
+      
+      
+        <link rel="canonical" href="https://aiwithr.github.io/automation_nsot/nsot_core/">
+      
+      
+        <link rel="prev" href="../two_states/">
+      
+      
+        <link rel="next" href="../installation2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>NSoT-এর কোর প্রিন্সিপাল এবং Nautobot - আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=SiyamRupali:300,300i,400,400i,700,700i%7CSiyamRupali:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"SiyamRupali";--md-code-font:"SiyamRupali"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" class="md-header__button md-logo" aria-label="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NSoT-এর কোর প্রিন্সিপাল এবং Nautobot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/raqueeb/mltraining/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    raqueeb/mltraining
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" class="md-nav__button md-logo" aria-label="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/raqueeb/mltraining/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    raqueeb/mltraining
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ১ মিলিয়ন ইন্টারনেট গ্রাহক
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    পেছনের দর্শন
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    পেছনের দর্শন
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কৃত্রিম বুদ্ধিমত্তা ও নেটওয়ার্ক অটোমেশনের রাস্তা
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    নেটওয়ার্ক সোর্স অফ ট্রুথ (NSoT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dedication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    উৎসর্গ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contents2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    বইয়ের সম্ভাব্য চ্যাপ্টার স্ট্রাকচার NSoT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot_scale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কেন NSoT ছাড়া স্কেল করা অসম্ভব
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../two_states/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ইনটেন্ডেড স্টেট বনাম অ্যাকচুয়াল স্টেট
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NSoT-এর কোর প্রিন্সিপাল এবং Nautobot
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NSoT-এর কোর প্রিন্সিপাল এবং Nautobot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ডেটা মডেলিং - কীভাবে ডাটা সাজাবেন
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        রিলেশনশিপ ও ডিপেন্ডেন্সি - কে কার সাথে যুক্ত
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ভার্সনিং ও অডিট ট্রেইল - কে কখন কী করল
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nautobot-nsot-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nautobot - NSoT-এর সেরা সমাধান
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netbox-nautobot-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NetBox থেকে Nautobot-এর জার্নি
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netbox-nautobot-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NetBox বনাম Nautobot - কোনটা বেছে নেবেন
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nautobot-30-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nautobot 3.0 - কী নতুন?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nautobot-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nautobot-এর আর্কিটেকচার - কীভাবে কাজ করে
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        কমিউনিটি বনাম ক্লাউড ভার্সন
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ইনস্টলেশন
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datamodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ডেটা মডেল - নেটওয়ার্কের যোগসুত্র
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui_organization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI দিয়ে ডেটা এন্ট্রি
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectivity_adv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কানেক্টিভিটি এবং এডভান্সড ফিচার
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fivethousands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ছোট আইএসপি সেটআপ (৫ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiftythousands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    মিডিয়াম আইএসপি সেটআপ (৫০ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API এবং অটোমেশনের শুরু
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv_automation_lac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    এডভান্সড অটোমেশন এবং ১ লক্ষ কাস্টমারের পথে
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mil_customers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ১ মিলিয়ন গ্রাহকের আইএসপি
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    বইটা এখনো লেখা চলছে
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ডেটা মডেলিং - কীভাবে ডাটা সাজাবেন
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        রিলেশনশিপ ও ডিপেন্ডেন্সি - কে কার সাথে যুক্ত
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ভার্সনিং ও অডিট ট্রেইল - কে কখন কী করল
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nautobot-nsot-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nautobot - NSoT-এর সেরা সমাধান
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netbox-nautobot-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NetBox থেকে Nautobot-এর জার্নি
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netbox-nautobot-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NetBox বনাম Nautobot - কোনটা বেছে নেবেন
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nautobot-30-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nautobot 3.0 - কী নতুন?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nautobot-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nautobot-এর আর্কিটেকচার - কীভাবে কাজ করে
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        কমিউনিটি বনাম ক্লাউড ভার্সন
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>NSoT-এর কোর প্রিন্সিপাল এবং Nautobot</h1>
+
+<p>আগের চ্যাপ্টারে আমরা দেখেছি ইনটেন্ডেড স্টেট আর অ্যাকচুয়াল স্টেট কী। এখন দেখা যাক NSoT-এর মূল প্রিন্সিপালগুলো কী।</p>
+<p>প্রথম এবং সবচেয়ে গুরুত্বপূর্ণ প্রিন্সিপাল হলো "সিঙ্গেল সোর্স অফ ট্রুথ"। এর মানে হলো - আপনার নেটওয়ার্ক সম্পর্কে যেকোনো তথ্য জানার জন্য শুধুমাত্র একটা জায়গায় যেতে হবে। সেই একটা জায়গাতেই সব সঠিক তথ্য থাকবে। এটাই হবে আপনার "সত্যের উৎস"।</p>
+<p>একটা উদাহরণ দিই। ধরুন, আপনার কোম্পানিতে পাঁচজন টেকনিশিয়ান। একজনের কাছে একটা এক্সেল শিট আছে যেখানে রাউটারের লিস্ট আছে। আরেকজনের কাছে একটা ওয়ার্ড ডকুমেন্ট আছে যেখানে আইপি অ্যাড্রেসের তালিকা আছে। তৃতীয়জন একটা নোটবুকে হাতে লিখে রাখে কোন কাস্টমার কোন রাউটারের আন্ডারে। চতুর্থজন মনে রাখে। পঞ্চমজন জানেই না কোথায় কী আছে।</p>
+<p>এখন যদি আপনি জানতে চান, "মিরপুর-১২ এর মেইন রাউটারের আইপি অ্যাড্রেস কী?" - তাহলে কাকে জিজ্ঞেস করবেন? কোন ডকুমেন্ট দেখবেন? আর যদি পাঁচজনের পাঁচ রকম উত্তর আসে, তাহলে কোনটা সত্যি?</p>
+<p>এই হলো সিঙ্গেল সোর্স অফ ট্রুথ না থাকার সমস্যা। কেউ জানে না আসলে কী সঠিক। আর যখন কেউ জানে না, তখন সবাই নিজের মতো করে কাজ করে। ফলে আরও বেশি গোলমাল তৈরি হয়।</p>
+<p>কিন্তু যদি সিঙ্গেল সোর্স অফ ট্রুথ থাকে? তাহলে সবাই জানে, "NSoT-এ গিয়ে দেখো। যা সেখানে লেখা আছে, সেটাই সঠিক।" কোনো কনফিউশন নেই, কোনো দ্বিধা নেই। একটাই জায়গা, একটাই সত্য।</p>
+<p>আর সবচেয়ে গুরুত্বপূর্ণ ব্যাপার হলো - এই সিঙ্গেল সোর্স অফ ট্রুথ হবে মাস্টার। নেটওয়ার্কে যা আছে তা নয়, বরং NSoT-এ যা লেখা আছে সেটাই হবে সত্য। নেটওয়ার্ককে মিলতে হবে NSoT-এর সাথে, উল্টোটা না।</p>
+<h3 id="-">ডেটা মডেলিং - কীভাবে ডাটা সাজাবেন<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
+<p>দ্বিতীয় প্রিন্সিপাল হলো ডেটা মডেলিং। মানে, আপনার নেটওয়ার্কের তথ্যগুলো কীভাবে সাজাবেন, কোন ফরম্যাটে রাখবেন, কোন স্ট্রাকচারে রাখবেন।</p>
+<p>একটা লাইব্রেরির কথা ভাবুন। লাইব্রেরিতে হাজার হাজার বই আছে। এখন এই বইগুলো কীভাবে সাজাবেন? এলোমেলো করে র‍্যাকে ঢুকিয়ে দেবেন? তাহলে তো কোনো বই খুঁজে পাওয়া অসম্ভব হবে। তাই লাইব্রেরিতে একটা সিস্টেম থাকে। বই সাজানো হয় ক্যাটাগরি অনুযায়ী - সায়েন্স, হিস্টরি, লিটারেচার। প্রতিটা বইয়ের একটা কোড নাম্বার থাকে। একটা ক্যাটালগ সিস্টেম থাকে যেখানে সার্চ করলেই জানা যায় বইটা কোথায় আছে।</p>
+<p>নেটওয়ার্ক ডেটাও তাই। এলোমেলো করে রাখলে হবে না। একটা স্ট্রাকচার লাগবে। আর সেই স্ট্রাকচারকেই বলা হয় ডেটা মডেল।</p>
+<p>NSoT-এর ডেটা মডেল খুবই চিন্তা করে বানানো। এখানে বিভিন্ন টাইপের অবজেক্ট আছে:</p>
+<p><strong>Locations (লোকেশন)</strong>: আপনার পপ লোকেশন, অফিস, ডেটা সেন্টার। Nautobot 3.0 এ এটা hierarchical - মানে "Dhaka North Zone" এর ভেতরে "Mirpur Cluster", তার ভেতরে "Mirpur POP", আবার তার ভেতরে "Rack A"। এই নেস্টেড স্ট্রাকচার অনেক শক্তিশালী।</p>
+<p><strong>Devices (ডিভাইস)</strong>: রাউটার, সুইচ, ফায়ারওয়াল - যেকোনো নেটওয়ার্ক ডিভাইস। প্রতিটা ডিভাইসের একটা নাম, একটা টাইপ, একটা লোকেশন, একটা role থাকবে।</p>
+<p><strong>Interfaces (ইন্টারফেস)</strong>: ডিভাইসের পোর্ট বা ইন্টারফেস। যেমন eth0, GigabitEthernet0/1।</p>
+<p><strong>IP Addresses (আইপি অ্যাড্রেস)</strong>: যেকোনো আইপি অ্যাড্রেস। এটা কোন ডিভাইসের কোন ইন্টারফেসে অ্যাসাইন করা সেটাও থাকবে।</p>
+<p><strong>VLANs (ভিল্যান)</strong>: আপনার নেটওয়ার্কের ভিল্যান। প্রতিটা ভিল্যানের একটা নাম্বার, একটা নাম থাকবে।</p>
+<p><strong>Circuits (সার্কিট)</strong>: আপস্ট্রিম প্রোভাইডার থেকে নেওয়া লিংক।</p>
+<p><strong>Roles (রোল)</strong>: Nautobot 3.0 এ সব roles একটা জায়গায় - ডিভাইস role, র‍্যাক role, IP role সব unified হয়ে গেছে। আরো সহজ এবং consistent।</p>
+<p>এই সবগুলো অবজেক্ট সুন্দরভাবে অর্গানাইজড। প্রতিটার নিজস্ব প্রপার্টি আছে। আর সবচেয়ে গুরুত্বপূর্ণ - এদের মধ্যে রিলেশনশিপ আছে।</p>
+<h2 id="-_1">রিলেশনশিপ ও ডিপেন্ডেন্সি - কে কার সাথে যুক্ত<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h2>
+<p>তৃতীয় প্রিন্সিপাল হলো রিলেশনশিপ। নেটওয়ার্কের কোনো কিছুই আলাদা করে থাকে না। সবকিছু একে অন্যের সাথে যুক্ত।</p>
+<p>একটা পরিবারের কথা ভাবুন। পরিবারে আপনি আছেন, আপনার বাবা-মা আছেন, ভাই-বোন আছেন। এখন যদি কেউ জিজ্ঞেস করে, "আপনার বাবা কে?", আপনি উত্তর দিতে পারবেন। কারণ আপনার সাথে আপনার বাবার একটা রিলেশনশিপ আছে। একইভাবে, আপনার ভাইয়ের সাথে আপনার বাবারও রিলেশনশিপ আছে। এই রিলেশনশিপগুলো জানা থাকলে পুরো পরিবারের স্ট্রাকচার বোঝা যায়।</p>
+<p>নেটওয়ার্কেও রিলেশনশিপ আছে। একটা উদাহরণ দিই:</p>
+<ul>
+<li>একটা লোকেশন হায়ারার্কি আছে: "Dhaka North Zone" → "Mirpur Cluster" → "Mirpur POP"</li>
+<li>সেই পপে একটা ডিভাইস আছে: "R-DN-MIR-CORE-01" (রাউটার)</li>
+<li>সেই রাউটারের একটা ইন্টারফেস আছে: "GigabitEthernet0/1"</li>
+<li>সেই ইন্টারফেসে একটা আইপি অ্যাসাইন করা: "10.10.1.1/24"</li>
+<li>সেই আইপি একটা প্রিফিক্সের অংশ: "10.10.1.0/24"</li>
+<li>সেই প্রিফিক্স একটা ভিল্যানে: "VLAN 100 - Management"</li>
+</ul>
+<p>দেখুন, এখানে সবকিছু একে অন্যের সাথে কানেক্টেড। আইপি থেকে ইন্টারফেস, ইন্টারফেস থেকে ডিভাইস, ডিভাইস থেকে লোকেশন - সব লিঙ্কড। এই রিলেশনশিপগুলো NSoT-এ স্টোর করা থাকে।</p>
+<p>এর সুবিধা কী? ধরুন, আপনি জানতে চান "VLAN 100-এ কোন কোন ডিভাইস আছে?"। NSoT সাথে সাথে বলে দিতে পারবে। কারণ সে জানে VLAN 100 কোন প্রিফিক্সে, সেই প্রিফিক্স কোন আইপিতে, সেই আইপি কোন ইন্টারফেসে, সেই ইন্টারফেস কোন ডিভাইসে।</p>
+<p>আরেকটা উদাহরণ। ধরুন, একটা রাউটার ডাউন হয়ে গেছে। আপনি জানতে চান, "এই রাউটার ডাউন হলে কোন কোন কাস্টমার আফেক্টেড হবে?"। যদি রিলেশনশিপ ঠিকমতো সেট করা থাকে, তাহলে NSoT সাথে সাথে বলে দিতে পারবে।</p>
+<p><strong>Nautobot 3.0 এর নতুন ফিচার - Custom Relationships:</strong></p>
+<p>এখন আপনি নিজের মতো করে রিলেশনশিপ তৈরি করতে পারবেন। যেমন, একটা ডিভাইসের সাথে একটা টেন্যান্ট (কাস্টমার) কানেক্ট করতে পারবেন। এটা আগে সম্ভব ছিল না। এখন Nautobot 3.0 এ এই flexibility আছে।</p>
+<p>এই হলো রিলেশনশিপের শক্তি। এটা শুধু তথ্য স্টোর করা না, বরং তথ্যগুলোর মধ্যে কানেকশন তৈরি করা।</p>
+<h2 id="-_2">ভার্সনিং ও অডিট ট্রেইল - কে কখন কী করল<a class="headerlink" href="#-_2" title="Permanent link">&para;</a></h2>
+<p>চতুর্থ প্রিন্সিপাল হলো ভার্সনিং আর অডিট ট্রেইল। মানে, যা কিছু চেঞ্জ হয় তার একটা রেকর্ড রাখা।</p>
+<p>ব্যাংক অ্যাকাউন্টের কথা ভাবুন। আপনি যখন টাকা তোলেন বা জমা দেন, তখন সেটার একটা রেকর্ড থাকে। পরে যেকোনো সময় স্টেটমেন্ট দেখলে জানতে পারবেন কখন কত টাকা তোলা হয়েছে, কে তুলেছে। এটা জরুরি, কারণ এতে ট্র্যান্সপারেন্সি থাকে, কোনো সমস্যা হলে বোঝা যায় কোথায় ভুল হয়েছে।</p>
+<p>নেটওয়ার্কেও একই জিনিস দরকার। কোনো কনফিগ চেঞ্জ করা হলে, কোনো ডিভাইস যুক্ত করা হলে, কোনো আইপি অ্যালোকেট করা হলে - সবকিছুর একটা রেকর্ড থাকা উচিত। কে করল, কখন করল, কী করল - সব জানা থাকলে পরে সমস্যা হলে ডিবাগ করা সহজ হয়।</p>
+<p>NSoT-এ এই ফিচার বিল্ট-ইন। প্রতিটা চেঞ্জের একটা লগ তৈরি হয়। ধরুন, আপনি একটা রাউটারের আইপি চেঞ্জ করলেন। NSoT রেকর্ড করবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>তারিখ: ২০২৫-০১-১৫, সময়: ১৪:৩০
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ইউজার: সাকিব (sakib@example.com)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>অবজেক্ট: R-DN-MIR-CORE-01
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>চেঞ্জ: আইপি অ্যাড্রেস
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>পুরোনো ভ্যালু: 10.10.1.1
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>নতুন ভ্যালু: 10.10.1.5
+</span></code></pre></div>
+<p>এই রেকর্ড থেকে আপনি জানতে পারবেন কে, কখন, কী চেঞ্জ করেছে। এমনকি পুরোনো ভ্যালুও জানা আছে, তাই দরকার হলে রোলব্যাক করা যাবে।</p>
+<p>আরেকটা সুবিধা হলো, এটা অ্যাকাউন্টেবিলিটি তৈরি করে। যদি সবাই জানে যে তাদের প্রতিটা কাজ লগ হচ্ছে, তাহলে তারা আরও সাবধানে কাজ করবে। র‍্যান্ডমভাবে কিছু চেঞ্জ করবে না।</p>
+<h2 id="nautobot-nsot-">Nautobot - NSoT-এর সেরা সমাধান<a class="headerlink" href="#nautobot-nsot-" title="Permanent link">&para;</a></h2>
+<p>এবার আসি Nautobot-এর কথায়। আমরা এতক্ষণ NSoT-এর প্রিন্সিপালগুলো দেখলাম। কিন্তু এই প্রিন্সিপালগুলো বাস্তবায়ন করবেন কীভাবে? এক্সেল শিট দিয়ে? ওয়ার্ড ডকুমেন্ট দিয়ে? উত্তর হলো - না। দরকার একটা প্রপার টুল। আর সেই টুলই হলো Nautobot।</p>
+<p>Nautobot হলো একটা ওপেন-সোর্স প্ল্যাটফর্ম যেটা নেটওয়ার্ক সোর্স অফ ট্রুথ বানানোর জন্য তৈরি। এটা Network to Code কোম্পানি ডেভেলপ করেছে। আর এটার পেছনের স্টোরিটা বেশ ইন্টারেস্টিং।</p>
+<h2 id="netbox-nautobot-">NetBox থেকে Nautobot-এর জার্নি<a class="headerlink" href="#netbox-nautobot-" title="Permanent link">&para;</a></h2>
+<p>অনেকেই হয়তো NetBox-এর নাম শুনেছেন। NetBox হলো ডিজিটাল ওশান কোম্পানির বানানো একটা টুল, যেটা শুরু হয়েছিল ২০১৬ সালে। NetBox ছিল খুবই পপুলার। অনেক বড় বড় কোম্পানি NetBox ইউজ করত তাদের নেটওয়ার্ক ডকুমেন্ট করতে।</p>
+<p>কিন্তু NetBox-এর কিছু লিমিটেশন ছিল। এটা মূলত একটা IPAM (IP Address Management) আর DCIM (Data Center Infrastructure Management) টুল ছিল। এর মধ্যে অটোমেশন ফিচার ছিল সীমিত। প্লাগইন সাপোর্ট ছিল, কিন্তু সেটাও ফুল-ফ্লেজড না।</p>
+<p>২০২০ সালে Network to Code কোম্পানি একটা সিদ্ধান্ত নিল। তারা NetBox-এর কোডবেস নিয়ে নতুন একটা প্রজেক্ট শুরু করল - Nautobot। এটা NetBox-এর একটা ফর্ক, মানে NetBox থেকেই বের হয়ে এসেছে, কিন্তু আলাদা হয়ে গেছে।</p>
+<p>Nautobot বানানোর সময় তারা কয়েকটা জিনিস মাথায় রেখেছিল:</p>
+<p><strong>অটোমেশন ফার্স্ট</strong>: শুধু ডেটা স্টোর করা না, বরং সেই ডেটা দিয়ে অটোমেশন চালানো।</p>
+<p><strong>এক্সটেনসিবিলিটি</strong>: সহজে প্লাগইন বানানো যাবে, কাস্টমাইজ করা যাবে।</p>
+<p><strong>API ড্রিভেন</strong>: সবকিছু API দিয়ে করা যাবে। REST এবং GraphQL উভয়ই।</p>
+<p><strong>এন্টারপ্রাইজ রেডি</strong>: বড় অর্গানাইজেশনের জন্য স্কেলেবল।</p>
+<h2 id="netbox-nautobot-_1">NetBox বনাম Nautobot - কোনটা বেছে নেবেন<a class="headerlink" href="#netbox-nautobot-_1" title="Permanent link">&para;</a></h2>
+<p>এখন প্রশ্ন হলো, আপনি NetBox নেবেন নাকি Nautobot? দুটোই তো ওপেন-সোর্স, দুটোতেই প্রায় একই রকম ফিচার আছে। তাহলে সিদ্ধান্ত নেবেন কীভাবে? চলুন একটা কম্পেয়ারিজন দেখি যাতে আপনার সিদ্ধান্ত নিতে সুবিধা হয়।</p>
+<p>NetBox-এর কিছু সুবিধা আছে যেগুলো উপেক্ষা করা যায় না। প্রথমত, এটা অনেক পুরোনো একটা প্রজেক্ট, ২০১৬ সাল থেকে চলছে। ফলে এর কমিউনিটি বেশ বড়। আপনি যেকোনো সমস্যায় পড়লে অনেক মানুষ সাহায্য করতে পারবে। দ্বিতীয়ত, অনেক ডকুমেন্টেশন আছে। ব্লগ পোস্ট, টিউটোরিয়াল, ভিডিও - সব পাওয়া যায়। তৃতীয়ত, অনেক প্লাগইন আছে যেগুলো কমিউনিটি বানিয়েছে। আর চতুর্থত, যদি আপনার ইউজ কেস সিম্পল হয় - মানে শুধু ডেটা স্টোর করতে চান, একটা IPAM টুল চান - তাহলে NetBox একদম যথেষ্ট।</p>
+<p>কিন্তু NetBox-এর কিছু অসুবিধাও আছে। সবচেয়ে বড় সমস্যা হলো অটোমেশন ফিচার কম। NetBox মূলত একটা ডেটা স্টোর হিসেবে বানানো হয়েছিল, অটোমেশন প্ল্যাটফর্ম হিসেবে না। তাই যদি আপনি অটোমেশন চালাতে চান, তাহলে আপনাকে অনেক কাস্টম কোড লিখতে হবে। দ্বিতীয়ত, এন্টারপ্রাইজ সাপোর্ট নেই আনলেস আপনি পেইড ভার্সন না নেন। আর তৃতীয়ত, কাস্টমাইজেশন একটু কঠিন। প্লাগইন বানানো যায়, কিন্তু সেটার প্রসেস Nautobot-এর মতো সহজ না।</p>
+<p>এবার Nautobot 3.0। Nautobot-এর সবচেয়ে বড় সুবিধা হলো এটা অটোমেশন-ফোকাসড। একদম শুরু থেকেই এটা বানানো হয়েছে অটোমেশন মাথায় রেখে। তাই এখানে Jobs ফিচার আছে যেটা দিয়ে আপনি কাস্টম অটোমেটেড টাস্ক চালাতে পারবেন। দ্বিতীয়ত, প্লাগইন ইকোসিস্টেম অনেক শক্তিশালী। প্লাগইন বানানো সহজ, আর অনেক রেডিমেড প্লাগইন আছে। তৃতীয়ত, GraphQL সাপোর্ট আছে যেটা REST API-এর চেয়ে বেশি ফ্লেক্সিবল। চতুর্থত, Golden Config, Device Lifecycle Management-এর মতো গুরুত্বপূর্ণ ফিচারগুলো প্লাগইন হিসেবে সহজে যুক্ত করা যায়। আর পঞ্চমত, <strong>Nautobot 3.0 এ আরো বড় পরিবর্তন এসেছে - Hierarchical Locations, Unified Roles, Custom Relationships</strong> - এই ফিচারগুলো NetBox এ নেই।</p>
+<p>Nautobot-এরও কিছু অসুবিধা আছে অবশ্য। প্রথমত, এটা NetBox-এর চেয়ে নতুন। ২০২০ সালে শুরু হয়েছে। যদিও এখন বেশ ম্যাচিউর হয়ে গেছে, তবুও NetBox-এর মতো পুরোনো না। দ্বিতীয়ত, কমিউনিটি একটু ছোট। যদিও দ্রুত বাড়ছে, কিন্তু NetBox-এর কমিউনিটির মতো বড় এখনও হয়নি। তবে এই অসুবিধাগুলো দিন দিন কমে আসছে।</p>
+<p>আমার মতে, যদি আপনি শুধু ডেটা স্টোর করতে চান, একটা সিম্পল IPAM টুল চান, আর অটোমেশনের দিকে যাওয়ার কোনো প্ল্যান নেই - তাহলে NetBox যথেষ্ট। কিন্তু যদি আপনি অটোমেশনের দিকে যেতে চান, স্কেল করতে চান, ভবিষ্যতে এআই ইন্টিগ্রেশন করতে চান, <strong>আর Nautobot 3.0 এর নতুন ফিচার (Hierarchical Locations, Custom Relationships) ব্যবহার করতে চান</strong> - তাহলে Nautobot অনেক ভালো চয়েস। Nautobot আপনাকে শুধু একটা ডেটাবেস দিচ্ছে না, বরং একটা সম্পূর্ণ অটোমেশন প্ল্যাটফর্ম দিচ্ছে। আর যেহেতু আমরা এই বইয়ে নেটওয়ার্ক অটোমেশন (ভবিষ্যত এআই ইন্টিগ্রেশন) নিয়ে কথা বলছি, তাই Nautobot 3.0 আমাদের জন্য পারফেক্ট।</p>
+<h2 id="nautobot-30-">Nautobot 3.0 - কী নতুন?<a class="headerlink" href="#nautobot-30-" title="Permanent link">&para;</a></h2>
+<p>Nautobot 3.0 একটা মেজর রিলিজ যেখানে অনেক গুরুত্বপূর্ণ পরিবর্তন এসেছে:</p>
+<p><strong>Hierarchical Locations:</strong> আগের Sites এখন Locations হয়ে গেছে, আর সেটা nestable। আপনি "Bangladesh" → "Dhaka" → "Dhaka North" → "Mirpur Cluster" → "Mirpur POP" - এভাবে unlimited লেভেলে organize করতে পারবেন।</p>
+<p><strong>Unified Roles:</strong> আগে Device Roles, Rack Roles, IP Roles সব আলাদা ছিল। এখন সব একটা জায়গায় - Extras app এ। Content Types দিয়ে specify করবেন কোথায় ব্যবহার হবে।</p>
+<p><strong>Custom Relationships:</strong> এখন আপনি যেকোনো দুটো object এর মধ্যে custom relationship তৈরি করতে পারবেন। যেমন Device ↔ Tenant, Circuit ↔ Provider - যা চান।</p>
+<p><strong>Better Performance:</strong> Database optimization, query improvement - সব মিলিয়ে Nautobot 3.0 অনেক দ্রুত।</p>
+<p><strong>GraphQL API:</strong> REST API এর পাশাপাশি GraphQL support যা আরো flexible querying দেয়।</p>
+<h2 id="nautobot-">Nautobot-এর আর্কিটেকচার - কীভাবে কাজ করে<a class="headerlink" href="#nautobot-" title="Permanent link">&para;</a></h2>
+<p>Nautobot-এর আর্কিটেকচার বুঝতে হলে কয়েকটা লেয়ার বুঝতে হবে:</p>
+<p><strong>ডেটাবেস লেয়ার</strong>: একদম নিচে আছে ডেটাবেস। Nautobot 3.0 PostgreSQL ইউজ করে (MySQL সাপোর্ট deprecated)। এখানে সব ডেটা স্টোর হয়।</p>
+<p><strong>অ্যাপ্লিকেশন লেয়ার</strong>: এটা Python দিয়ে বানানো, Django ফ্রেমওয়ার্ক ইউজ করে। এখানে সব বিজনেস লজিক থাকে। Nautobot 3.0 Django 4.2 ব্যবহার করে।</p>
+<p><strong>API লেয়ার</strong>: Nautobot একটা শক্তিশালী REST API দেয়। এছাড়া GraphQL API-ও আছে। এই API দিয়ে আপনি প্রোগ্রামেটিক্যালি Nautobot-এর সাথে ইন্টার‍্যাক্ট করতে পারবেন।</p>
+<p><strong>ইউজার ইন্টারফেস</strong>: একটা ওয়েব-বেসড UI আছে যেখানে আপনি ব্রাউজার দিয়ে ডেটা দেখতে, এডিট করতে পারবেন।</p>
+<p><strong>প্লাগইন সিস্টেম</strong>: Nautobot-এ প্লাগইন যুক্ত করে ফাংশনালিটি বাড়ানো যায়। যেমন Golden Config প্লাগইন দিয়ে কনফিগ ম্যানেজ করা যায়, Device Lifecycle প্লাগইন দিয়ে ডিভাইসের লাইফসাইকেল ট্র্যাক করা যায়।</p>
+<p><strong>Jobs সিস্টেম</strong>: Nautobot-এ আপনি কাস্টম জবস লিখতে পারবেন Python দিয়ে। এই জবসগুলো চালানো যায় ম্যানুয়ালি অথবা শিডিউল করে। যেমন, প্রতিদিন রাতে একটা জব চলবে যেটা সব রাউটার থেকে কনফিগ ব্যাকআপ নেবে।</p>
+<p><strong>Apps Architecture (Nautobot 3.0):</strong> Nautobot 3.0 modular apps দিয়ে organize করা - Organization, DCIM, IPAM, Circuits, Extras। প্রতিটা app নিজস্বভাবে কাজ করে কিন্তু একসাথে integrate হয়।</p>
+<h2 id="_1">কমিউনিটি বনাম ক্লাউড ভার্সন<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Nautobot দুটো ভার্সনে পাওয়া যায় - একটা কমিউনিটি এডিশন, আরেকটা ক্লাউড ভার্সন। দুটোর মধ্যে পার্থক্য বুঝলে আপনার জন্য কোনটা ঠিক সেটা বেছে নিতে সুবিধা হবে।</p>
+<p>Nautobot Community Edition সম্পূর্ণ ফ্রি এবং ওপেন-সোর্স। এর কোড GitHub-এ পাওয়া যায়, যে কেউ ডাউনলোড করে নিজের সার্ভারে ইনস্টল করতে পারবে। এতে বেসিক সব ফিচার আছে যেগুলো দিয়ে একটা পূর্ণাঙ্গ NSoT বানানো যায়। সাপোর্টের জন্য আছে কমিউনিটি ফোরাম আর Slack চ্যানেল যেখানে অন্য ইউজাররা আর ডেভেলপাররা সাহায্য করেন। ছোট থেকে মিডিয়াম সাইজ নেটওয়ার্কের জন্য এটা একদম যথেষ্ট।</p>
+<p>অন্যদিকে আছে Nautobot Cloud যেটা পেইড ভার্সন। এটা Network to Code কোম্পানি নিজেই হোস্ট করে দেয়। এর মানে আপনাকে ইনস্টলেশন, মেইনটেন্যান্সের কোনো ঝামেলা পোহাতে হবে না। অটোমেটিক আপডেট হয়ে যাবে। প্রফেশনাল সাপোর্ট পাবেন - মানে কোনো সমস্যা হলে সরাসরি তাদের টিমের কাছ থেকে হেল্প পাবেন। এসএলএ (Service Level Agreement) থাকে যেখানে লেখা থাকে কত সময়ের মধ্যে সমস্যা সমাধান করতে হবে। আর এন্টারপ্রাইজ সিকিউরিটি ফিচারও থাকে যেগুলো বড় অর্গানাইজেশনের জন্য জরুরি।</p>
+<div class="admonition info">
+<p class="admonition-title">আমার রেকমেন্ডেশন</p>
+<p>বাংলাদেশি আইএসপিদের জন্য আমার রেকমেন্ডেশন হলো, প্রথমে Nautobot 3.0 Community Edition দিয়ে শুরু করুন। এটা দিয়ে শিখুন, ছোট স্কেলে ইমপ্লিমেন্ট করুন। আপনার টিম যখন Nautobot-এ স্বাচ্ছন্দ্য বোধ করবে, যখন দেখবেন যে এটা সত্যিই কাজ করছে - তখন পরের ধাপে যেতে পারবেন। যখন আপনার নেটওয়ার্ক অনেক বড় হবে, যখন দুই লক্ষ বা তার বেশি কাস্টমার হবে, যখন ডাউনটাইম একদম মিনিমাল রাখা জরুরি হবে - তখন চিন্তা করতে পারেন পেইড ভার্সনের কথা। কিন্তু শুরুতে ফ্রি ভার্সনই যথেষ্ট।</p>
+<p>আর একটা ভালো খবর হলো, কমিউনিটি এডিশনে বেশিরভাগ ফিচারই আছে যেগুলো আপনার লাগবে। পেইড ভার্সনে যেসব এক্সট্রা জিনিস আছে সেগুলো মূলত এন্টারপ্রাইজ-লেভেল সাপোর্ট আর হোস্টিং রিলেটেড। ফাংশনালিটির দিক থেকে তেমন পার্থক্য নেই। বিশেষ করে <strong>Nautobot 3.0 এর সব নতুন ফিচার - Hierarchical Locations, Unified Roles, Custom Relationships - সব কমিউনিটি এডিশনেই আছে</strong>। আর কমিউনিটি সাপোর্টও বেশ ভালো। Nautobot-এর একটা Slack চ্যানেল আছে (networktocode.slack.com) যেখানে অনেক এক্সপেরিয়েন্সড ইউজার আর ডেভেলপাররা আছেন। তারা সাহায্য করতে পছন্দ করেন। আপনি যদি GitHub-এ কোনো ইস্যু রিপোর্ট করেন বা প্রশ্ন করেন, তাহলে বেশিরভাগ সময়ই দ্রুত রেসপন্স পাবেন। তাই কমিউনিটি ভার্সন দিয়ে শুরু করতে কোনো দ্বিধা থাকা উচিত না।</p>
+</div>
+<p>রেডি তো?</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../two_states/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ইনটেন্ডেড স্টেট বনাম অ্যাকচুয়াল স্টেট">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                ইনটেন্ডেড স্টেট বনাম অ্যাকচুয়াল স্টেট
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../installation2/" class="md-footer__link md-footer__link--next" aria-label="Next: Nautobot ইনস্টলেশন">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Nautobot ইনস্টলেশন
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      সৃজনশীল লাইসেন্সিং ২০২৩ - ২০২৬ &copy; রকিবুল হাসান
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/raqueeb" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://m.me/raqueeb" target="_blank" rel="noopener" title="m.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256.6 8C116.6 8 8 110.3 8 248.6c0 72.3 29.7 134.8 78.1 177.9 8.3 7.5 6.6 11.9 8 58.2.1 3.2 1 6.4 2.6 9.2s3.9 5.2 6.7 6.9 5.9 2.8 9.1 3 6.5-.3 9.5-1.6c52.9-23.2 53.6-25 62.6-22.6 153.2 42.2 319.4-55.9 319.4-231C504 110.3 396.6 8 256.6 8m149.2 185.1-73 115.6c-2.8 4.3-6.4 8.1-10.6 11s-9.1 4.8-14.1 5.8-10.3.8-15.3-.4-9.7-3.4-13.8-6.4l-58.1-43.5c-2.6-1.9-5.8-3-9-3s-6.4 1.1-9 3l-78.4 59.4c-10.5 7.9-24.2-4.6-17.1-15.7l73-115.6c2.8-4.3 6.4-8.1 10.6-11s9.1-4.8 14.1-5.8 10.3-.8 15.3.4 9.7 3.4 13.9 6.4l58.1 43.5c2.6 1.9 5.8 3 9 3s6.4-1.1 9-3l78.4-59.4c10.4-8 24.1 4.5 17.1 15.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="tel:+8801713095767" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157m-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6m101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/raqueeb" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/raqueeb/" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://instagram.com/raqueeb" target="_blank" rel="noopener" title="instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://facebook.com/raqueeb" target="_blank" rel="noopener" title="facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

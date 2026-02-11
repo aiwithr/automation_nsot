@@ -1,0 +1,1653 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="রোড টু হাইটেক ইন্ডাস্ট্রি:আইএসপি অটোমেশন ২">
+      
+      
+        <meta name="author" content="রকিবুল হাসান">
+      
+      
+        <link rel="canonical" href="https://aiwithr.github.io/automation_nsot/two_states/">
+      
+      
+        <link rel="prev" href="../nsot_scale/">
+      
+      
+        <link rel="next" href="../nsot_core/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>ইনটেন্ডেড স্টেট বনাম অ্যাকচুয়াল স্টেট - আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=SiyamRupali:300,300i,400,400i,700,700i%7CSiyamRupali:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"SiyamRupali";--md-code-font:"SiyamRupali"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" class="md-header__button md-logo" aria-label="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ইনটেন্ডেড স্টেট বনাম অ্যাকচুয়াল স্টেট
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/raqueeb/mltraining/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    raqueeb/mltraining
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" class="md-nav__button md-logo" aria-label="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/raqueeb/mltraining/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    raqueeb/mltraining
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ১ মিলিয়ন ইন্টারনেট গ্রাহক
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    পেছনের দর্শন
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    পেছনের দর্শন
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কৃত্রিম বুদ্ধিমত্তা ও নেটওয়ার্ক অটোমেশনের রাস্তা
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    নেটওয়ার্ক সোর্স অফ ট্রুথ (NSoT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dedication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    উৎসর্গ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contents2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    বইয়ের সম্ভাব্য চ্যাপ্টার স্ট্রাকচার NSoT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot_scale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কেন NSoT ছাড়া স্কেল করা অসম্ভব
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ইনটেন্ডেড স্টেট বনাম অ্যাকচুয়াল স্টেট
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ইনটেন্ডেড স্টেট বনাম অ্যাকচুয়াল স্টেট
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        দুটো স্টেটের গল্প
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ইনটেন্ডেড স্টেট - যেমন হওয়ার কথা
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        অ্যাকচুয়াল স্টেট - আসলে যেমন আছে
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        কেন এই দুটো আলাদা হয়ে যায়?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ১. রাত ২টার ইমার্জেন্সি
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ২. একাধিক মানুষ, একাধিক স্টাইল
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৩. টেস্টিং যেটা পার্মানেন্ট হয়ে যায়
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৪. অটোমেশন ছাড়া ম্যানুয়াল চেঞ্জ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        কনফিগারেশন ড্রিফ্ট - সাইলেন্ট কিলার
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ড্রিফ্টের ভয়াবহ পরিণতি
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ড্রিফ্টের ভয়াবহ পরিণতি">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ১. ট্রাবলশুটিং চ্যালেঞ্জ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ২. অটোমেশন ফেইলিউর
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৩. সিকিউরিটি হোল
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৪. টিম কনফিউশন
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ড্রিফ্ট ম্যানেজমেন্ট - সমাধানের রাস্তা
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ড্রিফ্ট ম্যানেজমেন্ট - সমাধানের রাস্তা">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ১. ইনটেন্ডেড স্টেটকে মাস্টার বানানো
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ২. অটোমেশন দিয়ে ডিপ্লয় করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৩. কন্টিনিউয়াস ড্রিফ্ট ডিটেকশন
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        প্র্যাক্টিক্যাল উদাহরণ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        এবং ফাইনালি
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot_core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NSoT-এর কোর প্রিন্সিপাল এবং Nautobot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ইনস্টলেশন
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datamodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ডেটা মডেল - নেটওয়ার্কের যোগসুত্র
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui_organization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI দিয়ে ডেটা এন্ট্রি
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectivity_adv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কানেক্টিভিটি এবং এডভান্সড ফিচার
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fivethousands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ছোট আইএসপি সেটআপ (৫ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiftythousands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    মিডিয়াম আইএসপি সেটআপ (৫০ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API এবং অটোমেশনের শুরু
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv_automation_lac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    এডভান্সড অটোমেশন এবং ১ লক্ষ কাস্টমারের পথে
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mil_customers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ১ মিলিয়ন গ্রাহকের আইএসপি
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    বইটা এখনো লেখা চলছে
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        দুটো স্টেটের গল্প
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ইনটেন্ডেড স্টেট - যেমন হওয়ার কথা
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        অ্যাকচুয়াল স্টেট - আসলে যেমন আছে
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        কেন এই দুটো আলাদা হয়ে যায়?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ১. রাত ২টার ইমার্জেন্সি
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ২. একাধিক মানুষ, একাধিক স্টাইল
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৩. টেস্টিং যেটা পার্মানেন্ট হয়ে যায়
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৪. অটোমেশন ছাড়া ম্যানুয়াল চেঞ্জ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        কনফিগারেশন ড্রিফ্ট - সাইলেন্ট কিলার
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ড্রিফ্টের ভয়াবহ পরিণতি
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ড্রিফ্টের ভয়াবহ পরিণতি">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ১. ট্রাবলশুটিং চ্যালেঞ্জ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ২. অটোমেশন ফেইলিউর
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৩. সিকিউরিটি হোল
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৪. টিম কনফিউশন
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ড্রিফ্ট ম্যানেজমেন্ট - সমাধানের রাস্তা
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ড্রিফ্ট ম্যানেজমেন্ট - সমাধানের রাস্তা">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ১. ইনটেন্ডেড স্টেটকে মাস্টার বানানো
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ২. অটোমেশন দিয়ে ডিপ্লয় করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৩. কন্টিনিউয়াস ড্রিফ্ট ডিটেকশন
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        প্র্যাক্টিক্যাল উদাহরণ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        এবং ফাইনালি
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>ইনটেন্ডেড স্টেট বনাম অ্যাকচুয়াল স্টেট</h1>
+
+<h3 id="_1">দুটো স্টেটের গল্প<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>নেটওয়ার্ক সোর্স অফ ট্রুথ বুঝতে হলে প্রথমে বুঝতে হবে নেটওয়ার্কের দুটো অবস্থার কথা। একটা হলো যেমন হওয়ার কথা, আরেকটা হলো আসলে যেমন আছে। এই দুটোর মধ্যে পার্থক্যটাই হলো বেশিরভাগ নেটওয়ার্ক সমস্যার মূল কারণ।</p>
+<p>একটা সহজ উদাহরণ দিই। ধরুন আপনি একটা বাড়ি বানাচ্ছেন। আর্কিটেক্ট একটা নকশা করে দিলেন। সেই নকশায় লেখা আছে - তিন তলা বিল্ডিং, চারটা রুম প্রতি তলায়, সামনে একটা বারান্দা। এটা হলো আপনার "ইনটেন্ডেড স্টেট" - মানে আপনি বাড়িটা ঠিক এভাবেই বানাতে চান।</p>
+<p>এখন বাড়ি বানানো শুরু হলো। রাজমিস্ত্রি কাজ করছে। হঠাৎ দেখা গেল, দ্বিতীয় তলায় একটা রুম একটু ছোট হয়ে গেছে কারণ মাপ নিতে ভুল হয়েছে। তৃতীয় তলায় বারান্দা একটু বাঁকা হয়ে গেছে কারণ বীম সোজা বসেনি। এটা হলো "অ্যাকচুয়াল স্টেট" - আসলে বাড়িটা যেভাবে দাঁড়িয়েছে।</p>
+<p>নকশা বলছে এক কথা, বাস্তবে হয়েছে আরেক কথা। এই যে পার্থক্য, এটাই সমস্যা। আপনি যদি নকশা দেখে ফার্নিচার কিনে আনেন, তাহলে হয়তো দেখবেন রুমে ঢুকছে না, কারণ রুম ছোট হয়ে গেছে।</p>
+<p>নেটওয়ার্কেও ঠিক এই জিনিসটা হয়।</p>
+<h3 id="-">ইনটেন্ডেড স্টেট - যেমন হওয়ার কথা<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
+<p>ইনটেন্ডেড স্টেট হলো আপনার নেটওয়ার্কের পরিকল্পনা। এটা হলো সেই আদর্শ অবস্থা যেটা আপনি চান। এখানে লেখা থাকে:</p>
+<ul>
+<li>আপনার নেটওয়ার্কে কতগুলো রাউটার থাকবে, কোথায় থাকবে</li>
+<li>প্রতিটা রাউটারের কনফিগারেশন কী হবে</li>
+<li>কোন আইপি রেঞ্জ কোথায় ইউজ হবে</li>
+<li>কোন ভিল্যান কোন কাজে লাগবে</li>
+<li>নেটওয়ার্কের টপোলজি কেমন হবে</li>
+<li>কোন লিংকের ব্যান্ডউইথ কত হবে</li>
+</ul>
+<p>এই সব তথ্য থাকে আপনার ডকুমেন্টেশনে, আপনার ডিজাইনে, আপনার পরিকল্পনায়। এটাই হলো "সত্যের উৎস" - সিঙ্গেল সোর্স অফ ট্রুথ। এটাই হলো সেই জায়গা যেখানে লেখা আছে নেটওয়ার্ক আসলে কেমন হওয়া উচিত।</p>
+<p>একটা উদাহরণ দিই। ধরুন, আপনার ইনটেন্ডেড স্টেটে লেখা আছে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>রাউটার নাম: R-Mirpur-Core-01
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>আইপি অ্যাড্রেস: 10.10.1.1
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>লোকেশন: মিরপুর পপ, র‍্যাক-A
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>ফাংশন: কোর রাউটার
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>আপলিংক: 10 Gbps
+</span></code></pre></div>
+<p>এটাই হলো আপনার প্ল্যান। এটাই হলো যেভাবে এই রাউটারটা থাকা উচিত।</p>
+<h3 id="-_1">অ্যাকচুয়াল স্টেট - আসলে যেমন আছে<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h3>
+<p>অ্যাকচুয়াল স্টেট হলো বাস্তবে আপনার নেটওয়ার্ক এই মুহূর্তে কেমন আছে। মানে, রাউটারে গিয়ে যদি কনফিগ দেখেন, সেখানে কী লেখা আছে। ডিভাইসে গিয়ে দেখলেন আসলে কী সেটিংস আছে।</p>
+<p>এই অ্যাকচুয়াল স্টেটটা থাকে নেটওয়ার্ক ডিভাইসগুলোর রানিং কনফিগারেশনে। প্রতিটা রাউটার, সুইচ, ফায়ারওয়ালে একটা কনফিগ ফাইল থাকে। সেই ফাইলে যা লেখা, সেটাই ডিভাইসটা মানছে। সেটাই তার অ্যাকচুয়াল স্টেট।</p>
+<p>একই উদাহরণে ফিরে যাই। ধরুন, আপনি রাউটারে লগইন করে দেখলেন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>রাউটার নাম: R-Mirpur-Core-01
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>আইপি অ্যাড্রেস: 10.10.1.5
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>লোকেশন: মিরপুর পপ, র‍্যাক-A
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>ফাংশন: কোর রাউটার
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>আপলিংক: 10 Gbps
+</span></code></pre></div>
+<p>দেখুন, এখানে একটা পার্থক্য আছে। ইনটেন্ডেড স্টেটে আইপি ছিল 10.10.1.1, কিন্তু অ্যাকচুয়াল স্টেটে আইপি হয়ে গেছে 10.10.1.5। হয়তো কোনো এক সময় কেউ একটা ইমার্জেন্সিতে এই আইপি চেঞ্জ করেছিল, কিন্তু ডকুমেন্টেশনে আপডেট করতে ভুলে গেছে।</p>
+<p>এই যে পার্থক্য, এটাই হলো সমস্যার শুরু।</p>
+<h3 id="_2">কেন এই দুটো আলাদা হয়ে যায়?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>নেটওয়ার্ক ডিজাইন করার সময় সবকিছু পরিকল্পনা মতো থাকে। কিন্তু যখন নেটওয়ার্ক লাইভ হয়, তখন ম্যানুয়াল চেঞ্জগুলো শুরু হয়। আর এখান থেকেই ইনটেন্ডেড আর অ্যাকচুয়াল স্টেটের মধ্যে ফাঁক তৈরি হয়।</p>
+<h3 id="_3">১. রাত ২টার ইমার্জেন্সি<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>সবচেয়ে বড় কারণ হলো ইমার্জেন্সি সিচুয়েশন। রাত ২টায় ফোন বাজল। একটা এরিয়ার নেট ডাউন। দুই হাজার কাস্টমার অফলাইন। নেটওয়ার্ক ইঞ্জিনিয়ার তাড়াহুড়ো করে ল্যাপটপ খুললেন, রাউটারে ঢুকলেন। দেখলেন একটা ইন্টারফেস ডাউন। তাড়াতাড়ি কনফিগ চেঞ্জ করলেন, ট্রাফিক অন্য পাথে রিডিরেক্ট করলেন। নেট আপ হলো। কাস্টমাররা খুশি।</p>
+<p>কিন্তু ইঞ্জিনিয়ার যেটা করতে ভুলে গেলেন, সেটা হলো এই চেঞ্জটা ডকুমেন্টেশনে আপডেট করা। কারণ তখন তো ইমার্জেন্সি, সময় কোথায়? সকাল হলো, তিনি ভুলে গেলেন। ব্যস, একটা কনফিগারেশন ড্রিফ্ট তৈরি হয়ে গেল।</p>
+<h3 id="_4">২. একাধিক মানুষ, একাধিক স্টাইল<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>আরেকটা বড় কারণ হলো বিভিন্ন টেকনিশিয়ানের বিভিন্ন ওয়ার্কিং স্টাইল। একজন হয়তো খুব সিস্টেমেটিক, সে যখন কিছু চেঞ্জ করে, সাথে সাথে ডকুমেন্ট করে। আরেকজন হয়তো বিশ্বাস করে "যা কাজ করে সেটাই ঠিক", সে ডকুমেন্ট করার ধৈর্য রাখে না।</p>
+<p>ফলাফল? একই নেটওয়ার্কে কিছু অংশ আপডেটেড, কিছু অংশ আউটডেটেড। কেউ জানে না আসলে কোনটা সত্যি।</p>
+<h3 id="_5">৩. টেস্টিং যেটা পার্মানেন্ট হয়ে যায়<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>অনেক সময় টেস্টিং করতে গিয়ে একটা টেম্পোরারি কনফিগ করা হয়। "দেখি তো এটা কাজ করে কিনা।" কাজ করে, ভালো। কিন্তু সেই টেম্পোরারি কনফিগটা রিমুভ করা হয় না। সেটা পার্মানেন্ট হয়ে যায়। আর ডকুমেন্টেশনে সেটার কোনো উল্লেখই নেই।</p>
+<p>ছয় মাস পরে যখন নতুন কেউ সেই নেটওয়ার্ক দেখবে, সে বুঝবে না এই কনফিগ কেন আছে, কী কাজে লাগে, রিমুভ করা যাবে কিনা।</p>
+<h3 id="_6">৪. অটোমেশন ছাড়া ম্যানুয়াল চেঞ্জ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>অনেক নেটওয়ার্কে অটোমেশন নেই। সব চেঞ্জ ম্যানুয়ালি করতে হয়। ম্যানুয়াল মানেই হিউম্যান এরর। একজন টেকনিশিয়ান হয়তো ১০টা রাউটারে একই কনফিগ করবে। সে SSH করে ঢুকছে, কপি-পেস্ট করছে। নবম রাউটারে গিয়ে হয়তো একটা লাইন মিস হয়ে গেল। দশম রাউটারে গিয়ে হয়তো একটা ভুল ভ্যালু দিয়ে দিল।</p>
+<p>ফলে ১০টা রাউটারের কনফিগ সামান্য আলাদা হয়ে গেল। কিন্তু ডকুমেন্টেশনে লেখা আছে সবগুলো একই কনফিগ আছে।</p>
+<h3 id="-_2">কনফিগারেশন ড্রিফ্ট - সাইলেন্ট কিলার<a class="headerlink" href="#-_2" title="Permanent link">&para;</a></h3>
+<p>এই যে ইনটেন্ডেড স্টেট আর অ্যাকচুয়াল স্টেটের মধ্যে পার্থক্য, এটাকে বলা হয় "কনফিগারেশন ড্রিফ্ট"। ইংরেজি Drift শব্দের মানে হলো ভেসে যাওয়া, সরে যাওয়া। আপনার নেটওয়ার্ক ধীরে ধীরে তার আসল ডিজাইন থেকে সরে যাচ্ছে, ভেসে যাচ্ছে।</p>
+<p>এই ড্রিফ্টটা অনেকটা নৌকার মতো। আপনি একটা নৌকা নিয়ে নদীতে ভাসছেন। বেঁধে না রাখলে স্রোতে ভেসে আস্তে আস্তে সরে যাবেন। হয়তো খেয়াল করবেন না, কিন্তু এক ঘণ্টা পরে দেখবেন আপনি অনেক দূরে চলে এসেছেন। </p>
+<p>কনফিগারেশন ড্রিফ্টও তাই। একটু একটু করে তৈরি হয়। প্রতিদিন একটা ছোট চেঞ্জ, আরেকদিন আরেকটা ছোট চেঞ্জ। কয়েক মাস পরে দেখবেন পুরো নেটওয়ার্ক আপনার আসল ডিজাইন থেকে অনেক দূরে চলে গেছে।</p>
+<p>আর সবচেয়ে বড় সমস্যা - আপনি জানেনই না যে এটা হচ্ছে। কারণ কেউ ট্র্যাক করছে না। এরপর আপনি অটোমেশন করতে চাইলে ভুল ডাটার উপর নেটওয়ার্ক তো আর চলবে না। আর, সেখানে এআই তো চিন্তাই করা যাবে না।</p>
+<h2 id="_7">ড্রিফ্টের ভয়াবহ পরিণতি<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>কনফিগারেশন ড্রিফ্ট শুনতে হয়তো বড় কোনো সমস্যা মনে হচ্ছে না। অনেকে বলবেন, "আরে, কনফিগ একটু আলাদা হয়েছে তো কী হয়েছে? নেটওয়ার্ক তো চলছে।" কিন্তু এই ছোট সমস্যা সামনে বড় দুর্ঘটনা ডেকে আনতে পারে।</p>
+<h4 id="_8">১. ট্রাবলশুটিং চ্যালেঞ্জ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>প্রথম সমস্যা হলো ট্রাবলশুটিং। ধরুন, একটা নেটওয়ার্ক সমস্যা হয়েছে। আপনি ডকুমেন্টেশন দেখে বুঝলেন সমস্যাটা কোথায় হতে পারে। একটা রাউটারে গিয়ে চেক করলেন। কিন্তু দেখলেন যে কনফিগটা থাকার কথা, সেটা নেই। আরেকটা কনফিগ আছে যেটার কথা ডকুমেন্টে নেই।</p>
+<p>এখন আপনি কনফিউজড। আসল কনফিগটা কী? কেন এটা আলাদা? এটা কি সমস্যার কারণ, নাকি এটা কোনো পুরোনো ফিক্স? আপনি ঘণ্টার পর ঘণ্টা নষ্ট করবেন শুধু বুঝতে যে আসলে কী হয়েছে।</p>
+<p>আমার নিজের একটা অভিজ্ঞতা শেয়ার করি। একবার একটা আইএসপিতে একটা রাউটিং ইস্যু ছিল। ডকুমেন্ট দেখে মনে হচ্ছিল OSPF ইউজ করা হচ্ছে। কিন্তু রাউটারে গিয়ে দেখি BGP চলছে। আরও দেখি কিছু স্ট্যাটিক রুট আছে যেগুলোর কথা কোথাও লেখা নেই। তিন ঘণ্টা লেগে গিয়েছিল শুধু বুঝতে যে আসলে নেটওয়ার্ক কীভাবে কাজ করছে।</p>
+<h4 id="_9">২. অটোমেশন ফেইলিউর<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>দ্বিতীয় বড় সমস্যা হলো অটোমেশন। যদি আপনি অটোমেশন ইউজ করতে চান, তাহলে আপনার স্ক্রিপ্টকে সঠিক ডেটা দিতে হবে। কিন্তু যদি ড্রিফ্ট থাকে, তাহলে আপনার ডেটাই ভুল। সামনে এআই নিয়ে কাজ করতে চাইলেও সেটা করা সম্ভব না।</p>
+<p>একটা উদাহরণ দিই। ধরুন, আপনি একটা স্ক্রিপ্ট লিখলেন যেটা সব রাউটারে গিয়ে একটা সিকিউরিটি প্যাচ অ্যাপ্লাই করবে। স্ক্রিপ্ট NSoT থেকে রাউটারের লিস্ট নিল, তাদের আইপি অ্যাড্রেস নিল, কানেক্ট করতে গেল।</p>
+<p>কিন্তু দেখা গেল, ১০টা রাউটারের মধ্যে ৩টার আইপি চেঞ্জ হয়ে গেছে কয়েক মাস আগে, কিন্তু NSoT-এ আপডেট হয়নি। স্ক্রিপ্ট সেই পুরোনো আইপিতে কানেক্ট করতে গেল, ফেইল করল। ফলে সেই ৩টা রাউটারে প্যাচ অ্যাপ্লাই হলো না। আর আপনি জানেনই না যে এটা হয়নি।</p>
+<p>এক মাস পরে সেই আনপ্যাচড রাউটারের কোনো একটা হ্যাক হয়ে গেল। কারণ সিকিউরিটি আপডেট ছিল না। কার দোষ? ড্রিফ্টের।</p>
+<h4 id="_10">৩. সিকিউরিটি হোল<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>তৃতীয় সমস্যা হলো সিকিউরিটি। যখন আপনি জানেন না আপনার নেটওয়ার্কে আসলে কী কনফিগ আছে, তখন আপনি জানেন না কোথায় কোথায় সিকিউরিটি হোল আছে।</p>
+<p>হয়তো একবার টেস্টিং করতে একটা পোর্ট ওপেন করা হয়েছিল। টেস্ট শেষ হওয়ার পরে বন্ধ করার কথা ছিল, কিন্তু ভুলে গেছে। এখন সেই পোর্ট দিয়ে যে কেউ ঢুকতে পারবে। আর আপনি জানেনই না যে এই পোর্ট ওপেন আছে, কারণ ডকুমেন্টেশনে এটার কথা নেই।</p>
+<p>অথবা হয়তো কোনো একটা ডিভাইসে ডিফল্ট পাসওয়ার্ড আছে। চেঞ্জ করার কথা ছিল, কিন্তু হয়নি। এটাও ড্রিফ্টের কারণে - আসল পলিসি বলছে "সব ডিভাইসে স্ট্রং পাসওয়ার্ড থাকতে হবে", কিন্তু বাস্তবে একটা ডিভাইসে ডিফল্ট পাসওয়ার্ড রয়ে গেছে।</p>
+<h4 id="_11">৪. টিম কনফিউশন<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p>চতুর্থ সমস্যা হলো টিম কোলাবরেশন। যখন একাধিক মানুষ একই নেটওয়ার্কে কাজ করে, তখন সবাইকে জানতে হবে নেটওয়ার্ক কেমন আছে। কিন্তু যদি ড্রিফ্ট থাকে, তাহলে একেকজন একেক জিনিস জানবে।</p>
+<p>একজন মনে করছে রাউটার A-তে ভিল্যান ১০০ কনফিগার করা আছে। আরেকজন জানে যে সেটা আসলে ভিল্যান ২০০। তৃতীয়জন জানেই না এটা নিয়ে। এখন যদি এই তিনজন মিলে কোনো চেঞ্জ করতে যায়, তাহলে হবে বিপদ। একজন ভিল্যান ১০০-এর জন্য কনফিগ করবে, আরেকজন ভিল্যান ২০০-এর জন্য - রেজাল্ট হবে নেটওয়ার্ক আউটেজ।</p>
+<h2 id="-_3">ড্রিফ্ট ম্যানেজমেন্ট - সমাধানের রাস্তা<a class="headerlink" href="#-_3" title="Permanent link">&para;</a></h2>
+<p>এখন প্রশ্ন হলো, এই ড্রিফ্ট প্রবলেম থেকে বাঁচবেন কীভাবে? উত্তর হলো - NSoT দিয়ে।</p>
+<p>NSoT-এর মূল কাজই হলো নিশ্চিত করা যে ইনটেন্ডেড স্টেট আর অ্যাকচুয়াল স্টেট সবসময় মিলে থাকে। এটা কীভাবে করে?</p>
+<h3 id="_12">১. ইনটেন্ডেড স্টেটকে মাস্টার বানানো<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>প্রথমে আপনি ঠিক করেন যে NSoT হবে আপনার একমাত্র সত্যের উৎস। এটাই বলবে নেটওয়ার্ক কেমন হবে। সব তথ্য এখানে রাখা হবে - ডিভাইস, আইপি, ভিল্যান, কনফিগ, পাওয়ার ম্যানেজমেন্ট, র‍্যাক সবকিছু।</p>
+<p>এটা অনেকটা ব্যাংকের লেজার বইয়ের মতো। যেখানে প্রতিটা ট্রানজ্যাকশন লেখা হয়। সেটাই হলো আসল রেকর্ড। কারো পকেটে কত টাকা আছে সেটা মুখে বললে কাজ হবে না, লেজার বইয়ে যা লেখা আছে সেটাই সত্যি।</p>
+<h3 id="_13">২. অটোমেশন দিয়ে ডিপ্লয় করা<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>তারপর, যখন কোনো চেঞ্জ করতে হবে, সেটা আগে NSoT-এ করা হবে। তারপর অটোমেশন টুল NSoT থেকে ডেটা নিয়ে ডিভাইসে অ্যাপ্লাই করবে। এতে নিশ্চিত হওয়া যায় যে যা NSoT-এ আছে, সেটাই ডিভাইসে অ্যাপ্লাই হয়েছে।</p>
+<p>ম্যানুয়াল চেঞ্জ নিষিদ্ধ না, কিন্তু রুল হবে - ম্যানুয়াল চেঞ্জ করলেও সাথে সাথে NSoT আপডেট করতে হবে অথবা অটোমেশন দিয়ে সঠিক ডাটা আনতে হবে। আর যত তাড়াতাড়ি সম্ভব সেই চেঞ্জটাকে অটোমেশনের মাধ্যমে রিপ্লে করতে হবে। এতে নিশ্চিত হওয়া যায় অটোমেশন টুল সেই চেঞ্জ সম্পর্কে জানে।</p>
+<h3 id="_14">৩. কন্টিনিউয়াস ড্রিফ্ট ডিটেকশন<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>তৃতীয় এবং সবচেয়ে গুরুত্বপূর্ণ - ড্রিফ্ট ডিটেকশন। এর মানে হলো, নিয়মিত চেক করা হবে যে NSoT-এ যা লেখা আছে আর ডিভাইসে যা আছে, সেটা মিলছে কিনা।</p>
+<p>এটা করা হয় অটোমেটেড স্ক্রিপ্ট দিয়ে। প্রতিদিন বা প্রতি সপ্তাহে একটা স্ক্রিপ্ট চলবে যেটা:</p>
+<ol>
+<li>NSoT থেকে ইনটেন্ডেড কনফিগ নেবে</li>
+<li>ডিভাইস থেকে অ্যাকচুয়াল কনফিগ নেবে</li>
+<li>দুটোকে কম্পেয়ার করবে</li>
+<li>যদি কোনো পার্থক্য পায়, রিপোর্ট করবে</li>
+</ol>
+<p>এই রিপোর্ট দেখে আপনি বুঝবেন কোথায় ড্রিফ্ট হয়েছে। তারপর ডিসিশন নেবেন - হয় ডিভাইসের কনফিগ ঠিক করবেন NSoT অনুযায়ী, নাহয় NSoT আপডেট করবেন ডিভাইস অনুযায়ী।</p>
+<h2 id="_15">প্র্যাক্টিক্যাল উদাহরণ<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<p>চলুন একটা রিয়েল লাইফ সিনারিও দেখি কীভাবে ড্রিফ্ট হয় আর কীভাবে ম্যানেজ করা যায়।</p>
+<p>সাকিব একটা মিডিয়াম সাইজ আইএসপিতে কাজ করে। তাদের নেটওয়ার্কে ৫০টা রাউটার আছে। একদিন রাত ১০টায় ফোন এলো - মগবাজার এরিয়ার নেট ডাউন।</p>
+<p>সাকিব দ্রুত ল্যাপটপ খুলল। দেখল মগবাজারের মেইন রাউটারে একটা ইন্টারফেস ডাউন। ব্যাকআপ রাউটার আছে, কিন্তু ট্রাফিক অটোমেটিক সুইচ হচ্ছে না। দ্রুত একটা স্ট্যাটিক রুট দিয়ে ট্রাফিক রিডিরেক্ট করল ব্যাকআপ পাথে। নেট আপ হলো। কাস্টমাররা খুশি।</p>
+<p>কিন্তু সাকিব NSoT আপডেট করতে ভুলে গেল। পরদিন অফিসেও মনে পড়ল না।</p>
+<p>দুই সপ্তাহ পরে, তাদের টিম একটা মেজর নেটওয়ার্ক আপগ্রেড প্ল্যান করছে। তারা NSoT দেখে দেখে সব রাউটারের লিস্ট বানাল। প্ল্যান করল কোন রাউটারে কী কী চেঞ্জ হবে।</p>
+<p>আপগ্রেডের দিন, অটোমেশন স্ক্রিপ্ট চলল। সব রাউটারে নতুন কনফিগ পুশ করা হলো। কিন্তু মগবাজারের রাউটারে যখন কনফিগ গেল, সেই স্ট্যাটিক রুট মুছে গেল। কারণ NSoT-এ তো সেটার কথা ছিল না। </p>
+<p>রেজাল্ট? মগবাজার আবার ডাউন। আবার ইমার্জেন্সি। আবার ফিক্স করতে হলো।</p>
+<p>এটাই হলো ড্রিফ্টের ক্লাসিক উদাহরণ। যদি সাকিব সেদিন NSoT আপডেট করত, অথবা যদি তাদের ড্রিফ্ট ডিটেকশন সিস্টেম থাকত, তাহলে এই সমস্যা হতো না।</p>
+<h2 id="_16">এবং ফাইনালি<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<p>ইনটেন্ডেড স্টেট আর অ্যাকচুয়াল স্টেট - এই দুটো কনসেপ্ট বোঝাটা জরুরি। ইনটেন্ডেড স্টেট হলো আপনার প্ল্যান, আপনার ডিজাইন, যেটা NSoT-এ থাকে। অ্যাকচুয়াল স্টেট হলো বাস্তবে নেটওয়ার্ক কেমন আছে, যেটা ডিভাইসের কনফিগে থাকে।</p>
+<p>এই দুটোর মধ্যে পার্থক্য হলো কনফিগারেশন ড্রিফ্ট। আর এই ড্রিফ্ট হলো নীরব ঘাতক - ধীরে ধীরে আপনার নেটওয়ার্ককে অস্থিতিশীল করে তোলে।</p>
+<p>NSoT-এর মূল লক্ষ্য হলো এই ড্রিফ্ট ম্যানেজ করা। নিশ্চিত করা যে আপনার প্ল্যান আর বাস্তবতা সবসময় মিলে থাকে। যাতে আপনি জানেন আপনার নেটওয়ার্ক আসলে কেমন আছে, আর যেকোনো সময় সঠিক সিদ্ধান্ত নিতে পারেন।</p>
+<p>পরের চ্যাপ্টারে আমরা দেখব NSoT-এর কোর প্রিন্সিপালগুলো কী কী, আর কীভাবে এটা কাজ করে।</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../nsot_scale/" class="md-footer__link md-footer__link--prev" aria-label="Previous: কেন NSoT ছাড়া স্কেল করা অসম্ভব">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                কেন NSoT ছাড়া স্কেল করা অসম্ভব
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../nsot_core/" class="md-footer__link md-footer__link--next" aria-label="Next: NSoT-এর কোর প্রিন্সিপাল এবং Nautobot">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                NSoT-এর কোর প্রিন্সিপাল এবং Nautobot
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      সৃজনশীল লাইসেন্সিং ২০২৩ - ২০২৬ &copy; রকিবুল হাসান
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/raqueeb" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://m.me/raqueeb" target="_blank" rel="noopener" title="m.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256.6 8C116.6 8 8 110.3 8 248.6c0 72.3 29.7 134.8 78.1 177.9 8.3 7.5 6.6 11.9 8 58.2.1 3.2 1 6.4 2.6 9.2s3.9 5.2 6.7 6.9 5.9 2.8 9.1 3 6.5-.3 9.5-1.6c52.9-23.2 53.6-25 62.6-22.6 153.2 42.2 319.4-55.9 319.4-231C504 110.3 396.6 8 256.6 8m149.2 185.1-73 115.6c-2.8 4.3-6.4 8.1-10.6 11s-9.1 4.8-14.1 5.8-10.3.8-15.3-.4-9.7-3.4-13.8-6.4l-58.1-43.5c-2.6-1.9-5.8-3-9-3s-6.4 1.1-9 3l-78.4 59.4c-10.5 7.9-24.2-4.6-17.1-15.7l73-115.6c2.8-4.3 6.4-8.1 10.6-11s9.1-4.8 14.1-5.8 10.3-.8 15.3.4 9.7 3.4 13.9 6.4l58.1 43.5c2.6 1.9 5.8 3 9 3s6.4-1.1 9-3l78.4-59.4c10.4-8 24.1 4.5 17.1 15.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="tel:+8801713095767" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157m-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6m101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/raqueeb" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/raqueeb/" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://instagram.com/raqueeb" target="_blank" rel="noopener" title="instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://facebook.com/raqueeb" target="_blank" rel="noopener" title="facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

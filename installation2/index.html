@@ -1,0 +1,2215 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="রোড টু হাইটেক ইন্ডাস্ট্রি:আইএসপি অটোমেশন ২">
+      
+      
+        <meta name="author" content="রকিবুল হাসান">
+      
+      
+        <link rel="canonical" href="https://aiwithr.github.io/automation_nsot/installation2/">
+      
+      
+        <link rel="prev" href="../nsot_core/">
+      
+      
+        <link rel="next" href="../datamodel/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Nautobot ইনস্টলেশন - আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=SiyamRupali:300,300i,400,400i,700,700i%7CSiyamRupali:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"SiyamRupali";--md-code-font:"SiyamRupali"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nautobot-30" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" class="md-header__button md-logo" aria-label="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Nautobot ইনস্টলেশন
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/raqueeb/mltraining/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    raqueeb/mltraining
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" class="md-nav__button md-logo" aria-label="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/raqueeb/mltraining/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    raqueeb/mltraining
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ১ মিলিয়ন ইন্টারনেট গ্রাহক
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    পেছনের দর্শন
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    পেছনের দর্শন
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কৃত্রিম বুদ্ধিমত্তা ও নেটওয়ার্ক অটোমেশনের রাস্তা
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    নেটওয়ার্ক সোর্স অফ ট্রুথ (NSoT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dedication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    উৎসর্গ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contents2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    বইয়ের সম্ভাব্য চ্যাপ্টার স্ট্রাকচার NSoT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot_scale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কেন NSoT ছাড়া স্কেল করা অসম্ভব
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../two_states/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ইনটেন্ডেড স্টেট বনাম অ্যাকচুয়াল স্টেট
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot_core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NSoT-এর কোর প্রিন্সিপাল এবং Nautobot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ইনস্টলেশন
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ইনস্টলেশন
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nautobot-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        কেন Nautobot 3.0?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সিস্টেম রিকোয়ারমেন্ট
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="সিস্টেম রিকোয়ারমেন্ট">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skynet-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        হার্ডওয়্যার রিকোয়ারমেন্ট (SkyNet-এর সাইজের জন্য):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সফটওয়্যার রিকোয়ারমেন্ট:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ইনস্টলেশন পদ্ধতি - কোনটা বেছে নেবেন?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        পদ্ধতি ১: Docker দিয়ে দ্রুত শুরু
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="পদ্ধতি ১: Docker দিয়ে দ্রুত শুরু">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ১: সার্ভার প্রস্তুত করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ২: Docker ইনস্টল করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nautobot-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৩: Nautobot Docker Compose সেটআপ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nautobot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৪: Nautobot চালু করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৫: প্রথম লগইন
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker সেটআপের সীমাবদ্ধতা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traditional-installation-production-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        পদ্ধতি ২: Traditional Installation (Production-Ready)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="পদ্ধতি ২: Traditional Installation (Production-Ready)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-2404-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ১: নতুন Ubuntu 24.04 Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ২: PostgreSQL ডেটাবেস সেটআপ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৩: Redis সেটআপ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nautobot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৪: Nautobot ইউজার তৈরি
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-virtual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৫: Python Virtual Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nautobot-30_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৬: Nautobot 3.0 ইনস্টল করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nautobot-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৭: Nautobot Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-files-logs-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৮: Static Files এবং Logs Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৯: Database Migration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#superuser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ১০: Superuser তৈরি
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-files-collect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ১১: Static Files Collect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-service-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ১২: Systemd Service Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datamodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ডেটা মডেল - নেটওয়ার্কের যোগসুত্র
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui_organization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI দিয়ে ডেটা এন্ট্রি
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectivity_adv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কানেক্টিভিটি এবং এডভান্সড ফিচার
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fivethousands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ছোট আইএসপি সেটআপ (৫ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiftythousands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    মিডিয়াম আইএসপি সেটআপ (৫০ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API এবং অটোমেশনের শুরু
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv_automation_lac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    এডভান্সড অটোমেশন এবং ১ লক্ষ কাস্টমারের পথে
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mil_customers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ১ মিলিয়ন গ্রাহকের আইএসপি
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    বইটা এখনো লেখা চলছে
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nautobot-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        কেন Nautobot 3.0?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সিস্টেম রিকোয়ারমেন্ট
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="সিস্টেম রিকোয়ারমেন্ট">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skynet-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        হার্ডওয়্যার রিকোয়ারমেন্ট (SkyNet-এর সাইজের জন্য):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সফটওয়্যার রিকোয়ারমেন্ট:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ইনস্টলেশন পদ্ধতি - কোনটা বেছে নেবেন?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        পদ্ধতি ১: Docker দিয়ে দ্রুত শুরু
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="পদ্ধতি ১: Docker দিয়ে দ্রুত শুরু">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ১: সার্ভার প্রস্তুত করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ২: Docker ইনস্টল করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nautobot-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৩: Nautobot Docker Compose সেটআপ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nautobot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৪: Nautobot চালু করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৫: প্রথম লগইন
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker সেটআপের সীমাবদ্ধতা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traditional-installation-production-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        পদ্ধতি ২: Traditional Installation (Production-Ready)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="পদ্ধতি ২: Traditional Installation (Production-Ready)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-2404-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ১: নতুন Ubuntu 24.04 Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ২: PostgreSQL ডেটাবেস সেটআপ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৩: Redis সেটআপ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nautobot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৪: Nautobot ইউজার তৈরি
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-virtual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৫: Python Virtual Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nautobot-30_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৬: Nautobot 3.0 ইনস্টল করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nautobot-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৭: Nautobot Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-files-logs-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৮: Static Files এবং Logs Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ৯: Database Migration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#superuser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ১০: Superuser তৈরি
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-files-collect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ১১: Static Files Collect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-service-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ১২: Systemd Service Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Nautobot ইনস্টলেশন</h1>
+
+<p>SkyNets Bangladesh আইএসপি হিসেবে বেশ নাম করেছে। ঢাকা নর্থ জোনে মূলতঃ তাদের নেটওয়ার্ক। বর্তমানে মিরপুর এবং উত্তরায় দুটো পপ, প্রায় ৫ হাজার কাস্টমার। তারা সিদ্ধান্ত নিয়েছে এক্সেল শিট/গুগল শিট এবং হাতে আঁকা ডায়াগ্রাম ছেড়ে একটা প্রপার Network Source of Truth সিস্টেম বানাবে। তাদের লক্ষ্য পরের দুই বছরে ৫০ হাজার কাস্টমারে পৌঁছানো, আর তারপর ১ লক্ষ। এজন্য দরকার একটা শক্ত ফাউন্ডেশন। সেই ফাউন্ডেশনের নাম Nautobot 3.0।</p>
+<p>এই চ্যাপ্টারে আমরা দেখব কীভাবে SkyNets Bangladesh তাদের নেটওয়ার্কের জন্য Nautobot 3.0 ইনস্টল এবং সেটআপ করেছে। আপনিও একইভাবে আপনার ISP-এর জন্য সেটআপ করতে পারবেন।</p>
+<h3 id="nautobot-30">কেন Nautobot 3.0?<a class="headerlink" href="#nautobot-30" title="Permanent link">&para;</a></h3>
+<p>প্রথম প্রশ্ন - কেন Nautobot 3.0? কেন Nautobot 2.x না?</p>
+<p><strong>Nautobot 3.0-এর মূল সুবিধা:</strong></p>
+<ol>
+<li>
+<p><strong>Flexible Location Hierarchy:</strong> আগে Sites একটা ফ্ল্যাট স্ট্রাকচার ছিল। এখন Locations দিয়ে যত খুশি লেভেলের hierarchy বানাতে পারবেন। Zone → Cluster → POP → Building → Floor - যেভাবে চান সাজান।</p>
+</li>
+<li>
+<p><strong>Unified Role System:</strong> ডিভাইস রোল, র‍্যাক রোল, IPAM রোল - সব আলাদা আলাদা ছিল। এখন একটা unified Roles system। এক জায়গা থেকে সব ম্যানেজ করুন।</p>
+</li>
+<li>
+<p><strong>Custom Relationships:</strong> দুটো যেকোনো অবজেক্টের মধ্যে custom relationship তৈরি করতে পারবেন। যেমন "Device supports Customer" - এরকম relationship।</p>
+</li>
+<li>
+<p><strong>Better Performance:</strong> ডেটাবেস optimization, faster queries, improved UI responsiveness।</p>
+</li>
+<li>
+<p><strong>GraphQL API:</strong> REST API-এর পাশাপাশি GraphQL support। জটিল query সহজে করা যায়।</p>
+</li>
+<li>
+<p><strong>Plugin Ecosystem:</strong> আরো শক্তিশালী plugin system। Golden Config, Device Lifecycle Management - এসব plugin সহজে integrate করা যায়।</p>
+</li>
+</ol>
+<p>SkyNets Bangladesh এই কারণে 3.0 বেছে নিয়েছে। তারা জানে ভবিষ্যতে scaling করতে হবে, তাই শুরু থেকেই সবচেয়ে আধুনিক ভার্সন দিয়ে শুরু করছে।</p>
+<h3 id="_1">সিস্টেম রিকোয়ারমেন্ট<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>Nautobot চালাতে হলে একটা লিনাক্স সার্ভার দরকার। SkyNet Bangladesh-এর ক্ষেত্রে তারা একটা ডেডিকেটেড Ubuntu server সেটআপ করেছে।</p>
+<h4 id="skynet-">হার্ডওয়্যার রিকোয়ারমেন্ট (SkyNet-এর সাইজের জন্য):<a class="headerlink" href="#skynet-" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>CPU: 4 cores (Intel/AMD)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>RAM: 8 GB (minimum), 16 GB (recommended)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Storage: 100 GB SSD
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Network: 1 Gbps ethernet
+</span></code></pre></div>
+<p>যদি আপনার নেটওয়ার্ক খুব ছোট হয় (১-২ হাজার কাস্টমার), তাহলে 2 cores এবং 4 GB RAM দিয়েও চলবে। কিন্তু future-proofing-এর জন্য একটু বেশি নেওয়া ভালো।</p>
+<h4 id="_2">সফটওয়্যার রিকোয়ারমেন্ট:<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Operating System: Ubuntu 24.04 LTS (recommended)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>                  অথবা Ubuntu 22.04 LTS
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>                  অথবা Debian 12
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Python: 3.11 বা তার উপরে
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>PostgreSQL: 13 বা তার উপরে
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Redis: 6.0 বা তার উপরে
+</span></code></pre></div>
+<p>SkyNet Ubuntu 24.04 LTS বেছে নিয়েছে কারণ এটা long-term support পাবে ২০২৯ সাল পর্যন্ত।</p>
+<h3 id="-">ইনস্টলেশন পদ্ধতি - কোনটা বেছে নেবেন?<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
+<p>Nautobot ইনস্টল করার দুটো প্রধান উপায়:</p>
+<p><strong>১. Docker দিয়ে (সহজ, দ্রুত)</strong></p>
+<ul>
+<li>১০-১৫ মিনিটে চালু করা যায়</li>
+<li>Development/testing-এর জন্য পারফেক্ট</li>
+<li>Production-এও চলে কিন্তু কাস্টমাইজেশন কম</li>
+</ul>
+<p><strong>২. Traditional Installation (সম্পূর্ণ নিয়ন্ত্রণ নিজ হাতে)</strong></p>
+<ul>
+<li>একটু সময় লাগে (৩০-৪৫ মিনিট)</li>
+<li>Production-এর জন্য best</li>
+<li>সব কিছু নিজের মতো সাজানো যায়</li>
+</ul>
+<p>SkyNet Bangladesh দুটো পদ্ধতিই অনুসরণ করেছে:</p>
+<ul>
+<li>প্রথমে Docker দিয়ে টেস্ট করেছে</li>
+<li>তারপর Production-এর জন্য Traditional Installation করেছে </li>
+</ul>
+<p>আমরা দুটোই দেখব।</p>
+<hr />
+<h3 id="docker">পদ্ধতি ১: Docker দিয়ে দ্রুত শুরু<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h3>
+<h4 id="_3">স্টেপ ১: সার্ভার প্রস্তুত করা<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>একটা নতুন Ubuntu 24.04 সার্ভার নিন। SkyNet একটা VM ব্যবহার করেছে তাদের NOC-এর ভেতরে।</p>
+<p>SSH করে সার্ভারে লগইন করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh<span class="w"> </span>admin@nautobot-server.skynet.bd
+</span></code></pre></div>
+<p>সিস্টেম আপডেট করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+</span></code></pre></div>
+<h4 id="docker_1">স্টেপ ২: Docker ইনস্টল করা<a class="headerlink" href="#docker_1" title="Permanent link">&para;</a></h4>
+<p>Docker এবং Docker Compose ইনস্টল করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Docker এর official GPG key যোগ করুন</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg<span class="w"> </span>-y
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>sudo<span class="w"> </span>install<span class="w"> </span>-m<span class="w"> </span><span class="m">0755</span><span class="w"> </span>-d<span class="w"> </span>/etc/apt/keyrings
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/docker.gpg
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>a+r<span class="w"> </span>/etc/apt/keyrings/docker.gpg
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Repository যোগ করুন</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="s2">  </span><span class="k">$(</span>.<span class="w"> </span>/etc/os-release<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VERSION_CODENAME</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2"> stable&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/docker.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1"># Docker ইনস্টল করুন</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>docker-buildx-plugin<span class="w"> </span>docker-compose-plugin<span class="w"> </span>-y
+</span></code></pre></div>
+<p>যাচাই করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>docker<span class="w"> </span>--version
+</span></code></pre></div>
+<p>দেখাবে: <code>Docker version 24.0.7, build...</code></p>
+<h4 id="nautobot-docker-compose">স্টেপ ৩: Nautobot Docker Compose সেটআপ<a class="headerlink" href="#nautobot-docker-compose" title="Permanent link">&para;</a></h4>
+<p>Nautobot-এর official docker compose repository clone করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>/opt
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/nautobot/nautobot-docker-compose.git
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nb">cd</span><span class="w"> </span>nautobot-docker-compose
+</span></code></pre></div>
+<p>Environment configuration তৈরি করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>cp<span class="w"> </span>development/creds.example.env<span class="w"> </span>development/creds.env
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>sudo<span class="w"> </span>cp<span class="w"> </span>development/dev.env<span class="w"> </span>.env
+</span></code></pre></div>
+<p>এখন configuration ফাইল এডিট করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>development/creds.env
+</span></code></pre></div>
+<p>গুরুত্বপূর্ণ সেটিংস:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Database credentials</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nv">NAUTOBOT_DB_USER</span><span class="o">=</span>nautobot
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nv">NAUTOBOT_DB_PASSWORD</span><span class="o">=</span>SkyNet@2025<span class="nv">$Secure</span><span class="w">  </span><span class="c1"># শক্তিশালী পাসওয়ার্ড দিন</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>SkyNet@2025<span class="nv">$PostgreSQL</span><span class="w">  </span><span class="c1"># আলাদা শক্তিশালী পাসওয়ার্ড</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="c1"># Nautobot superuser</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nv">NAUTOBOT_CREATE_SUPERUSER</span><span class="o">=</span><span class="nb">true</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="nv">NAUTOBOT_SUPERUSER_USERNAME</span><span class="o">=</span>admin
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="nv">NAUTOBOT_SUPERUSER_PASSWORD</span><span class="o">=</span>SkyNet@Admin2025!<span class="w">  </span><span class="c1"># শক্তিশালী পাসওয়ার্ড</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="nv">NAUTOBOT_SUPERUSER_EMAIL</span><span class="o">=</span>admin@skynet.bd
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="nv">NAUTOBOT_SUPERUSER_API_TOKEN</span><span class="o">=</span>0123456789abcdef0123456789abcdef01234567<span class="w">  </span><span class="c1"># Random 40-char token</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="c1"># Redis password</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="nv">NAUTOBOT_REDIS_PASSWORD</span><span class="o">=</span>SkyNet@Redis2025$
+</span></code></pre></div>
+<p><code>.env</code> ফাইল এডিট করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>.env
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">NAUTOBOT_IMAGE</span><span class="o">=</span>networktocode/nautobot:3.0-py3.11
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nv">NAUTOBOT_VERSION</span><span class="o">=</span><span class="m">3</span>.0.0
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># SkyNet specific settings</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="nv">NAUTOBOT_ALLOWED_HOSTS</span><span class="o">=</span>nautobot.skynet.bd,localhost,127.0.0.1
+</span></code></pre></div>
+<p>সেভ করুন (Ctrl+O, Enter, Ctrl+X)।</p>
+<h4 id="nautobot">স্টেপ ৪: Nautobot চালু করা<a class="headerlink" href="#nautobot" title="Permanent link">&para;</a></h4>
+<p>Docker containers শুরু করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</span></code></pre></div>
+<p>প্রথমবার চালালে সব images download হবে। ৫-১০ মিনিট লাগতে পারে (ইন্টারনেট স্পিডের উপর নির্ভর করে)।</p>
+<p>আউটপুট দেখাবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>[+] Running 5/5
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a> ✔ Container nautobot-redis-1     Started
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a> ✔ Container nautobot-db-1        Started
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a> ✔ Container nautobot-nautobot-1  Started
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a> ✔ Container nautobot-celery-worker-1  Started
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a> ✔ Container nautobot-celery-beat-1    Started
+</span></code></pre></div>
+<p>স্ট্যাটাস চেক করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>ps
+</span></code></pre></div>
+<p>সব containers "healthy" বা "running" দেখাবে।</p>
+<h4 id="_4">স্টেপ ৫: প্রথম লগইন<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>ব্রাউজারে যান:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>http://your-server-ip:8080
+</span></code></pre></div>
+<p>SkyNet-এর ক্ষেত্রে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>http://192.168.10.50:8080
+</span></code></pre></div>
+<p>লগইন পেজ দেখাবে। আপনার সুপারইউজার ক্রেডেনশিয়াল দিয়ে লগইন করুন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Username: admin
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Password: SkyNet@Admin2025!
+</span></code></pre></div>
+<p>অভিনন্দন! Nautobot 3.0 চালু হয়ে গেছে।</p>
+<h4 id="docker_2">Docker সেটআপের সীমাবদ্ধতা<a class="headerlink" href="#docker_2" title="Permanent link">&para;</a></h4>
+<p>Docker দিয়ে শুরু করা সহজ, কিন্তু কিছু সীমাবদ্ধতা আছে:</p>
+<ul>
+<li>Custom plugins ইনস্টল করা জটিল</li>
+<li>Performance tuning সীমিত</li>
+<li>Backup/restore complex</li>
+<li>Production-grade SSL/Nginx setup লাগে extra কাজ</li>
+</ul>
+<p>এজন্য SkyNet Bangladesh production-এর জন্য Traditional Installation বেছে নিয়েছে।</p>
+<hr />
+<h3 id="traditional-installation-production-ready">পদ্ধতি ২: Traditional Installation (Production-Ready)<a class="headerlink" href="#traditional-installation-production-ready" title="Permanent link">&para;</a></h3>
+<p>এখন দেখব কীভাবে SkyNet Bangladesh তাদের production Nautobot server সেটআপ করেছে। এটা একটু সময় সাপেক্ষ কিন্তু সম্পূর্ণ নিয়ন্ত্রণ পাবেন।</p>
+<h4 id="ubuntu-2404-server">স্টেপ ১: নতুন Ubuntu 24.04 Server<a class="headerlink" href="#ubuntu-2404-server" title="Permanent link">&para;</a></h4>
+<p>একটা ফ্রেশ Ubuntu 24.04 LTS সার্ভার নিন। SSH করে লগইন করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ssh<span class="w"> </span>admin@nautobot.skynet.bd
+</span></code></pre></div>
+<p>সিস্টেম আপডেট:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+</span></code></pre></div>
+<p>প্রয়োজনীয় প্যাকেজ ইনস্টল:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span>python3.11<span class="w"> </span>python3.11-venv<span class="w"> </span>python3-pip<span class="w"> </span>python3-dev<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span>build-essential<span class="w"> </span>libxml2-dev<span class="w"> </span>libxslt1-dev<span class="w"> </span>libffi-dev<span class="w"> </span>libpq-dev<span class="w"> </span>libssl-dev<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">  </span>zlib1g-dev<span class="w"> </span>redis-server<span class="w"> </span>postgresql<span class="w"> </span>postgresql-contrib<span class="w"> </span>nginx
+</span></code></pre></div>
+<h4 id="postgresql">স্টেপ ২: PostgreSQL ডেটাবেস সেটআপ<a class="headerlink" href="#postgresql" title="Permanent link">&para;</a></h4>
+<p>PostgreSQL ডেটাবেস এবং ইউজার তৈরি করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># PostgreSQL-এ যান</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>psql
+</span></code></pre></div>
+<p>PostgreSQL প্রম্পটে:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1">-- Nautobot database তৈরি</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">nautobot</span><span class="p">;</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="c1">-- Nautobot user তৈরি</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">nautobot</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">PASSWORD</span><span class="w"> </span><span class="s1">&#39;SkyNet@DB2025$Secure&#39;</span><span class="p">;</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="c1">-- User-কে database access দিন</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">nautobot</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">client_encoding</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;utf8&#39;</span><span class="p">;</span>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">nautobot</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">default_transaction_isolation</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;read committed&#39;</span><span class="p">;</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">nautobot</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">timezone</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;Asia/Dhaka&#39;</span><span class="p">;</span>
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="c1">-- সব privileges দিন</span>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">nautobot</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">nautobot</span><span class="p">;</span>
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="c1">-- Database owner করুন</span>
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">nautobot</span><span class="w"> </span><span class="k">OWNER</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">nautobot</span><span class="p">;</span>
+</span><span id="__span-22-17"><a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a>
+</span><span id="__span-22-18"><a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a><span class="c1">-- বের হন</span>
+</span><span id="__span-22-19"><a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a><span class="err">\</span><span class="n">q</span>
+</span></code></pre></div>
+<p>যাচাই করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>nautobot<span class="w"> </span>-d<span class="w"> </span>nautobot<span class="w"> </span>-h<span class="w"> </span>localhost
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="c1"># Password দিন: SkyNet@DB2025$Secure</span>
+</span></code></pre></div>
+<p>যদি কানেক্ট হয়, তাহলে ঠিক আছে। <code>\q</code> দিয়ে বের হন।</p>
+<h4 id="redis">স্টেপ ৩: Redis সেটআপ<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h4>
+<p>Redis configuration এডিট করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/redis/redis.conf
+</span></code></pre></div>
+<p>এই লাইনগুলো খুঁজে পরিবর্তন করুন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a># Password সেট করুন (line খুঁজে আনকমেন্ট করুন)
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>requirepass SkyNet@Redis2025$
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a># Bind করুন localhost-এ
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>bind 127.0.0.1
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a># Persistence enable করুন
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>save 900 1
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>save 300 10
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>save 60 10000
+</span></code></pre></div>
+<p>সেভ করুন এবং Redis restart করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>redis-server
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>redis-server
+</span></code></pre></div>
+<p>যাচাই করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>redis-cli
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>&gt;<span class="w"> </span>AUTH<span class="w"> </span>SkyNet@Redis2025$
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>&gt;<span class="w"> </span>PING
+</span></code></pre></div>
+<p>দেখাবে: <code>PONG</code></p>
+<h4 id="nautobot_1">স্টেপ ৪: Nautobot ইউজার তৈরি<a class="headerlink" href="#nautobot_1" title="Permanent link">&para;</a></h4>
+<p>Nautobot-এর জন্য একটা dedicated system user তৈরি করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>sudo<span class="w"> </span>useradd<span class="w"> </span>--system<span class="w"> </span>--shell<span class="w"> </span>/bin/bash<span class="w"> </span>--create-home<span class="w"> </span>--home-dir<span class="w"> </span>/opt/nautobot<span class="w"> </span>nautobot
+</span></code></pre></div>
+<p>এই ইউজারে switch করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>sudo<span class="w"> </span>-iu<span class="w"> </span>nautobot
+</span></code></pre></div>
+<h4 id="python-virtual-environment">স্টেপ ৫: Python Virtual Environment<a class="headerlink" href="#python-virtual-environment" title="Permanent link">&para;</a></h4>
+<p>Virtual environment তৈরি করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nb">cd</span><span class="w"> </span>/opt/nautobot
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>python3.11<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</span></code></pre></div>
+<p>Pip upgrade করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip<span class="w"> </span>wheel
+</span></code></pre></div>
+<h4 id="nautobot-30_1">স্টেপ ৬: Nautobot 3.0 ইনস্টল করা<a class="headerlink" href="#nautobot-30_1" title="Permanent link">&para;</a></h4>
+<p>Nautobot ইনস্টল করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">nautobot</span><span class="o">==</span><span class="m">3</span>.0.0
+</span></code></pre></div>
+<p>এটা কয়েক মিনিট লাগবে। অনেক dependencies install হবে।</p>
+<p>ইনস্টল verify করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>nautobot-server<span class="w"> </span>--version
+</span></code></pre></div>
+<p>দেখাবে: <code>3.0.0</code></p>
+<h4 id="nautobot-configuration">স্টেপ ৭: Nautobot Configuration<a class="headerlink" href="#nautobot-configuration" title="Permanent link">&para;</a></h4>
+<p>Configuration ডিরেক্টরি তৈরি:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/nautobot/nautobot_config
+</span></code></pre></div>
+<p>Configuration file তৈরি করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>nano<span class="w"> </span>/opt/nautobot/nautobot_config/nautobot_config.py
+</span></code></pre></div>
+<p>এই configuration টা পেস্ট করুন (SkyNet Bangladesh-এর জন্য কাস্টমাইজড):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="sd">Nautobot Configuration for SkyNet Bangladesh</span>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="sd">Production Setup</span>
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">nautobot.core.settings</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>  <span class="c1"># noqa: F403</span>
+</span><span id="__span-36-8"><a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>
+</span><span id="__span-36-9"><a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a><span class="c1"># ==============================</span>
+</span><span id="__span-36-10"><a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="c1"># Basic Settings</span>
+</span><span id="__span-36-11"><a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a><span class="c1"># ==============================</span>
+</span><span id="__span-36-12"><a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a>
+</span><span id="__span-36-13"><a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-36-14"><a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a>    <span class="s1">&#39;nautobot.skynet.bd&#39;</span><span class="p">,</span>
+</span><span id="__span-36-15"><a id="__codelineno-36-15" name="__codelineno-36-15" href="#__codelineno-36-15"></a>    <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+</span><span id="__span-36-16"><a id="__codelineno-36-16" name="__codelineno-36-16" href="#__codelineno-36-16"></a>    <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
+</span><span id="__span-36-17"><a id="__codelineno-36-17" name="__codelineno-36-17" href="#__codelineno-36-17"></a>    <span class="s1">&#39;192.168.10.50&#39;</span><span class="p">,</span>  <span class="c1"># SkyNet internal IP</span>
+</span><span id="__span-36-18"><a id="__codelineno-36-18" name="__codelineno-36-18" href="#__codelineno-36-18"></a><span class="p">]</span>
+</span><span id="__span-36-19"><a id="__codelineno-36-19" name="__codelineno-36-19" href="#__codelineno-36-19"></a>
+</span><span id="__span-36-20"><a id="__codelineno-36-20" name="__codelineno-36-20" href="#__codelineno-36-20"></a><span class="c1"># Database Configuration</span>
+</span><span id="__span-36-21"><a id="__codelineno-36-21" name="__codelineno-36-21" href="#__codelineno-36-21"></a><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-36-22"><a id="__codelineno-36-22" name="__codelineno-36-22" href="#__codelineno-36-22"></a>    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-36-23"><a id="__codelineno-36-23" name="__codelineno-36-23" href="#__codelineno-36-23"></a>        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.postgresql&#39;</span><span class="p">,</span>
+</span><span id="__span-36-24"><a id="__codelineno-36-24" name="__codelineno-36-24" href="#__codelineno-36-24"></a>        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;nautobot&#39;</span><span class="p">,</span>
+</span><span id="__span-36-25"><a id="__codelineno-36-25" name="__codelineno-36-25" href="#__codelineno-36-25"></a>        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;nautobot&#39;</span><span class="p">,</span>
+</span><span id="__span-36-26"><a id="__codelineno-36-26" name="__codelineno-36-26" href="#__codelineno-36-26"></a>        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;SkyNet@DB2025$Secure&#39;</span><span class="p">,</span>
+</span><span id="__span-36-27"><a id="__codelineno-36-27" name="__codelineno-36-27" href="#__codelineno-36-27"></a>        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+</span><span id="__span-36-28"><a id="__codelineno-36-28" name="__codelineno-36-28" href="#__codelineno-36-28"></a>        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span id="__span-36-29"><a id="__codelineno-36-29" name="__codelineno-36-29" href="#__codelineno-36-29"></a>        <span class="s1">&#39;CONN_MAX_AGE&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+</span><span id="__span-36-30"><a id="__codelineno-36-30" name="__codelineno-36-30" href="#__codelineno-36-30"></a>    <span class="p">}</span>
+</span><span id="__span-36-31"><a id="__codelineno-36-31" name="__codelineno-36-31" href="#__codelineno-36-31"></a><span class="p">}</span>
+</span><span id="__span-36-32"><a id="__codelineno-36-32" name="__codelineno-36-32" href="#__codelineno-36-32"></a>
+</span><span id="__span-36-33"><a id="__codelineno-36-33" name="__codelineno-36-33" href="#__codelineno-36-33"></a><span class="c1"># Redis Configuration</span>
+</span><span id="__span-36-34"><a id="__codelineno-36-34" name="__codelineno-36-34" href="#__codelineno-36-34"></a><span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-36-35"><a id="__codelineno-36-35" name="__codelineno-36-35" href="#__codelineno-36-35"></a>    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-36-36"><a id="__codelineno-36-36" name="__codelineno-36-36" href="#__codelineno-36-36"></a>        <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;django_redis.cache.RedisCache&#39;</span><span class="p">,</span>
+</span><span id="__span-36-37"><a id="__codelineno-36-37" name="__codelineno-36-37" href="#__codelineno-36-37"></a>        <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span> <span class="s1">&#39;redis://127.0.0.1:6379/0&#39;</span><span class="p">,</span>
+</span><span id="__span-36-38"><a id="__codelineno-36-38" name="__codelineno-36-38" href="#__codelineno-36-38"></a>        <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-36-39"><a id="__codelineno-36-39" name="__codelineno-36-39" href="#__codelineno-36-39"></a>            <span class="s1">&#39;CLIENT_CLASS&#39;</span><span class="p">:</span> <span class="s1">&#39;django_redis.client.DefaultClient&#39;</span><span class="p">,</span>
+</span><span id="__span-36-40"><a id="__codelineno-36-40" name="__codelineno-36-40" href="#__codelineno-36-40"></a>            <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;SkyNet@Redis2025$&#39;</span><span class="p">,</span>
+</span><span id="__span-36-41"><a id="__codelineno-36-41" name="__codelineno-36-41" href="#__codelineno-36-41"></a>        <span class="p">},</span>
+</span><span id="__span-36-42"><a id="__codelineno-36-42" name="__codelineno-36-42" href="#__codelineno-36-42"></a>    <span class="p">}</span>
+</span><span id="__span-36-43"><a id="__codelineno-36-43" name="__codelineno-36-43" href="#__codelineno-36-43"></a><span class="p">}</span>
+</span><span id="__span-36-44"><a id="__codelineno-36-44" name="__codelineno-36-44" href="#__codelineno-36-44"></a>
+</span><span id="__span-36-45"><a id="__codelineno-36-45" name="__codelineno-36-45" href="#__codelineno-36-45"></a><span class="c1"># Celery Configuration (Background Tasks)</span>
+</span><span id="__span-36-46"><a id="__codelineno-36-46" name="__codelineno-36-46" href="#__codelineno-36-46"></a><span class="n">CELERY_BROKER_URL</span> <span class="o">=</span> <span class="s1">&#39;redis://:SkyNet@Redis2025$@127.0.0.1:6379/1&#39;</span>
+</span><span id="__span-36-47"><a id="__codelineno-36-47" name="__codelineno-36-47" href="#__codelineno-36-47"></a><span class="n">CELERY_RESULT_BACKEND</span> <span class="o">=</span> <span class="s1">&#39;redis://:SkyNet@Redis2025$@127.0.0.1:6379/1&#39;</span>
+</span><span id="__span-36-48"><a id="__codelineno-36-48" name="__codelineno-36-48" href="#__codelineno-36-48"></a>
+</span><span id="__span-36-49"><a id="__codelineno-36-49" name="__codelineno-36-49" href="#__codelineno-36-49"></a><span class="c1"># ==============================</span>
+</span><span id="__span-36-50"><a id="__codelineno-36-50" name="__codelineno-36-50" href="#__codelineno-36-50"></a><span class="c1"># Security Settings</span>
+</span><span id="__span-36-51"><a id="__codelineno-36-51" name="__codelineno-36-51" href="#__codelineno-36-51"></a><span class="c1"># ==============================</span>
+</span><span id="__span-36-52"><a id="__codelineno-36-52" name="__codelineno-36-52" href="#__codelineno-36-52"></a>
+</span><span id="__span-36-53"><a id="__codelineno-36-53" name="__codelineno-36-53" href="#__codelineno-36-53"></a><span class="c1"># SECRET_KEY - Generate করুন এভাবে:</span>
+</span><span id="__span-36-54"><a id="__codelineno-36-54" name="__codelineno-36-54" href="#__codelineno-36-54"></a><span class="c1"># python3 -c &quot;from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())&quot;</span>
+</span><span id="__span-36-55"><a id="__codelineno-36-55" name="__codelineno-36-55" href="#__codelineno-36-55"></a><span class="n">SECRET_KEY</span> <span class="o">=</span> <span class="s1">&#39;ab#cd$ef@12*34&amp;56^78(90)gh!ij~kl+mn=op_qr-st[uv]wx</span><span class="si">{yz}</span><span class="s1">&#39;</span>  <span class="c1"># এটা বদলান!</span>
+</span><span id="__span-36-56"><a id="__codelineno-36-56" name="__codelineno-36-56" href="#__codelineno-36-56"></a>
+</span><span id="__span-36-57"><a id="__codelineno-36-57" name="__codelineno-36-57" href="#__codelineno-36-57"></a><span class="c1"># Session security</span>
+</span><span id="__span-36-58"><a id="__codelineno-36-58" name="__codelineno-36-58" href="#__codelineno-36-58"></a><span class="n">SESSION_COOKIE_SECURE</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># HTTPS-এর জন্য</span>
+</span><span id="__span-36-59"><a id="__codelineno-36-59" name="__codelineno-36-59" href="#__codelineno-36-59"></a><span class="n">CSRF_COOKIE_SECURE</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-36-60"><a id="__codelineno-36-60" name="__codelineno-36-60" href="#__codelineno-36-60"></a>
+</span><span id="__span-36-61"><a id="__codelineno-36-61" name="__codelineno-36-61" href="#__codelineno-36-61"></a><span class="c1"># ==============================</span>
+</span><span id="__span-36-62"><a id="__codelineno-36-62" name="__codelineno-36-62" href="#__codelineno-36-62"></a><span class="c1"># Time Zone</span>
+</span><span id="__span-36-63"><a id="__codelineno-36-63" name="__codelineno-36-63" href="#__codelineno-36-63"></a><span class="c1"># ==============================</span>
+</span><span id="__span-36-64"><a id="__codelineno-36-64" name="__codelineno-36-64" href="#__codelineno-36-64"></a>
+</span><span id="__span-36-65"><a id="__codelineno-36-65" name="__codelineno-36-65" href="#__codelineno-36-65"></a><span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;Asia/Dhaka&#39;</span>
+</span><span id="__span-36-66"><a id="__codelineno-36-66" name="__codelineno-36-66" href="#__codelineno-36-66"></a>
+</span><span id="__span-36-67"><a id="__codelineno-36-67" name="__codelineno-36-67" href="#__codelineno-36-67"></a><span class="c1"># ==============================</span>
+</span><span id="__span-36-68"><a id="__codelineno-36-68" name="__codelineno-36-68" href="#__codelineno-36-68"></a><span class="c1"># Static Files এবং Media</span>
+</span><span id="__span-36-69"><a id="__codelineno-36-69" name="__codelineno-36-69" href="#__codelineno-36-69"></a><span class="c1"># ==============================</span>
+</span><span id="__span-36-70"><a id="__codelineno-36-70" name="__codelineno-36-70" href="#__codelineno-36-70"></a>
+</span><span id="__span-36-71"><a id="__codelineno-36-71" name="__codelineno-36-71" href="#__codelineno-36-71"></a><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="s1">&#39;/opt/nautobot/static&#39;</span>
+</span><span id="__span-36-72"><a id="__codelineno-36-72" name="__codelineno-36-72" href="#__codelineno-36-72"></a><span class="n">MEDIA_ROOT</span> <span class="o">=</span> <span class="s1">&#39;/opt/nautobot/media&#39;</span>
+</span><span id="__span-36-73"><a id="__codelineno-36-73" name="__codelineno-36-73" href="#__codelineno-36-73"></a>
+</span><span id="__span-36-74"><a id="__codelineno-36-74" name="__codelineno-36-74" href="#__codelineno-36-74"></a><span class="c1"># ==============================</span>
+</span><span id="__span-36-75"><a id="__codelineno-36-75" name="__codelineno-36-75" href="#__codelineno-36-75"></a><span class="c1"># Logging</span>
+</span><span id="__span-36-76"><a id="__codelineno-36-76" name="__codelineno-36-76" href="#__codelineno-36-76"></a><span class="c1"># ==============================</span>
+</span><span id="__span-36-77"><a id="__codelineno-36-77" name="__codelineno-36-77" href="#__codelineno-36-77"></a>
+</span><span id="__span-36-78"><a id="__codelineno-36-78" name="__codelineno-36-78" href="#__codelineno-36-78"></a><span class="n">LOGGING</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-36-79"><a id="__codelineno-36-79" name="__codelineno-36-79" href="#__codelineno-36-79"></a>    <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-36-80"><a id="__codelineno-36-80" name="__codelineno-36-80" href="#__codelineno-36-80"></a>    <span class="s1">&#39;disable_existing_loggers&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-36-81"><a id="__codelineno-36-81" name="__codelineno-36-81" href="#__codelineno-36-81"></a>    <span class="s1">&#39;formatters&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-36-82"><a id="__codelineno-36-82" name="__codelineno-36-82" href="#__codelineno-36-82"></a>        <span class="s1">&#39;verbose&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-36-83"><a id="__codelineno-36-83" name="__codelineno-36-83" href="#__codelineno-36-83"></a>            <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{levelname}</span><span class="s1"> </span><span class="si">{asctime}</span><span class="s1"> </span><span class="si">{module}</span><span class="s1"> </span><span class="si">{message}</span><span class="s1">&#39;</span><span class="p">,</span>
+</span><span id="__span-36-84"><a id="__codelineno-36-84" name="__codelineno-36-84" href="#__codelineno-36-84"></a>            <span class="s1">&#39;style&#39;</span><span class="p">:</span> <span class="s1">&#39;{&#39;</span><span class="p">,</span>
+</span><span id="__span-36-85"><a id="__codelineno-36-85" name="__codelineno-36-85" href="#__codelineno-36-85"></a>        <span class="p">},</span>
+</span><span id="__span-36-86"><a id="__codelineno-36-86" name="__codelineno-36-86" href="#__codelineno-36-86"></a>    <span class="p">},</span>
+</span><span id="__span-36-87"><a id="__codelineno-36-87" name="__codelineno-36-87" href="#__codelineno-36-87"></a>    <span class="s1">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-36-88"><a id="__codelineno-36-88" name="__codelineno-36-88" href="#__codelineno-36-88"></a>        <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-36-89"><a id="__codelineno-36-89" name="__codelineno-36-89" href="#__codelineno-36-89"></a>            <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="s1">&#39;INFO&#39;</span><span class="p">,</span>
+</span><span id="__span-36-90"><a id="__codelineno-36-90" name="__codelineno-36-90" href="#__codelineno-36-90"></a>            <span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="s1">&#39;logging.handlers.RotatingFileHandler&#39;</span><span class="p">,</span>
+</span><span id="__span-36-91"><a id="__codelineno-36-91" name="__codelineno-36-91" href="#__codelineno-36-91"></a>            <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;/opt/nautobot/logs/nautobot.log&#39;</span><span class="p">,</span>
+</span><span id="__span-36-92"><a id="__codelineno-36-92" name="__codelineno-36-92" href="#__codelineno-36-92"></a>            <span class="s1">&#39;maxBytes&#39;</span><span class="p">:</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">50</span><span class="p">,</span>  <span class="c1"># 50 MB</span>
+</span><span id="__span-36-93"><a id="__codelineno-36-93" name="__codelineno-36-93" href="#__codelineno-36-93"></a>            <span class="s1">&#39;backupCount&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+</span><span id="__span-36-94"><a id="__codelineno-36-94" name="__codelineno-36-94" href="#__codelineno-36-94"></a>            <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;verbose&#39;</span><span class="p">,</span>
+</span><span id="__span-36-95"><a id="__codelineno-36-95" name="__codelineno-36-95" href="#__codelineno-36-95"></a>        <span class="p">},</span>
+</span><span id="__span-36-96"><a id="__codelineno-36-96" name="__codelineno-36-96" href="#__codelineno-36-96"></a>        <span class="s1">&#39;console&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-36-97"><a id="__codelineno-36-97" name="__codelineno-36-97" href="#__codelineno-36-97"></a>            <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="s1">&#39;INFO&#39;</span><span class="p">,</span>
+</span><span id="__span-36-98"><a id="__codelineno-36-98" name="__codelineno-36-98" href="#__codelineno-36-98"></a>            <span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="s1">&#39;logging.StreamHandler&#39;</span><span class="p">,</span>
+</span><span id="__span-36-99"><a id="__codelineno-36-99" name="__codelineno-36-99" href="#__codelineno-36-99"></a>            <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;verbose&#39;</span><span class="p">,</span>
+</span><span id="__span-36-100"><a id="__codelineno-36-100" name="__codelineno-36-100" href="#__codelineno-36-100"></a>        <span class="p">},</span>
+</span><span id="__span-36-101"><a id="__codelineno-36-101" name="__codelineno-36-101" href="#__codelineno-36-101"></a>    <span class="p">},</span>
+</span><span id="__span-36-102"><a id="__codelineno-36-102" name="__codelineno-36-102" href="#__codelineno-36-102"></a>    <span class="s1">&#39;loggers&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-36-103"><a id="__codelineno-36-103" name="__codelineno-36-103" href="#__codelineno-36-103"></a>        <span class="s1">&#39;nautobot&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-36-104"><a id="__codelineno-36-104" name="__codelineno-36-104" href="#__codelineno-36-104"></a>            <span class="s1">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">,</span> <span class="s1">&#39;console&#39;</span><span class="p">],</span>
+</span><span id="__span-36-105"><a id="__codelineno-36-105" name="__codelineno-36-105" href="#__codelineno-36-105"></a>            <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="s1">&#39;INFO&#39;</span><span class="p">,</span>
+</span><span id="__span-36-106"><a id="__codelineno-36-106" name="__codelineno-36-106" href="#__codelineno-36-106"></a>        <span class="p">},</span>
+</span><span id="__span-36-107"><a id="__codelineno-36-107" name="__codelineno-36-107" href="#__codelineno-36-107"></a>    <span class="p">},</span>
+</span><span id="__span-36-108"><a id="__codelineno-36-108" name="__codelineno-36-108" href="#__codelineno-36-108"></a><span class="p">}</span>
+</span><span id="__span-36-109"><a id="__codelineno-36-109" name="__codelineno-36-109" href="#__codelineno-36-109"></a>
+</span><span id="__span-36-110"><a id="__codelineno-36-110" name="__codelineno-36-110" href="#__codelineno-36-110"></a><span class="c1"># ==============================</span>
+</span><span id="__span-36-111"><a id="__codelineno-36-111" name="__codelineno-36-111" href="#__codelineno-36-111"></a><span class="c1"># SkyNet Bangladesh Custom Settings</span>
+</span><span id="__span-36-112"><a id="__codelineno-36-112" name="__codelineno-36-112" href="#__codelineno-36-112"></a><span class="c1"># ==============================</span>
+</span><span id="__span-36-113"><a id="__codelineno-36-113" name="__codelineno-36-113" href="#__codelineno-36-113"></a>
+</span><span id="__span-36-114"><a id="__codelineno-36-114" name="__codelineno-36-114" href="#__codelineno-36-114"></a><span class="c1"># Organization name</span>
+</span><span id="__span-36-115"><a id="__codelineno-36-115" name="__codelineno-36-115" href="#__codelineno-36-115"></a><span class="n">BANNER_TOP</span> <span class="o">=</span> <span class="s1">&#39;SkyNet Bangladesh - Network Source of Truth&#39;</span>
+</span><span id="__span-36-116"><a id="__codelineno-36-116" name="__codelineno-36-116" href="#__codelineno-36-116"></a><span class="n">BANNER_BOTTOM</span> <span class="o">=</span> <span class="s1">&#39;Managed by NOC Team&#39;</span>
+</span><span id="__span-36-117"><a id="__codelineno-36-117" name="__codelineno-36-117" href="#__codelineno-36-117"></a>
+</span><span id="__span-36-118"><a id="__codelineno-36-118" name="__codelineno-36-118" href="#__codelineno-36-118"></a><span class="c1"># Support contact</span>
+</span><span id="__span-36-119"><a id="__codelineno-36-119" name="__codelineno-36-119" href="#__codelineno-36-119"></a><span class="n">SUPPORT_EMAIL</span> <span class="o">=</span> <span class="s1">&#39;noc@skynet.bd&#39;</span>
+</span><span id="__span-36-120"><a id="__codelineno-36-120" name="__codelineno-36-120" href="#__codelineno-36-120"></a><span class="n">SUPPORT_MESSAGE</span> <span class="o">=</span> <span class="s1">&#39;For support, contact NOC team at noc@skynet.bd&#39;</span>
+</span></code></pre></div>
+<p>সেভ করুন।</p>
+<p><strong>গুরুত্বপূর্ণ:</strong> SECRET_KEY একটা নতুন জেনারেট করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>python3<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())&quot;</span>
+</span></code></pre></div>
+<p>যে key আসবে সেটা configuration file-এ বসান।</p>
+<h4 id="static-files-logs-directory">স্টেপ ৮: Static Files এবং Logs Directory<a class="headerlink" href="#static-files-logs-directory" title="Permanent link">&para;</a></h4>
+<p>প্রয়োজনীয় ডিরেক্টরি তৈরি করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/nautobot/static
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/nautobot/media
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/nautobot/logs
+</span></code></pre></div>
+<h4 id="database-migration">স্টেপ ৯: Database Migration<a class="headerlink" href="#database-migration" title="Permanent link">&para;</a></h4>
+<p>Database tables তৈরি করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>nautobot-server<span class="w"> </span>migrate
+</span></code></pre></div>
+<p>এটা ৫-১০ মিনিট লাগবে। অনেকগুলো migration apply হবে।</p>
+<p>আউটপুট শেষে দেখাবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>Applying sessions.0001_initial... OK
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>Applying users.0001_initial... OK
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>...
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>Operations to perform:
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>  Apply all migrations: ... (success)
+</span></code></pre></div>
+<h4 id="superuser">স্টেপ ১০: Superuser তৈরি<a class="headerlink" href="#superuser" title="Permanent link">&para;</a></h4>
+<p>Admin user তৈরি করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>nautobot-server<span class="w"> </span>createsuperuser
+</span></code></pre></div>
+<p>প্রম্পট আসবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Username: admin
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>Email address: admin@skynet.bd
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>Password: ********  (SkyNet@Admin2025!)
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>Password (again): ********
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>Superuser created successfully.
+</span></code></pre></div>
+<h4 id="static-files-collect">স্টেপ ১১: Static Files Collect<a class="headerlink" href="#static-files-collect" title="Permanent link">&para;</a></h4>
+<p>Static files collect করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>nautobot-server<span class="w"> </span>collectstatic<span class="w"> </span>--no-input
+</span></code></pre></div>
+<p>এটা CSS, JavaScript, images সব একসাথে <code>/opt/nautobot/static</code>-এ কপি করবে।</p>
+<p>এখন <code>nautobot</code> user থেকে বের হন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="nb">exit</span>
+</span></code></pre></div>
+<h4 id="systemd-service-files">স্টেপ ১২: Systemd Service Files<a class="headerlink" href="#systemd-service-files" title="Permanent link">&para;</a></h4>
+<p>Nautobot-কে systemd service হিসেবে চালাবেন যাতে server restart হলে automatically চালু হয়।</p>
+<p><strong>Nautobot Service:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/systemd/system/nautobot.service
+</span></code></pre></div>
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="k">[Unit]</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">Nautobot WSGI Service - SkyNet Bangladesh</span>
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="na">Documentation</span><span class="o">=</span><span class="s">https://docs.nautobot.com/</span>
+</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="na">After</span><span class="o">=</span><span class="s">network-online.target</span>
+</span><span id="__span-46-5"><a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target</span>
+</span><span id="__span-46-6"><a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>
+</span><span id="__span-46-7"><a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a><span class="k">[Service]</span>
+</span><span id="__span-46-8"><a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a><span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
+</span><span id="__span-46-9"><a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a><span class="na">User</span><span class="o">=</span><span class="s">nautobot</span>
+</span><span id="__span-46-10"><a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a><span class="na">Group</span><span class="o">=</span><span class="s">nautobot</span>
+</span><span id="__span-46-11"><a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a><span class="na">PIDFile</span><span class="o">=</span><span class="s">/var/run/nautobot/nautobot.pid</span>
+</span><span id="__span-46-12"><a id="__codelineno-46-12" name="__codelineno-46-12" href="#__codelineno-46-12"></a><span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/opt/nautobot</span>
+</span><span id="__span-46-13"><a id="__codelineno-46-13" name="__codelineno-46-13" href="#__codelineno-46-13"></a>
+</span><span id="__span-46-14"><a id="__codelineno-46-14" name="__codelineno-46-14" href="#__codelineno-46-14"></a><span class="na">Environment</span><span class="o">=</span><span class="s">&quot;NAUTOBOT_ROOT=/opt/nautobot&quot;</span>
+</span><span id="__span-46-15"><a id="__codelineno-46-15" name="__codelineno-46-15" href="#__codelineno-46-15"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/opt/nautobot/venv/bin/gunicorn </span>\
+</span><span id="__span-46-16"><a id="__codelineno-46-16" name="__codelineno-46-16" href="#__codelineno-46-16"></a><span class="w">    </span><span class="s">--workers 4 </span>\
+</span><span id="__span-46-17"><a id="__codelineno-46-17" name="__codelineno-46-17" href="#__codelineno-46-17"></a><span class="w">    </span><span class="s">--bind 127.0.0.1:8001 </span>\
+</span><span id="__span-46-18"><a id="__codelineno-46-18" name="__codelineno-46-18" href="#__codelineno-46-18"></a><span class="w">    </span><span class="s">--timeout 120 </span>\
+</span><span id="__span-46-19"><a id="__codelineno-46-19" name="__codelineno-46-19" href="#__codelineno-46-19"></a><span class="w">    </span><span class="s">--access-logfile /opt/nautobot/logs/access.log </span>\
+</span><span id="__span-46-20"><a id="__codelineno-46-20" name="__codelineno-46-20" href="#__codelineno-46-20"></a><span class="w">    </span><span class="s">--error-logfile /opt/nautobot/logs/error.log </span>\
+</span><span id="__span-46-21"><a id="__codelineno-46-21" name="__codelineno-46-21" href="#__codelineno-46-21"></a><span class="w">    </span><span class="s">nautobot.core.wsgi:application</span>
+</span><span id="__span-46-22"><a id="__codelineno-46-22" name="__codelineno-46-22" href="#__codelineno-46-22"></a>
+</span><span id="__span-46-23"><a id="__codelineno-46-23" name="__codelineno-46-23" href="#__codelineno-46-23"></a><span class="na">Restart</span><span class="o">=</span><span class="s">on-failure</span>
+</span><span id="__span-46-24"><a id="__codelineno-46-24" name="__codelineno-46-24" href="#__codelineno-46-24"></a><span class="na">RestartSec</span><span class="o">=</span><span class="s">30</span>
+</span><span id="__span-46-25"><a id="__codelineno-46-25" name="__codelineno-46-25" href="#__codelineno-46-25"></a><span class="na">PrivateTmp</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-46-26"><a id="__codelineno-46-26" name="__codelineno-46-26" href="#__codelineno-46-26"></a>
+</span><span id="__span-46-27"><a id="__codelineno-46-27" name="__codelineno-46-27" href="#__codelineno-46-27"></a><span class="k">[Install]</span>
+</span><span id="__span-46-28"><a id="__codelineno-46-28" name="__codelineno-46-28" href="#__codelineno-46-28"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</span></code></pre></div>
+<p><strong>Nautobot Celery Worker (Background Tasks):</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/systemd/system/nautobot-celery.service
+</span></code></pre></div>
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="k">[Unit]</span>
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">Nautobot Celery Worker - SkyNet Bangladesh</span>
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="na">Documentation</span><span class="o">=</span><span class="s">https://docs.nautobot.com/</span>
+</span><span id="__span-48-4"><a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="na">After</span><span class="o">=</span><span class="s">network-online.target</span>
+</span><span id="__span-48-5"><a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a><span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target</span>
+</span><span id="__span-48-6"><a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a>
+</span><span id="__span-48-7"><a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a><span class="k">[Service]</span>
+</span><span id="__span-48-8"><a id="__codelineno-48-8" name="__codelineno-48-8" href="#__codelineno-48-8"></a><span class="na">Type</span><span class="o">=</span><span class="s">exec</span>
+</span><span id="__span-48-9"><a id="__codelineno-48-9" name="__codelineno-48-9" href="#__codelineno-48-9"></a><span class="na">User</span><span class="o">=</span><span class="s">nautobot</span>
+</span><span id="__span-48-10"><a id="__codelineno-48-10" name="__codelineno-48-10" href="#__codelineno-48-10"></a><span class="na">Group</span><span class="o">=</span><span class="s">nautobot</span>
+</span><span id="__span-48-11"><a id="__codelineno-48-11" name="__codelineno-48-11" href="#__codelineno-48-11"></a><span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/opt/nautobot</span>
+</span><span id="__span-48-12"><a id="__codelineno-48-12" name="__codelineno-48-12" href="#__codelineno-48-12"></a>
+</span><span id="__span-48-13"><a id="__codelineno-48-13" name="__codelineno-48-13" href="#__codelineno-48-13"></a><span class="na">Environment</span><span class="o">=</span><span class="s">&quot;NAUTOBOT_ROOT=/opt/nautobot&quot;</span>
+</span><span id="__span-48-14"><a id="__codelineno-48-14" name="__codelineno-48-14" href="#__codelineno-48-14"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/opt/nautobot/venv/bin/celery -A nautobot.core.celery worker </span>\
+</span><span id="__span-48-15"><a id="__codelineno-48-15" name="__codelineno-48-15" href="#__codelineno-48-15"></a><span class="w">    </span><span class="s">--loglevel INFO </span>\
+</span><span id="__span-48-16"><a id="__codelineno-48-16" name="__codelineno-48-16" href="#__codelineno-48-16"></a><span class="w">    </span><span class="s">--logfile /opt/nautobot/logs/celery.log</span>
+</span><span id="__span-48-17"><a id="__codelineno-48-17" name="__codelineno-48-17" href="#__codelineno-48-17"></a>
+</span><span id="__span-48-18"><a id="__codelineno-48-18" name="__codelineno-48-18" href="#__codelineno-48-18"></a><span class="na">Restart</span><span class="o">=</span><span class="s">on-failure</span>
+</span><span id="__span-48-19"><a id="__codelineno-48-19" name="__codelineno-48-19" href="#__codelineno-48-19"></a><span class="na">RestartSec</span><span class="o">=</span><span class="s">30</span>
+</span><span id="__span-48-20"><a id="__codelineno-48-20" name="__codelineno-48-20" href="#__codelineno-48-20"></a>
+</span><span id="__span-48-21"><a id="__codelineno-48-21" name="__codelineno-48-21" href="#__codelineno-48-21"></a><span class="k">[Install]</span>
+</span><span id="__span-48-22"><a id="__codelineno-48-22" name="__codelineno-48-22" href="#__codelineno-48-22"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</span></code></pre></div>
+<p><strong>Nautobot Celery Beat (Scheduled Tasks):</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/systemd/system/nautobot-celery-beat.service
+</span></code></pre></div>
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="k">[Unit]</span>
+</span><span id="__span-50-2"><a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">Nautobot Celery Beat - SkyNet Bangladesh</span>
+</span><span id="__span-50-3"><a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="na">Documentation</span><span class="o">=</span><span class="s">https://docs.nautobot.com/</span>
+</span><span id="__span-50-4"><a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="na">After</span><span class="o">=</span><span class="s">network-online.target</span>
+</span><span id="__span-50-5"><a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a><span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target</span>
+</span><span id="__span-50-6"><a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a>
+</span><span id="__span-50-7"><a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a><span class="k">[Service]</span>
+</span><span id="__span-50-8"><a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a><span class="na">Type</span><span class="o">=</span><span class="s">exec</span>
+</span><span id="__span-50-9"><a id="__codelineno-50-9" name="__codelineno-50-9" href="#__codelineno-50-9"></a><span class="na">User</span><span class="o">=</span><span class="s">nautobot</span>
+</span><span id="__span-50-10"><a id="__codelineno-50-10" name="__codelineno-50-10" href="#__codelineno-50-10"></a><span class="na">Group</span><span class="o">=</span><span class="s">nautobot</span>
+</span><span id="__span-50-11"><a id="__codelineno-50-11" name="__codelineno-50-11" href="#__codelineno-50-11"></a><span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/opt/nautobot</span>
+</span><span id="__span-50-12"><a id="__codelineno-50-12" name="__codelineno-50-12" href="#__codelineno-50-12"></a>
+</span><span id="__span-50-13"><a id="__codelineno-50-13" name="__codelineno-50-13" href="#__codelineno-50-13"></a><span class="na">Environment</span><span class="o">=</span><span class="s">&quot;NAUTOBOT_ROOT=/opt/nautobot&quot;</span>
+</span><span id="__span-50-14"><a id="__codelineno-50-14" name="__codelineno-50-14" href="#__codelineno-50-14"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/opt/nautobot/venv/bin/celery -A nautobot.core.celery beat </span>\
+</span><span id="__span-50-15"><a id="__codelineno-50-15" name="__codelineno-50-15" href="#__codelineno-50-15"></a><span class="w">    </span><span class="s">--loglevel INFO </span>\
+</span><span id="__span-50-16"><a id="__codelineno-50-16" name="__codelineno-50-16" href="#__codelineno-50-16"></a><span class="w">    </span><span class="s">--logfile /opt/nautobot/logs/celery-beat.log</span>
+</span><span id="__span-50-17"><a id="__codelineno-50-17" name="__codelineno-50-17" href="#__codelineno-50-17"></a>
+</span><span id="__span-50-18"><a id="__codelineno-50-18" name="__codelineno-50-18" href="#__codelineno-50-18"></a><span class="na">Restart</span><span class="o">=</span><span class="s">on-failure</span>
+</span><span id="__span-50-19"><a id="__codelineno-50-19" name="__codelineno-50-19" href="#__codelineno-50-19"></a><span class="na">RestartSec</span><span class="o">=</span><span class="s">30</span>
+</span><span id="__span-50-20"><a id="__codelineno-50-20" name="__codelineno-50-20" href="#__codelineno-50-20"></a>
+</span><span id="__span-50-21"><a id="__codelineno-50-21" name="__codelineno-50-21" href="#__codelineno-50-21"></a><span class="k">[Install]</span>
+</span><span id="__span-50-22"><a id="__codelineno-50-22" name="__codelineno-50-22" href="#__codelineno-50-22"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</span></code></pre></div>
+<p>Systemd reload করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+</span></code></pre></div>
+<p>Services চালু করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nautobot
+</span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nautobot-celery
+</span><span id="__span-52-3"><a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nautobot-celery-beat
+</span></code></pre></div>
+<p>Boot-এ automatically চালু হওয়ার জন্য enable করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nautobot
+</span><span id="__span-53-2"><a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nautobot-celery
+</span><span id="__span-53-3"><a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nautobot-celery-beat
+</span></code></pre></div>
+<p>Status চেক করুন:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>nautobot
+</span></code></pre></div>
+<p>দেখাবে: <code>Active: active (running)</code></p>
+<hr />
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../nsot_core/" class="md-footer__link md-footer__link--prev" aria-label="Previous: NSoT-এর কোর প্রিন্সিপাল এবং Nautobot">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                NSoT-এর কোর প্রিন্সিপাল এবং Nautobot
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../datamodel/" class="md-footer__link md-footer__link--next" aria-label="Next: Nautobot ডেটা মডেল - নেটওয়ার্কের যোগসুত্র">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Nautobot ডেটা মডেল - নেটওয়ার্কের যোগসুত্র
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      সৃজনশীল লাইসেন্সিং ২০২৩ - ২০২৬ &copy; রকিবুল হাসান
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/raqueeb" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://m.me/raqueeb" target="_blank" rel="noopener" title="m.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256.6 8C116.6 8 8 110.3 8 248.6c0 72.3 29.7 134.8 78.1 177.9 8.3 7.5 6.6 11.9 8 58.2.1 3.2 1 6.4 2.6 9.2s3.9 5.2 6.7 6.9 5.9 2.8 9.1 3 6.5-.3 9.5-1.6c52.9-23.2 53.6-25 62.6-22.6 153.2 42.2 319.4-55.9 319.4-231C504 110.3 396.6 8 256.6 8m149.2 185.1-73 115.6c-2.8 4.3-6.4 8.1-10.6 11s-9.1 4.8-14.1 5.8-10.3.8-15.3-.4-9.7-3.4-13.8-6.4l-58.1-43.5c-2.6-1.9-5.8-3-9-3s-6.4 1.1-9 3l-78.4 59.4c-10.5 7.9-24.2-4.6-17.1-15.7l73-115.6c2.8-4.3 6.4-8.1 10.6-11s9.1-4.8 14.1-5.8 10.3-.8 15.3.4 9.7 3.4 13.9 6.4l58.1 43.5c2.6 1.9 5.8 3 9 3s6.4-1.1 9-3l78.4-59.4c10.4-8 24.1 4.5 17.1 15.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="tel:+8801713095767" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157m-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6m101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/raqueeb" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/raqueeb/" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://instagram.com/raqueeb" target="_blank" rel="noopener" title="instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://facebook.com/raqueeb" target="_blank" rel="noopener" title="facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

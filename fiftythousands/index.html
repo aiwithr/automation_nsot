@@ -1,0 +1,2463 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="রোড টু হাইটেক ইন্ডাস্ট্রি:আইএসপি অটোমেশন ২">
+      
+      
+        <meta name="author" content="রকিবুল হাসান">
+      
+      
+        <link rel="canonical" href="https://aiwithr.github.io/automation_nsot/fiftythousands/">
+      
+      
+        <link rel="prev" href="../fivethousands/">
+      
+      
+        <link rel="next" href="../api_automation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>মিডিয়াম আইএসপি সেটআপ (৫০ হাজার কাস্টমার) - আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=SiyamRupali:300,300i,400,400i,700,700i%7CSiyamRupali:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"SiyamRupali";--md-code-font:"SiyamRupali"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" class="md-header__button md-logo" aria-label="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              মিডিয়াম আইএসপি সেটআপ (৫০ হাজার কাস্টমার)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/raqueeb/mltraining/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    raqueeb/mltraining
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" class="md-nav__button md-logo" aria-label="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/raqueeb/mltraining/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    raqueeb/mltraining
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ১ মিলিয়ন ইন্টারনেট গ্রাহক
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    পেছনের দর্শন
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    পেছনের দর্শন
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কৃত্রিম বুদ্ধিমত্তা ও নেটওয়ার্ক অটোমেশনের রাস্তা
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    নেটওয়ার্ক সোর্স অফ ট্রুথ (NSoT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dedication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    উৎসর্গ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contents2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    বইয়ের সম্ভাব্য চ্যাপ্টার স্ট্রাকচার NSoT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot_scale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কেন NSoT ছাড়া স্কেল করা অসম্ভব
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../two_states/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ইনটেন্ডেড স্টেট বনাম অ্যাকচুয়াল স্টেট
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot_core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NSoT-এর কোর প্রিন্সিপাল এবং Nautobot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ইনস্টলেশন
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datamodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ডেটা মডেল - নেটওয়ার্কের যোগসুত্র
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui_organization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI দিয়ে ডেটা এন্ট্রি
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectivity_adv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কানেক্টিভিটি এবং এডভান্সড ফিচার
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fivethousands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ছোট আইএসপি সেটআপ (৫ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    মিডিয়াম আইএসপি সেটআপ (৫০ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    মিডিয়াম আইএসপি সেটআপ (৫০ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        বর্তমান পরিস্থিতি - ২০২৬ সালের গল্প
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="বর্তমান পরিস্থিতি - ২০২৬ সালের গল্প">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নতুন পপগুলো
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নতুন আপস্ট্রিম কানেকশন
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        প্রথম চ্যালেঞ্জ: লোকেশন হায়ারার্কি রি-অর্গানাইজ করা
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="প্রথম চ্যালেঞ্জ: লোকেশন হায়ারার্কি রি-অর্গানাইজ করা">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        আগের স্ট্রাকচার (২০২৪):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নতুন স্ট্রাকচার (২০২৬):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        হায়ারার্কি এর সুবিধা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        দ্বিতীয় চ্যালেঞ্জ: ডিভাইস নেমিং স্কেল করা
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="দ্বিতীয় চ্যালেঞ্জ: ডিভাইস নেমিং স্কেল করা">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নতুন নেমিং কনভেনশন (২০২৬):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        উদাহরণ:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        পুরোনো ডিভাইস রিনেম করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-address-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        তৃতীয় চ্যালেঞ্জ: IP Address Management স্কেলিং
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="তৃতীয় চ্যালেঞ্জ: IP Address Management স্কেলিং">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        পুরোনো আইপি স্ট্রাকচার (২০২৪):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নতুন আইপি স্ট্রাকচার (২০২৬):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-utilization-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Utilization Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-ip-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private IP Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        চতুর্থ চ্যালেঞ্জ: VLAN Scaling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cable-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        পঞ্চম চ্যালেঞ্জ: Cable Management বাস্তবতা
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="পঞ্চম চ্যালেঞ্জ: Cable Management বাস্তবতা">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pragmatic-cable-management-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pragmatic Cable Management Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-team-collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ষষ্ঠ চ্যালেঞ্জ: Multi-Team Collaboration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ষষ্ঠ চ্যালেঞ্জ: Multi-Team Collaboration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collaboration-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collaboration Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-quality-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সপ্তম চ্যালেঞ্জ: Data Quality Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="সপ্তম চ্যালেঞ্জ: Data Quality Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weekly-data-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weekly Data Audit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-response-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        অষ্টম চ্যালেঞ্জ: Performance এবং Response Time
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="অষ্টম চ্যালেঞ্জ: Performance এবং Response Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৬ মাসের রোডম্যাপ - ৫ হাজার থেকে ৫০ হাজারে
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="৬ মাসের রোডম্যাপ - ৫ হাজার থেকে ৫০ হাজারে">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-foundation-strengthening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        মাস ১-২: Foundation Strengthening
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-new-sites-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        মাস ৩-৪: New Sites Onboarding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-vlan-restructuring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        মাস ৫: IP এবং VLAN Restructuring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-sites-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        মাস ৬: Final Sites এবং Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-metrics-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Metrics - আগে এবং পরে
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        শিক্ষা এবং পরামর্শ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API এবং অটোমেশনের শুরু
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv_automation_lac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    এডভান্সড অটোমেশন এবং ১ লক্ষ কাস্টমারের পথে
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mil_customers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ১ মিলিয়ন গ্রাহকের আইএসপি
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    বইটা এখনো লেখা চলছে
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        বর্তমান পরিস্থিতি - ২০২৬ সালের গল্প
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="বর্তমান পরিস্থিতি - ২০২৬ সালের গল্প">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নতুন পপগুলো
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নতুন আপস্ট্রিম কানেকশন
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        প্রথম চ্যালেঞ্জ: লোকেশন হায়ারার্কি রি-অর্গানাইজ করা
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="প্রথম চ্যালেঞ্জ: লোকেশন হায়ারার্কি রি-অর্গানাইজ করা">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        আগের স্ট্রাকচার (২০২৪):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নতুন স্ট্রাকচার (২০২৬):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        হায়ারার্কি এর সুবিধা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        দ্বিতীয় চ্যালেঞ্জ: ডিভাইস নেমিং স্কেল করা
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="দ্বিতীয় চ্যালেঞ্জ: ডিভাইস নেমিং স্কেল করা">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নতুন নেমিং কনভেনশন (২০২৬):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        উদাহরণ:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        পুরোনো ডিভাইস রিনেম করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-address-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        তৃতীয় চ্যালেঞ্জ: IP Address Management স্কেলিং
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="তৃতীয় চ্যালেঞ্জ: IP Address Management স্কেলিং">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        পুরোনো আইপি স্ট্রাকচার (২০২৪):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নতুন আইপি স্ট্রাকচার (২০২৬):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-utilization-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Utilization Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-ip-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private IP Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        চতুর্থ চ্যালেঞ্জ: VLAN Scaling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cable-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        পঞ্চম চ্যালেঞ্জ: Cable Management বাস্তবতা
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="পঞ্চম চ্যালেঞ্জ: Cable Management বাস্তবতা">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pragmatic-cable-management-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pragmatic Cable Management Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-team-collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ষষ্ঠ চ্যালেঞ্জ: Multi-Team Collaboration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ষষ্ঠ চ্যালেঞ্জ: Multi-Team Collaboration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collaboration-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collaboration Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-quality-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সপ্তম চ্যালেঞ্জ: Data Quality Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="সপ্তম চ্যালেঞ্জ: Data Quality Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weekly-data-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weekly Data Audit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-response-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        অষ্টম চ্যালেঞ্জ: Performance এবং Response Time
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="অষ্টম চ্যালেঞ্জ: Performance এবং Response Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৬ মাসের রোডম্যাপ - ৫ হাজার থেকে ৫০ হাজারে
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="৬ মাসের রোডম্যাপ - ৫ হাজার থেকে ৫০ হাজারে">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-foundation-strengthening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        মাস ১-২: Foundation Strengthening
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-new-sites-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        মাস ৩-৪: New Sites Onboarding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-vlan-restructuring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        মাস ৫: IP এবং VLAN Restructuring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-sites-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        মাস ৬: Final Sites এবং Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-metrics-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Metrics - আগে এবং পরে
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        শিক্ষা এবং পরামর্শ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>মিডিয়াম আইএসপি সেটআপ (৫০ হাজার কাস্টমার)</h1>
+
+<p>দুই বছর আগে SkyNets Bangladesh শুরু করেছিল মাত্র দুটো পপ নিয়ে - মিরপুর এবং উত্তরা। প্রায় ৫ হাজার কাস্টমার। তখন তারা Nautobot সেটআপ করেছিল। সেই পরিকল্পনা অনুযায়ী কাজ করেছে, সফল হয়েছে।</p>
+<p>এখন ২০২৬ সাল। SkyNets Bangladesh এর গ্রোথ হয়েছে বিশাল। বর্তমানে নর্থ ঢাকায় তাদের আটটা পপ, প্রায় পঞ্চাশ হাজার কাস্টমার। আর সবচেয়ে বড় কথা - তারা এখনও সেই একই Nautobot সিস্টেম ব্যবহার করছে যেটা দুই বছর আগে সেটআপ করেছিল।</p>
+<p>কিন্তু স্কেল বাড়ার সাথে সাথে নতুন চ্যালেঞ্জ এসেছে। এই চ্যাপ্টারে আমরা দেখব কীভাবে SkyNets সেই চ্যালেঞ্জগুলো সামলেছে, কী কী পরিবর্তন করেছে, আর কীভাবে Nautobot তাদের এই স্কেলিং জার্নিতে সাহায্য করেছে।</p>
+<h2 id="-">বর্তমান পরিস্থিতি - ২০২৬ সালের গল্প<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<p>আজ থেকে দুই বছর আগে (২০২৪) যেখানে ছিল:
+- ২টা পপ (মিরপুর, উত্তরা)
+- প্রায় ২০টা ডিভাইস (২টা কোর, ৩টা ডিস্ট্রিবিউশন, ~১৫টা এক্সেস)
+- ৫ হাজার কাস্টমার
+- ৩ জন টেকনিক্যাল টিম (জাহাঙ্গীর, আসিফ, রফিক)
+- নেমিং কনভেনশন: <code>R-MIR-CORE-01</code> (কোনো Zone prefix ছিল না)</p>
+<p>এখন ২০২৬ সালে কোথায় এসেছে:
+- ৮টা পপ (নর্থ ঢাকা জুড়ে)
+- ১৫০+ ডিভাইস
+- ৫০ হাজার কাস্টমার
+- ১৮ জন টেকনিক্যাল টিম</p>
+<h3 id="_1">নতুন পপগুলো<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>মিরপুর আর উত্তরার পাশাপাশি নতুন ছয়টা পপ যুক্ত হয়েছে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>১. কল্যাণপুর পপ - সেকশন ৩ (~৫ হাজার কাস্টমার)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>২. বনানী পপ - রোড ১১ (~৬ হাজার কাস্টমার)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>৩. গুলশান পপ - গুলশান-২ (~৮ হাজার কাস্টমার)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>৪. মোহাম্মদপুর পপ - টাউন হল রোড (~৭ হাজার কাস্টমার)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>৫. ধানমন্ডি পপ - রোড ২৭ (~৯ হাজার কাস্টমার)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>৬. বারিধারা পপ - বারিধারা DOHS (~৫ হাজার কাস্টমার)
+</span></code></pre></div>
+<p>প্রতিটা পপে:
+- ১টা কোর রাউটার
+- ২-৩টা ডিস্ট্রিবিউশন সুইচ
+- ১৫-২৫টা এক্সেস সুইচ</p>
+<h3 id="_2">নতুন আপস্ট্রিম কানেকশন<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>শুধু BTCL আর Summit না, এখন আরো যুক্ত হয়েছে:
+- <strong>BTCL</strong> - প্রাইমারি প্রোভাইডার (মিরপুর, উত্তরা)
+- <strong>Summit Communications</strong> - সেকেন্ডারি প্রোভাইডার (কল্যাণপুর, গুলশান)
+- <strong>ফাইবার@হোম</strong> - ব্যাকআপ কানেকশন
+- <strong>সাইবারগেট</strong> - কর্পোরেট ক্লায়েন্টদের জন্য ডেডিকেটেড
+- <strong>ইন্টার-পপ লিংক</strong> - নিজেদের ফাইবার দিয়ে পপ-টু-পপ কানেকশন</p>
+<h2 id="-_1">প্রথম চ্যালেঞ্জ: লোকেশন হায়ারার্কি রি-অর্গানাইজ করা<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h2>
+<p>৫ হাজার কাস্টমারের সময় সব ফ্ল্যাট স্ট্রাকচারে রাখা যেত। কিন্তু ৫০ হাজারে সেটা কাজ করে না। দরকার হায়ারার্কিক্যাল স্ট্রাকচার।</p>
+<h3 id="_3">আগের স্ট্রাকচার (২০২৪):<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Mirpur POP
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Uttara POP
+</span></code></pre></div>
+<p>সিম্পল দুটো POP, কোনো hierarchy নেই। Nautobot 3.0 এর Hierarchical Locations ফিচার ইউজ করা হয়নি।</p>
+<h3 id="_4">নতুন স্ট্রাকচার (২০২৬):<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>Nautobot 3.0 এর Hierarchical Locations ব্যবহার করে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SkyNets Bangladesh Network (Location Type: Region)
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  └── Dhaka North Zone (Location Type: Zone)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>       ├── Mirpur Cluster (Location Type: Cluster)
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>       │    ├── Mirpur POP (Location Type: POP)
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>       │    │    ├── Rack A (Location Type: Rack)
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>       │    │    └── Rack B (Location Type: Rack)
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>       │    └── Kalyanpur POP (নতুন)
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>       │         └── Rack A
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>       │
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>       ├── Uttara Cluster (Location Type: Cluster)
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>       │    ├── Uttara POP
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>       │    │    └── Rack A
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>       │    └── Baridhara POP (নতুন)
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>       │         └── Rack A
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>       │
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>       ├── Gulshan Cluster (নতুন)
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>       │    ├── Gulshan POP
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>       │    │    ├── Rack A
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>       │    │    └── Rack B
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>       │    └── Banani POP
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>       │         └── Rack A
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>       │
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>       └── Central Cluster (নতুন)
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>            ├── Dhanmondi POP
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>            │    ├── Rack A
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>            │    └── Rack B
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>            └── Mohammadpur POP
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>                 └── Rack A
+</span></code></pre></div>
+<p>এই হায়ারার্কি তৈরি করতে প্রথমে Location Types ডিফাইন করা হয়েছে:</p>
+<p><strong>Location Types তৈরি:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>1. Region (Top level, Nestable: ✓)
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2. Zone (Parent: Region, Nestable: ✓)
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>3. Cluster (Parent: Zone, Nestable: ✓)
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>4. POP (Parent: Cluster, Nestable: ✓)
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>5. Rack (Parent: POP, Nestable: ✗)
+</span></code></pre></div>
+<p><strong>Gulshan Cluster তৈরি:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Organization → Locations → + Add
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Name: Gulshan Cluster
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Location Type: Cluster
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Parent: Dhaka North Zone
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Status: Active
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Description: Gulshan and Banani area coverage - high-value residential and commercial zone
+</span></code></pre></div>
+<p><strong>Gulshan POP তৈরি:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Name: Gulshan POP
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Location Type: POP
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Parent: Gulshan Cluster
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Physical Address: House 45, Road 11, Block CEN(A), Gulshan-2, Dhaka-1212
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Latitude: 23.7925
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Longitude: 90.4078
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>Contact Name: Salman Ahmed
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Contact Phone: +880 1811-987654
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>Time Zone: Asia/Dhaka
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>Description: Premium POP serving Gulshan-2 area. 8000 customers, mostly high-bandwidth corporate and residential.
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>Comments:
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  - Established: March 2025
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>  - Building: 5-story commercial building, 3rd floor
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>  - Fiber Routes: Dual path to Mirpur and Uttara POPs
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>  - Backup Power: 100 KVA generator + 2 hours UPS
+</span></code></pre></div>
+<p>একইভাবে বাকি পপগুলো যোগ করা হয়েছে।</p>
+<h3 id="_5">হায়ারার্কি এর সুবিধা<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>এখন রিপোর্টিং অনেক সহজ:</p>
+<p><strong>প্রশ্ন:</strong> "Gulshan Cluster এ মোট কয়টা ডিভাইস?"</p>
+<p><strong>উত্তর:</strong> Devices → Devices → Filters → Location: Gulshan Cluster → দেখাবে সব ডিভাইস (গুলশান পপ + বনানী পপ মিলে)</p>
+<p><strong>প্রশ্ন:</strong> "Central Cluster এ কতটা আইপি ব্যবহৃত হচ্ছে?"</p>
+<p><strong>উত্তর:</strong> IPAM → Prefixes → Filter by Location: Central Cluster → utilization দেখুন</p>
+<h2 id="_6">দ্বিতীয় চ্যালেঞ্জ: ডিভাইস নেমিং স্কেল করা<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>আগের নেমিং কনভেনশন ছিল (২০২৪):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Format: [Type]-[Site]-[Role]-[Number]
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>উদাহরণ: 
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>R-MIR-CORE-01 = Router, Mirpur, Core, #1
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>SW-UTT-DIST-01 = Switch, Uttara, Distribution, #1
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>SW-MIR-ACC-03 = Switch, Mirpur, Access, #3
+</span></code></pre></div>
+<p>এটা ভালো কাজ করছিল যখন দুটো সাইট ছিল। কিন্তু এখন আটটা সাইট। তাই নেমিং আপডেট করা হয়েছে Zone prefix যোগ করে:</p>
+<h3 id="_7">নতুন নেমিং কনভেনশন (২০২৬):<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Format: [Type]-[Zone]-[Site]-[Role]-[Number]
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Type: (আগের মতোই)
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>  R = Router
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  SW = Switch
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  FW = Firewall
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>Zone: (নতুন যোগ)
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  DN = Dhaka North
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>Site: (নতুন সাইট কোড যোগ)
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>  MIR = Mirpur
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>  UTT = Uttara
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>  KAL = Kalyanpur
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>  BAN = Banani
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>  GUL = Gulshan
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>  MOH = Mohammadpur
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>  DHA = Dhanmondi
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>  BAR = Baridhara
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>Role: (আগের মতোই)
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>  CORE = Core Router
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>  DIST = Distribution Switch
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>  ACC = Access Switch
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>Number: 01, 02, 03... (zero-padded)
+</span></code></pre></div>
+<h3 id="_8">উদাহরণ:<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>R-DN-GUL-CORE-01 = Router, Dhaka North, Gulshan, Core, #1
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>SW-DN-DHA-DIST-02 = Switch, Dhaka North, Dhanmondi, Distribution, #2
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>SW-DN-BAR-ACC-18 = Switch, Dhaka North, Baridhara, Access, #18
+</span></code></pre></div>
+<h3 id="_9">পুরোনো ডিভাইস রিনেম করা<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>সমস্যা হলো পুরোনো ডিভাইসগুলো (২০২৪ এর) আগের নেমিং-এ আছে:
+- R-MIR-CORE-01
+- SW-UTT-DIST-01</p>
+<p>এগুলো রিনেম করতে হয়েছে নতুন কনভেনশনে:
+- R-DN-MIR-CORE-01
+- SW-DN-UTT-DIST-01</p>
+<p>প্রায় ২০টা ডিভাইস হওয়ায় UI থেকে এক একটা করে ম্যানুয়ালি এডিট করা হয়েছে। বড় স্কেলে (১৫০+ ডিভাইস) API/script দিয়ে bulk rename করা ভালো (পরবর্তী চ্যাপ্টারে দেখব)।</p>
+<h2 id="ip-address-management">তৃতীয় চ্যালেঞ্জ: IP Address Management স্কেলিং<a class="headerlink" href="#ip-address-management" title="Permanent link">&para;</a></h2>
+<p>৫ হাজার কাস্টমারের সময় যে /22 পাবলিক ব্লক ছিল সেটা যথেষ্ট ছিল। কিন্তু ৫০ হাজারে সেটা শেষ হয়ে গেছে। নতুন আইপি ব্লক এসেছে।</p>
+<h3 id="_10">পুরোনো আইপি স্ট্রাকচার (২০২৪):<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>103.12x.4x.0/22 (1024 IPs total)
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  ├─ 103.12x.4x.0/24 - Residential Mirpur
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  ├─ 103.12x.x1.0/24 - Residential Uttara (তখন কল্যাণপুর ছিল, এখন উত্তরা)
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  ├─ 103.12x.x2.0/25 - Corporate
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  └─ 103.12x.x2.128/25 - Infrastructure
+</span></code></pre></div>
+<h3 id="_11">নতুন আইপি স্ট্রাকচার (২০২৬):<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>আরো তিনটা /22 ব্লক এলোকেট হয়েছে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>103.12x.4x.0/22 (Original - প্রায় ফুল)
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>103.12x.x4.0/22 (New Block 1)
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>103.12x.x8.0/22 (New Block 2)
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>103.12x.x2.0/22 (New Block 3)
+</span></code></pre></div>
+<p>এখন এগুলোকে সুন্দর করে অর্গানাইজ করা হয়েছে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Parent: 103.12x.4x.0/20 (Aggregate - সব ব্লক মিলে)
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  │
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  ├─ 103.12x.4x.0/22 - Mirpur/Kalyanpur Cluster
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  │    ├─ 103.12x.4x.0/24 - Mirpur Residential
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>  │    ├─ 103.12x.41.0/24 - Kalyanpur Residential
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>  │    ├─ 103.12x.42.0/24 - Corporate (Mirpur/Kalyanpur)
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>  │    └─ 103.12x.43.0/24 - Infrastructure
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>  │
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>  ├─ 103.12x.44.0/22 - Uttara/Baridhara Cluster
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>  │    ├─ 103.12x.44.0/24 - Uttara Residential
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>  │    ├─ 103.12x.45.0/24 - Baridhara Residential
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>  │    ├─ 103.12x.46.0/24 - Corporate (Uttara/Baridhara)
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>  │    └─ 103.12x.47.0/24 - Reserved
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>  │
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>  ├─ 103.12x.48.0/22 - Gulshan/Banani Cluster
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>  │    ├─ 103.12x.48.0/24 - Gulshan Residential
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>  │    ├─ 103.12x.49.0/24 - Banani Residential
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>  │    ├─ 103.12x.50.0/24 - Corporate (Premium zone)
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>  │    └─ 103.12x.51.0/24 - Reserved
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>  │
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>  └─ 103.12x.52.0/22 - Central Cluster + Future
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>       ├─ 103.12x.52.0/24 - Dhanmondi Residential
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>       ├─ 103.12x.53.0/24 - Mohammadpur Residential
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>       ├─ 103.12x.54.0/24 - Corporate (Central)
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>       └─ 103.12x.55.0/24 - Future Expansion
+</span></code></pre></div>
+<h3 id="ip-utilization-monitoring">IP Utilization Monitoring<a class="headerlink" href="#ip-utilization-monitoring" title="Permanent link">&para;</a></h3>
+<p>৫০ হাজার কাস্টমারে আইপি ইউটিলাইজেশন ট্র্যাক করা অত্যন্ত জরুরি।</p>
+<p><strong>IPAM → Prefixes</strong> লিস্টে গেলে দেখবেন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>103.12x.4x.0/24 - 92% utilized (236/256 IPs used) - ⚠️ Almost Full
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>103.12x.x4.0/24 - 68% utilized (174/256 IPs used) - ✓ Healthy
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>103.12x.x8.0/24 - 45% utilized (115/256 IPs used) - ✓ Good
+</span></code></pre></div>
+<p>যখন কোনো প্রিফিক্স ৮০% এর বেশি ইউটিলাইজড হয়, তখন alert তৈরি করুন। নতুন প্রিফিক্স রিকোয়েস্ট করুন।</p>
+<h3 id="private-ip-management">Private IP Management<a class="headerlink" href="#private-ip-management" title="Permanent link">&para;</a></h3>
+<p>পাবলিক আইপি ছাড়াও প্রাইভেট আইপি স্ট্রাকচার বড় হয়েছে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>10.10.0.0/16 - SkyNets Internal Network
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>  │
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>  ├─ 10.10.1.0/24 - Loopbacks (all routers)
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>  │    ├─ 10.10.1.1/32 - R-DN-MIR-CORE-01
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>  │    ├─ 10.10.1.2/32 - R-DN-UTT-CORE-01
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>  │    ├─ 10.10.1.3/32 - R-DN-GUL-CORE-01
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>  │    └─ ... (সব কোর রাউটার)
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>  │
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>  ├─ 10.10.10.0/24 - Management - Mirpur POP
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>  ├─ 10.10.11.0/24 - Management - Uttara POP
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>  ├─ 10.10.12.0/24 - Management - Gulshan POP
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>  ├─ 10.10.13.0/24 - Management - Banani POP
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>  ├─ 10.10.14.0/24 - Management - Kalyanpur POP
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>  ├─ 10.10.15.0/24 - Management - Dhanmondi POP
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>  ├─ 10.10.16.0/24 - Management - Mohammadpur POP
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>  └─ 10.10.17.0/24 - Management - Baridhara POP
+</span></code></pre></div>
+<h2 id="vlan-scaling">চতুর্থ চ্যালেঞ্জ: VLAN Scaling<a class="headerlink" href="#vlan-scaling" title="Permanent link">&para;</a></h2>
+<p>আগের (২০২৪) ভিল্যান স্ট্রাকচার ছিল সিম্পল:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>VLAN 10: MGMT_MIRPUR
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>VLAN 10: MGMT_UTTARA (same VLAN ID, different location)
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>VLAN 20: UPLINK_MIRPUR
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>VLAN 21: UPLINK_UTTARA
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>VLAN 100: RESIDENTIAL_MIR
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>VLAN 101: RESIDENTIAL_UTT
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>VLAN 200: CORPORATE (shared)
+</span></code></pre></div>
+<p>এখন (২০২৬) প্রতিটা সাইটের জন্য আলাদা ভিল্যান:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>VLAN 10-19: Management (site-specific)
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>  - VLAN 10: MGMT_MIRPUR
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>  - VLAN 11: MGMT_UTTARA
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  - VLAN 12: MGMT_GULSHAN
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>  - VLAN 13: MGMT_BANANI
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>  - VLAN 14: MGMT_KALYANPUR
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>  - VLAN 15: MGMT_DHANMONDI
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>  - VLAN 16: MGMT_MOHAMMADPUR
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>  - VLAN 17: MGMT_BARIDHARA
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>VLAN 100-199: Residential (site-specific)
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>  - VLAN 100: RES_MIRPUR
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>  - VLAN 101: RES_UTTARA
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>  - VLAN 102: RES_GULSHAN
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>  - VLAN 103: RES_BANANI
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>  - VLAN 104: RES_KALYANPUR
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>  - VLAN 105: RES_DHANMONDI
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>  - VLAN 106: RES_MOHAMMADPUR
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>  - VLAN 107: RES_BARIDHARA
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>VLAN 200-299: Corporate (সব সাইট শেয়ারড)
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>  - VLAN 200: CORP_STANDARD
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>  - VLAN 201: CORP_PREMIUM
+</span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>  - VLAN 202: CORP_ENTERPRISE
+</span></code></pre></div>
+<p>এই সব ভিল্যান Nautobot এ CSV দিয়ে বাল্ক ইমপোর্ট করা হয়েছে।</p>
+<h2 id="cable-management">পঞ্চম চ্যালেঞ্জ: Cable Management বাস্তবতা<a class="headerlink" href="#cable-management" title="Permanent link">&para;</a></h2>
+<p>৫ হাজার কাস্টমারের সময় (~২০ ডিভাইস) সব ক্যাবল ডকুমেন্ট করা সম্ভব ছিল। কিন্তু ৫০ হাজারে এসে (১৫০+ ডিভাইস) বোঝা গেল প্রতিটা প্যাচ কর্ড ট্র্যাক করা impractical।</p>
+<h3 id="pragmatic-cable-management-policy">Pragmatic Cable Management Policy<a class="headerlink" href="#pragmatic-cable-management-policy" title="Permanent link">&para;</a></h3>
+<p>SkyNets একটা প্র্যাগম্যাটিক পলিসি বানিয়েছে:</p>
+<p><strong>অবশ্যই ডকুমেন্ট করবেন:</strong></p>
+<ul>
+<li>আপলিংক ক্যাবল (প্রোভাইডার টু কোর)</li>
+<li>কোর টু ডিস্ট্রিবিউশন লিংক</li>
+<li>ইন্টার-পপ ফাইবার লিংক</li>
+<li>ক্রিটিক্যাল ব্যাকআপ লিংক</li>
+<li>যেকোনো ৫০ মিটারের বেশি দৈর্ঘ্যের ক্যাবল</li>
+</ul>
+<p><strong>ডকুমেন্ট করতে হবে না:</strong></p>
+<ul>
+<li>ডিস্ট্রিবিউশন টু এক্সেস সুইচ লিংক (যদি স্ট্যান্ডার্ড হয়)</li>
+<li>এক্সেস সুইচ টু কাস্টমার প্যাচ কর্ড</li>
+<li>NOC এর ইন্টারনাল প্যাচিং</li>
+<li>টেম্পোরারি টেস্ট ক্যাবল</li>
+<li>২ মিটারের কম patch cables</li>
+</ul>
+<p>এই পলিসি ডকুমেন্ট করে রাখা আছে এবং সব টিম মেম্বার জানে।</p>
+<h2 id="multi-team-collaboration">ষষ্ঠ চ্যালেঞ্জ: Multi-Team Collaboration<a class="headerlink" href="#multi-team-collaboration" title="Permanent link">&para;</a></h2>
+<p>৫ হাজার কাস্টমারের সময় তিনজন টেকনিশিয়ান ছিল (জাহাঙ্গীর, আসিফ, রফিক)। এখন ১৮ জন। বিভিন্ন টিম:</p>
+<p><strong>NOC Team (৬ জন):</strong></p>
+<ul>
+<li>২৪/৭ মনিটরিং</li>
+<li>ইনসিডেন্ট রেসপন্স</li>
+<li>কাস্টমার সাপোর্ট</li>
+</ul>
+<p><strong>Field Operations (৮ জন):</strong></p>
+<ul>
+<li>নতুন কানেকশন ইনস্টলেশন</li>
+<li>ফল্ট রিপেয়ার</li>
+<li>সাইট মেইনটেন্যান্স</li>
+</ul>
+<p><strong>Network Engineering (৩ জন):</strong></p>
+<ul>
+<li>নেটওয়ার্ক ডিজাইন</li>
+<li>কনফিগারেশন ম্যানেজমেন্ট</li>
+<li>ক্যাপাসিটি প্ল্যানিং</li>
+</ul>
+<p><strong>Management (১ জন - জাহাঙ্গীর সাহেব, এখন CTO):</strong></p>
+<ul>
+<li>ওভারভিউ এবং রিপোর্টিং</li>
+</ul>
+<h3 id="permission-structure">Permission Structure<a class="headerlink" href="#permission-structure" title="Permanent link">&para;</a></h3>
+<p>এই টিমগুলোর জন্য আলাদা আলাদা পারমিশন:</p>
+<p><strong>NOC Team:</strong></p>
+<ul>
+<li>View: সব</li>
+<li>Add/Edit: Devices, IPs, Cables</li>
+<li>Delete: না</li>
+</ul>
+<p><strong>Field Operations:</strong></p>
+<ul>
+<li>View: সব</li>
+<li>Add: Devices, Cables</li>
+<li>Edit: Devices (status, location)</li>
+<li>Delete: না</li>
+</ul>
+<p><strong>Network Engineering:</strong></p>
+<ul>
+<li>View: সব</li>
+<li>Add/Edit: সব (Delete ছাড়া)</li>
+<li>Delete: না (শুধু critical জিনিস delete করতে পারে approval এর পরে)</li>
+</ul>
+<p><strong>Management:</strong></p>
+<ul>
+<li>View: সব</li>
+<li>Add/Edit/Delete: না (read-only)</li>
+</ul>
+<h3 id="collaboration-workflow">Collaboration Workflow<a class="headerlink" href="#collaboration-workflow" title="Permanent link">&para;</a></h3>
+<p>একটা স্ট্যান্ডার্ড ওয়ার্কফ্লো:</p>
+<p><strong>নতুন সাইট যুক্ত করার সময়:</strong></p>
+<ol>
+<li>
+<p><strong>Network Engineer</strong> নতুন সাইট প্ল্যান করে Nautobot এ:</p>
+</li>
+<li>
+<p>Location তৈরি করে</p>
+</li>
+<li>IP allocation করে</li>
+<li>
+<p>Device types verify করে</p>
+</li>
+<li>
+<p><strong>Field Team</strong> সাইট সেটআপ করে:</p>
+</li>
+<li>
+<p>ডিভাইস ইনস্টল করে</p>
+</li>
+<li>Serial numbers নোট করে</li>
+<li>
+<p>Cable routing করে</p>
+</li>
+<li>
+<p><strong>Network Engineer</strong> Nautobot আপডেট করে:</p>
+</li>
+<li>
+<p>Devices এড করে</p>
+</li>
+<li>Cables ডকুমেন্ট করে</li>
+<li>
+<p>IP assign করে</p>
+</li>
+<li>
+<p><strong>NOC Team</strong> যাচাই করে:</p>
+</li>
+<li>
+<p>সব ডিভাইস Nautobot এ আছে কিনা</p>
+</li>
+<li>Monitoring সেটআপ হয়েছে কিনা</li>
+<li>Connectivity test করে</li>
+</ol>
+<h2 id="data-quality-control">সপ্তম চ্যালেঞ্জ: Data Quality Control<a class="headerlink" href="#data-quality-control" title="Permanent link">&para;</a></h2>
+<p>১৫০ ডিভাইস মানে ১৫০ জায়গায় ভুল হওয়ার সম্ভাবনা। Data Quality নিশ্চিত করা জরুরি।</p>
+<h3 id="weekly-data-audit">Weekly Data Audit<a class="headerlink" href="#weekly-data-audit" title="Permanent link">&para;</a></h3>
+<p>SkyNets প্রতি সপ্তাহে একটা ডেটা অডিট করে:</p>
+<p><strong>সোমবার: Device Audit</strong></p>
+<ul>
+<li>সব Active ডিভাইসের Serial Number আছে কিনা</li>
+<li>সব ডিভাইসের Location সঠিক কিনা</li>
+<li>নেমিং কনভেনশন মানা হচ্ছে কিনা</li>
+</ul>
+<p><strong>বুধবার: IP Audit</strong></p>
+<ul>
+<li>কোনো ডুপ্লিকেট IP নেই তো</li>
+<li>কোনো IP ভুল prefix এ নেই তো</li>
+<li>DNS names unique কিনা</li>
+</ul>
+<p><strong>শুক্রবার: Cable Audit</strong></p>
+<ul>
+<li>Critical cables ডকুমেন্টেড কিনা</li>
+<li>Cable status সঠিক কিনা (Connected/Planned)</li>
+</ul>
+<h3 id="automated-validation">Automated Validation<a class="headerlink" href="#automated-validation" title="Permanent link">&para;</a></h3>
+<p>প্রতি সোমবার সকালে একটা Python script চলে যা validate করে এবং রিপোর্ট ইমেইল করে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Missing Serial Numbers: 3 devices
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Duplicate IPs: 0
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>Non-standard Device Names: 2 devices
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>Orphaned IPs (no device assigned): 5 IPs
+</span></code></pre></div>
+<p>টিম লিডার এই রিপোর্ট দেখে action নেন।</p>
+<h2 id="performance-response-time">অষ্টম চ্যালেঞ্জ: Performance এবং Response Time<a class="headerlink" href="#performance-response-time" title="Permanent link">&para;</a></h2>
+<p>১৫০+ ডিভাইস, ৮টা সাইট, হাজার হাজার আইপি - Nautobot UI স্লো হয়ে যাচ্ছিল না তো?</p>
+<h3 id="performance-optimization">Performance Optimization<a class="headerlink" href="#performance-optimization" title="Permanent link">&para;</a></h3>
+<p>SkyNets কিছু optimization করেছে:</p>
+<p><strong>১. PostgreSQL Tuning:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>shared_buffers = 4GB (ডিফল্ট 128MB থেকে বাড়ানো)
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>effective_cache_size = 12GB
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>work_mem = 64MB
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>maintenance_work_mem = 1GB
+</span></code></pre></div>
+<p><strong>২. Pagination বাড়ানো:</strong></p>
+<p>User Preferences এ:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Items per page: 100 (ডিফল্ট 25 থেকে)
+</span></code></pre></div></p>
+<p><strong>৩. Saved Filters ব্যবহার:</strong></p>
+<p>বারবার একই complex query না চালিয়ে Saved Filters ব্যবহার।</p>
+<p><strong>৪. Regular Database Maintenance:</strong></p>
+<p>মাসে একবার:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>vacuumdb<span class="w"> </span>--analyze<span class="w"> </span>nautobot
+</span></code></pre></div></p>
+<p>এই optimizations এর পরে response time ভালো আছে। ডিভাইস লিস্ট লোড হতে ২-৩ সেকেন্ড লাগে যা acceptable।</p>
+<h2 id="-_2">৬ মাসের রোডম্যাপ - ৫ হাজার থেকে ৫০ হাজারে<a class="headerlink" href="#-_2" title="Permanent link">&para;</a></h2>
+<p>এই স্কেলিং একদিনে হয়নি। ছয় মাস লেগেছে। এই ছিল রোডম্যাপ:</p>
+<h3 id="-foundation-strengthening">মাস ১-২: Foundation Strengthening<a class="headerlink" href="#-foundation-strengthening" title="Permanent link">&para;</a></h3>
+<p><strong>মাস ১ (জানুয়ারি ২০২৫):</strong></p>
+<ul>
+<li>Location hierarchy ডিজাইন (Region → Zone → Cluster → POP)</li>
+<li>Location Types তৈরি</li>
+<li>নতুন Clusters তৈরি (Mirpur, Uttara Clusters)</li>
+<li>নেমিং কনভেনশন আপডেট (Zone prefix যোগ)</li>
+<li>পুরোনো ডিভাইস রিনেম প্ল্যান</li>
+</ul>
+<p><strong>মাস ২ (ফেব্রুয়ারি ২০২৫):</strong></p>
+<ul>
+<li>পুরোনো ২০টা ডিভাইস রিনেম (R-MIR-CORE-01 → R-DN-MIR-CORE-01)</li>
+<li>নতুন আইপি ব্লক অ্যাপ্লাই করা</li>
+<li>IP addressing স্কিম ডিজাইন</li>
+<li>Permission structure review এবং নতুন groups তৈরি</li>
+</ul>
+<h3 id="-new-sites-onboarding">মাস ৩-৪: New Sites Onboarding<a class="headerlink" href="#-new-sites-onboarding" title="Permanent link">&para;</a></h3>
+<p><strong>মাস ৩ (মার্চ ২০২৫):</strong></p>
+<ul>
+<li>কল্যাণপুর পপ যুক্ত (প্রথম নতুন সাইট - ধীরে ধীরে)</li>
+<li>গুলশান পপ যুক্ত</li>
+<li>প্রতিটা সাইটে ফুল ডকুমেন্টেশন</li>
+<li>Cable management policy finalize</li>
+</ul>
+<p><strong>মাস ৪ (এপ্রিল ২০২৫):</strong></p>
+<ul>
+<li>বনানী পপ যুক্ত</li>
+<li>বারিধারা পপ যুক্ত</li>
+<li>Team training (নতুন Field Operations members দের)</li>
+<li>NOC team expansion</li>
+</ul>
+<h3 id="ip-vlan-restructuring">মাস ৫: IP এবং VLAN Restructuring<a class="headerlink" href="#ip-vlan-restructuring" title="Permanent link">&para;</a></h3>
+<p><strong>মাস ৫ (মে ২০২৫):</strong></p>
+<ul>
+<li>নতুন IP blocks সব prefix এ ভাগ করা</li>
+<li>VLAN স্ট্রাকচার রিডিজাইন এবং CSV import</li>
+<li>Migration প্ল্যানিং এবং execution</li>
+</ul>
+<h3 id="final-sites-optimization">মাস ৬: Final Sites এবং Optimization<a class="headerlink" href="#final-sites-optimization" title="Permanent link">&para;</a></h3>
+<p><strong>মাস ৬ (জুন ২০২৫):</strong></p>
+<ul>
+<li>ধানমন্ডি পপ যুক্ত</li>
+<li>মোহাম্মদপুর পপ যুক্ত</li>
+<li>Performance tuning (PostgreSQL, pagination)</li>
+<li>Automation scripts তৈরি (validation, reports)</li>
+<li>Team training complete</li>
+</ul>
+<h2 id="key-metrics-">Key Metrics - আগে এবং পরে<a class="headerlink" href="#key-metrics-" title="Permanent link">&para;</a></h2>
+<p>কিছু সংখ্যা যা সফলতা প্রমাণ করে:</p>
+<p><strong>২০২৪ (৫ হাজার কাস্টমার):</strong></p>
+<ul>
+<li>নতুন সাইট যুক্ত করতে সময়: ২-৩ সপ্তাহ</li>
+<li>ডেটা এন্ট্রি ভুলের হার: ~১৫%</li>
+<li>NOC query response time: ৮-১০ মিনিট</li>
+<li>ম্যানুয়াল কাজ: ৮৫%</li>
+</ul>
+<p><strong>২০২৬ (৫০ হাজার কাস্টমার):</strong></p>
+<ul>
+<li>নতুন সাইট যুক্ত করতে সময়: ৩ দিন</li>
+<li>ডেটা এন্ট্রি ভুলের হার: ~৪%</li>
+<li>NOC query response time: ৩০ সেকেন্ড</li>
+<li>ম্যানুয়াল কাজ: ২৫%</li>
+</ul>
+<h2 id="_12">শিক্ষা এবং পরামর্শ<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>SkyNets এর CTO জাহাঙ্গীর সাহেবের কিছু পরামর্শ:</p>
+<p><strong>১. একবারে সব করতে যাবেন না</strong></p>
+<p>"আমরা ভুল করেছিলাম প্রথমে সব নতুন সাইট একসাথে করতে গিয়ে। পরে বুঝলাম একটা একটা করে করলে ভালো হয়। কল্যাণপুর পপ সম্পূর্ণ করে তারপর গুলশান - এভাবে করলে লেসন শিখতে পেরেছি।"</p>
+<p><strong>২. নেমিং কনভেনশন শুরুতেই ভবিষ্যৎ মাথায় রেখে করুন</strong></p>
+<p>"আমাদের একবার নাম চেঞ্জ করতে হয়েছে। প্রথমবারই যদি স্কেলেবল কনভেনশন (Zone prefix সহ) করতাম, এত ঝামেলা হতো না।"</p>
+<p><strong>৩. Data quality এ কম্প্রোমাইজ করবেন না</strong></p>
+<p>"একটা ভুল ডেটা এন্ট্রি পুরো নেটওয়ার্কে সমস্যা করতে পারে। Weekly audit করুন, automated validation রাখুন।"</p>
+<p><strong>৪. টিমকে সাথে নিন</strong></p>
+<p>"Nautobot শুধু একজনের জিনিস না। পুরো টিম যদি ইউজ না করে, তাহলে ডেটা আউটডেটেড হয়ে যায়। প্রপার ট্রেনিং দিন, documentation রাখুন।"</p>
+<p><strong>৫. Performance monitoring করুন</strong></p>
+<p>"স্কেল বাড়ার সাথে সাথে রেগুলার পারফরম্যান্স চেক করুন। Database tuning, caching - এগুলো গুরুত্বপূর্ণ।"</p>
+<p><strong>স্কেলিং চ্যালেঞ্জ:</strong></p>
+<ul>
+<li>লোকেশন হায়ারার্কি রি-অর্গানাইজ করা (flat → hierarchical)</li>
+<li>ডিভাইস নেমিং স্কেল করা (Zone prefix যোগ)</li>
+<li>IP এবং VLAN ম্যানেজমেন্ট (১টা /22 → ৪টা /22)</li>
+<li>Cable management বাস্তবতা (pragmatic policy)</li>
+<li>Multi-team collaboration (৩ জন → ১৮ জন)</li>
+<li>Data quality control (weekly audit, automated validation)</li>
+<li>Performance optimization (PostgreSQL tuning, saved filters)</li>
+</ul>
+<p>SkyNets Bangladesh এখন ৫০ হাজার কাস্টমারে স্ট্যাবল। তাদের লক্ষ্য পরের দুই বছরে (২০২৮) ১ লক্ষ কাস্টমার। সেজন্য তারা এখন অটোমেশনের দিকে যাচ্ছে। পরের চ্যাপ্টারে আমরা দেখব কীভাবে API এবং Python দিয়ে Nautobot কে অটোমেট করা যায়।</p>
+<hr />
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../fivethousands/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ছোট আইএসপি সেটআপ (৫ হাজার কাস্টমার)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                ছোট আইএসপি সেটআপ (৫ হাজার কাস্টমার)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../api_automation/" class="md-footer__link md-footer__link--next" aria-label="Next: API এবং অটোমেশনের শুরু">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                API এবং অটোমেশনের শুরু
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      সৃজনশীল লাইসেন্সিং ২০২৩ - ২০২৬ &copy; রকিবুল হাসান
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/raqueeb" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://m.me/raqueeb" target="_blank" rel="noopener" title="m.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256.6 8C116.6 8 8 110.3 8 248.6c0 72.3 29.7 134.8 78.1 177.9 8.3 7.5 6.6 11.9 8 58.2.1 3.2 1 6.4 2.6 9.2s3.9 5.2 6.7 6.9 5.9 2.8 9.1 3 6.5-.3 9.5-1.6c52.9-23.2 53.6-25 62.6-22.6 153.2 42.2 319.4-55.9 319.4-231C504 110.3 396.6 8 256.6 8m149.2 185.1-73 115.6c-2.8 4.3-6.4 8.1-10.6 11s-9.1 4.8-14.1 5.8-10.3.8-15.3-.4-9.7-3.4-13.8-6.4l-58.1-43.5c-2.6-1.9-5.8-3-9-3s-6.4 1.1-9 3l-78.4 59.4c-10.5 7.9-24.2-4.6-17.1-15.7l73-115.6c2.8-4.3 6.4-8.1 10.6-11s9.1-4.8 14.1-5.8 10.3-.8 15.3.4 9.7 3.4 13.9 6.4l58.1 43.5c2.6 1.9 5.8 3 9 3s6.4-1.1 9-3l78.4-59.4c10.4-8 24.1 4.5 17.1 15.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="tel:+8801713095767" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157m-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6m101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/raqueeb" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/raqueeb/" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://instagram.com/raqueeb" target="_blank" rel="noopener" title="instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://facebook.com/raqueeb" target="_blank" rel="noopener" title="facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

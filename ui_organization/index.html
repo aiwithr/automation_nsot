@@ -1,0 +1,3513 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="রোড টু হাইটেক ইন্ডাস্ট্রি:আইএসপি অটোমেশন ২">
+      
+      
+        <meta name="author" content="রকিবুল হাসান">
+      
+      
+        <link rel="canonical" href="https://aiwithr.github.io/automation_nsot/ui_organization/">
+      
+      
+        <link rel="prev" href="../datamodel/">
+      
+      
+        <link rel="next" href="../connectivity_adv/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>UI দিয়ে ডেটা এন্ট্রি - আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=SiyamRupali:300,300i,400,400i,700,700i%7CSiyamRupali:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"SiyamRupali";--md-code-font:"SiyamRupali"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nautobot-30-ui-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" class="md-header__button md-logo" aria-label="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UI দিয়ে ডেটা এন্ট্রি
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/raqueeb/mltraining/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    raqueeb/mltraining
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" class="md-nav__button md-logo" aria-label="আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/raqueeb/mltraining/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    raqueeb/mltraining
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ১ মিলিয়ন ইন্টারনেট গ্রাহক
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    পেছনের দর্শন
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    পেছনের দর্শন
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কৃত্রিম বুদ্ধিমত্তা ও নেটওয়ার্ক অটোমেশনের রাস্তা
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    নেটওয়ার্ক সোর্স অফ ট্রুথ (NSoT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dedication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    উৎসর্গ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contents2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    বইয়ের সম্ভাব্য চ্যাপ্টার স্ট্রাকচার NSoT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot_scale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কেন NSoT ছাড়া স্কেল করা অসম্ভব
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../two_states/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ইনটেন্ডেড স্টেট বনাম অ্যাকচুয়াল স্টেট
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nsot_core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NSoT-এর কোর প্রিন্সিপাল এবং Nautobot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ইনস্টলেশন
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datamodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nautobot ডেটা মডেল - নেটওয়ার্কের যোগসুত্র
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI দিয়ে ডেটা এন্ট্রি
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI দিয়ে ডেটা এন্ট্রি
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nautobot-30-ui-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nautobot 3.0 UI Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nautobot 3.0 UI Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        লগইন এবং ড্যাশবোর্ড
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নেভিগেশন বার
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সার্চ ফিচার
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ইউজার মেনু
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        লোকেশন হায়ারার্কি তৈরি করা
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="লোকেশন হায়ারার্কি তৈরি করা">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#location-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ১: Location Types ডিফাইন করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actual-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ২: Actual Locations তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unified-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unified Roles সেটআপ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unified Roles সেটআপ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ডিভাইস Roles তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manufacturers-device-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manufacturers এবং Device Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manufacturers এবং Device Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manufacturers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manufacturers যোগ করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device Types তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#racks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Racks তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        প্রথম Device এন্ট্রি - মিরপুর কোর রাউটার
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface কনফিগারেশন - Details যোগ করা
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devices-bulk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        আরো Devices যোগ করা - Bulk এর জন্য প্রস্তুতি
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv-bulk-import-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV Bulk Import - দ্রুত ডেটা এন্ট্রি
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSV Bulk Import - দ্রুত ডেটা এন্ট্রি">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV Template ডাউনলোড করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV ফাইল তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV ইমপোর্ট করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-address-assignment-logical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Address Assignment - Logical কানেকশন
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Address Assignment - Logical কানেকশন">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        প্রথমে IP Namespace তৈরি
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-prefixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Prefixes তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-addresses-interface-assign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Addresses তৈরি এবং Interface এ Assign করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlan-management-layer-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN Management - Layer 2 সেগমেন্টেশন
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VLAN Management - Layer 2 সেগমেন্টেশন">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vlan-groups-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN Groups তৈরি করা (অপশনাল কিন্তু recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLANs তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlan-prefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN এবং Prefix এর সম্পর্ক
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cable-management-physical-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cable Management - Physical Connections
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cable Management - Physical Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cable-method-1-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cable তৈরি করা - Method 1 (Interface থেকে)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable-method-2-cable-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cable তৈরি করা - Method 2 (সরাসরি Cable object)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable-types-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cable Types - কোনগুলো available?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cable Trace ব্যবহার করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provider-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provider এবং Circuit সেটআপ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provider এবং Circuit সেটআপ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provider তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuit-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuit Type তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuit তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-validation-quality-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Validation এবং Quality Check
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Validation এবং Quality Check">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device-list-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device List Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing Information চেক করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-address-utilization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Address Utilization দেখা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duplicate Name চেক
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Mistakes এবং কীভাবে এড়াবেন
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Mistakes এবং কীভাবে এড়াবেন">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-location-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mistake 1: Location Hierarchy ভুল
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-device-type-interface-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mistake 2: Device Type এ Interface Templates ভুলে যাওয়া
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-ip-address-prefix-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mistake 3: IP Address এ Prefix Mask ভুল
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-cable-color-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mistake 4: Cable Color Coding না মানা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mistake 5: Description ফিল্ড খালি রাখা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-6-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mistake 6: Status সঠিকভাবে সেট না করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-convention-standards-skynets-bangladesh-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming Convention Standards - SkyNets Bangladesh এর Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-backup-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export এবং Backup - ডেটা সংরক্ষণ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Export এবং Backup - ডেটা সংরক্ষণ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV Export
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monthly-data-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monthly Data Snapshot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        চ্যাপ্টার সারাংশ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectivity_adv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    কানেক্টিভিটি এবং এডভান্সড ফিচার
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fivethousands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ছোট আইএসপি সেটআপ (৫ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiftythousands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    মিডিয়াম আইএসপি সেটআপ (৫০ হাজার কাস্টমার)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API এবং অটোমেশনের শুরু
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv_automation_lac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    এডভান্সড অটোমেশন এবং ১ লক্ষ কাস্টমারের পথে
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mil_customers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ১ মিলিয়ন গ্রাহকের আইএসপি
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    বইটা এখনো লেখা চলছে
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nautobot-30-ui-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nautobot 3.0 UI Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nautobot 3.0 UI Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        লগইন এবং ড্যাশবোর্ড
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        নেভিগেশন বার
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সার্চ ফিচার
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ইউজার মেনু
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        লোকেশন হায়ারার্কি তৈরি করা
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="লোকেশন হায়ারার্কি তৈরি করা">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#location-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ১: Location Types ডিফাইন করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actual-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        স্টেপ ২: Actual Locations তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unified-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unified Roles সেটআপ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unified Roles সেটআপ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ডিভাইস Roles তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manufacturers-device-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manufacturers এবং Device Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manufacturers এবং Device Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manufacturers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manufacturers যোগ করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device Types তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#racks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Racks তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        প্রথম Device এন্ট্রি - মিরপুর কোর রাউটার
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface কনফিগারেশন - Details যোগ করা
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devices-bulk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        আরো Devices যোগ করা - Bulk এর জন্য প্রস্তুতি
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv-bulk-import-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV Bulk Import - দ্রুত ডেটা এন্ট্রি
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSV Bulk Import - দ্রুত ডেটা এন্ট্রি">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV Template ডাউনলোড করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV ফাইল তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV ইমপোর্ট করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-address-assignment-logical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Address Assignment - Logical কানেকশন
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Address Assignment - Logical কানেকশন">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        প্রথমে IP Namespace তৈরি
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-prefixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Prefixes তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-addresses-interface-assign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Addresses তৈরি এবং Interface এ Assign করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlan-management-layer-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN Management - Layer 2 সেগমেন্টেশন
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VLAN Management - Layer 2 সেগমেন্টেশন">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vlan-groups-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN Groups তৈরি করা (অপশনাল কিন্তু recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLANs তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlan-prefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN এবং Prefix এর সম্পর্ক
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cable-management-physical-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cable Management - Physical Connections
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cable Management - Physical Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cable-method-1-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cable তৈরি করা - Method 1 (Interface থেকে)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable-method-2-cable-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cable তৈরি করা - Method 2 (সরাসরি Cable object)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable-types-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cable Types - কোনগুলো available?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cable Trace ব্যবহার করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provider-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provider এবং Circuit সেটআপ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provider এবং Circuit সেটআপ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provider তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuit-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuit Type তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuit তৈরি করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-validation-quality-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Validation এবং Quality Check
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Validation এবং Quality Check">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device-list-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device List Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing Information চেক করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-address-utilization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Address Utilization দেখা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duplicate Name চেক
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Mistakes এবং কীভাবে এড়াবেন
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Mistakes এবং কীভাবে এড়াবেন">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-location-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mistake 1: Location Hierarchy ভুল
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-device-type-interface-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mistake 2: Device Type এ Interface Templates ভুলে যাওয়া
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-ip-address-prefix-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mistake 3: IP Address এ Prefix Mask ভুল
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-cable-color-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mistake 4: Cable Color Coding না মানা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mistake 5: Description ফিল্ড খালি রাখা
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-6-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mistake 6: Status সঠিকভাবে সেট না করা
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-convention-standards-skynets-bangladesh-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming Convention Standards - SkyNets Bangladesh এর Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-backup-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export এবং Backup - ডেটা সংরক্ষণ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Export এবং Backup - ডেটা সংরক্ষণ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV Export
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monthly-data-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monthly Data Snapshot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        চ্যাপ্টার সারাংশ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>UI দিয়ে ডেটা এন্ট্রি</h1>
+
+<p>আগের চ্যাপ্টারে আমরা Nautobot 3.0 এর ডেটা মডেল বুঝলাম - Organization, DCIM, IPAM, Circuits, Extras। এখন সময় এসেছে হাতে-কলমে কাজ শুরু করার। এই চ্যাপ্টারে আমরা দেখব কীভাবে Nautobot এর ওয়েব UI ব্যবহার করে actual ডেটা এন্ট্রি করতে হয়।</p>
+<p>SkyNet Bangladesh এর NOC টিম এখন তাদের মিরপুর এবং উত্তরা পপের সম্পূর্ণ নেটওয়ার্ক Nautobot এ ডকুমেন্ট করবে। তাদের সাথে একসাথে আমরাও শিখব। শুরু করা যাক।</p>
+<h3 id="nautobot-30-ui-overview">Nautobot 3.0 UI Overview<a class="headerlink" href="#nautobot-30-ui-overview" title="Permanent link">&para;</a></h3>
+<p>প্রথমে একবার Nautobot UI এর সাথে পরিচিত হয়ে নিই।</p>
+<h4 id="_1">লগইন এবং ড্যাশবোর্ড<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>ব্রাউজারে যান:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://nautobot.skynet.bd
+</span></code></pre></div>
+<p>লগইন করুন:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Username: admin
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Password: SkyNet@Admin2025!
+</span></code></pre></div></p>
+<p>লগইন করার পরে আপনি ড্যাশবোর্ডে আসবেন। প্রথমবার লগইন করলে ড্যাশবোর্ড খালি দেখাবে - এটা স্বাভাবিক। এখনও কোনো ডেটা নেই।</p>
+<h4 id="_2">নেভিগেশন বার<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>উপরে একটা নেভিগেশন বার দেখবেন। এখানে মূল মেনুগুলো:</p>
+<p><strong>Organization:</strong> Locations, Teams, Tenants, Contacts</p>
+<p><strong>Devices:</strong> Device Types, Manufacturers, Devices, Racks, Cables, Device Redundancy Groups</p>
+<p><strong>IPAM:</strong> Namespaces, Prefixes, IP Addresses, VLANs, VLAN Groups, RIRs</p>
+<p><strong>Circuits:</strong> Providers, Circuit Types, Circuits</p>
+<p><strong>Power:</strong> Power Feeds, Power Panels (আমরা এগুলো ব্যবহার করব না এই বইতে)</p>
+<p><strong>Extras:</strong> Roles, Statuses, Tags, Custom Fields, Relationships, Jobs, Git Repositories</p>
+<p><strong>Plugins:</strong> (যদি কোনো plugin ইনস্টল করা থাকে)</p>
+<h4 id="_3">সার্চ ফিচার<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>ডান দিকে উপরের কোণায় একটা সার্চ বক্স দেখবেন। এটা গ্লোবাল সার্চ - যেকোনো কিছু এখানে টাইপ করলে Nautobot সব জায়গায় খুঁজবে।</p>
+<p>টেস্ট করুন - টাইপ করুন "mirpur" (এখনও কিছু পাবেন না কারণ ডেটা নেই)।</p>
+<h4 id="_4">ইউজার মেনু<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>একদম ডান দিকে উপরের কোণায় আপনার ইউজারনেম দেখবেন। ক্লিক করলে একটা ড্রপডাউন:</p>
+<ul>
+<li><strong>Profile:</strong> আপনার প্রোফাইল দেখুন/এডিট করুন</li>
+<li><strong>Preferences:</strong> UI সেটিংস (items per page, theme ইত্যাদি)</li>
+<li><strong>API Tokens:</strong> API টোকেন ম্যানেজ করুন</li>
+<li><strong>Change Password:</strong> পাসওয়ার্ড চেঞ্জ করুন</li>
+<li><strong>Logout:</strong> লগআউট</li>
+</ul>
+<hr />
+<h3 id="_5">লোকেশন হায়ারার্কি তৈরি করা<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>প্রথম কাজ হলো Location Hierarchy সেটআপ করা। এটা Nautobot 3.0 এর সবচেয়ে ইম্পর্ট্যান্ট ফিচার।</p>
+<h4 id="location-types">স্টেপ ১: Location Types ডিফাইন করা<a class="headerlink" href="#location-types" title="Permanent link">&para;</a></h4>
+<p><strong>Organization → Location Types</strong> যান।</p>
+<p>খালি পেজ দেখাবে। ডান দিকে উপরে <strong>+ Add</strong> বাটনে ক্লিক করুন।</p>
+<p><strong>প্রথম Location Type: Zone</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Name: Zone
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Description: Geographic coverage zone
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Nestable: ✓ (চেক করুন)
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Content Types: (খালি রাখুন - সব কিছুতে ইউজ হতে পারে)
+</span></code></pre></div>
+<p><strong>Create</strong> ক্লিক করুন।</p>
+<p>এখন আরেকটা - <strong>+ Add</strong> আবার ক্লিক করুন।</p>
+<p><strong>দ্বিতীয় Location Type: Cluster</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Name: Cluster
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Description: Group of nearby POPs for operational management
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Nestable: ✓
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Parent Location Type: Zone (এটা ড্রপডাউন থেকে সিলেক্ট করুন)
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p><strong>তৃতীয় Location Type: POP</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Name: POP
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Description: Point of Presence - ISP network node
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Nestable: ✓
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Parent Location Type: Cluster
+</span></code></pre></div>
+<p><strong>চতুর্থ Location Type: Rack</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Name: Rack
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Description: Equipment rack
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Nestable: ✗ (আনচেক রাখুন - এর নিচে আর কিছু হবে না)
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Parent Location Type: POP
+</span></code></pre></div>
+<p>এখন আপনার চারটা Location Type তৈরি হয়েছে। <strong>Organization → Location Types</strong> এ গিয়ে দেখুন - সব লিস্টেড দেখাবে।</p>
+<h4 id="actual-locations">স্টেপ ২: Actual Locations তৈরি করা<a class="headerlink" href="#actual-locations" title="Permanent link">&para;</a></h4>
+<p>এখন real locations তৈরি করব।</p>
+<p><strong>Organization → Locations</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<p><strong>Top Level Location: Dhaka North Zone</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Name: Dhaka North Zone
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Location Type: Zone (ড্রপডাউন থেকে সিলেক্ট করুন)
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Status: Active (ড্রপডাউন থেকে)
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Parent Location: (খালি রাখুন - এটা top level)
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Tenant: (খালি রাখুন)
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>Description: Northern Dhaka metropolitan area coverage
+</span></code></pre></div>
+<p><strong>Create</strong> ক্লিক করুন।</p>
+<p>এখন ভেতরে ঢুকুন - <strong>Mirpur Cluster</strong> তৈরি করব।</p>
+<p>আবার <strong>Organization → Locations → + Add</strong> যান।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Name: Mirpur Cluster
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Location Type: Cluster
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Status: Active
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Parent Location: Dhaka North Zone (এটা খুব ইম্পর্ট্যান্ট!)
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>Description: Mirpur and Kalyanpur area operations cluster
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p>এবার Mirpur POP:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Name: Mirpur POP
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Location Type: POP
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Status: Active
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Parent Location: Mirpur Cluster
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>Facility: Mirpur-12 Data Center
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>Physical Address: House 25, Road 10, Mirpur-12, Dhaka-1216, Bangladesh
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>Shipping Address: (Same as physical address)
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>Latitude: 23.8103
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>Longitude: 90.3654
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>Contact Name: Jahangir Khan
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>Contact Phone: +880 1712-345678
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>Contact Email: jahangir@skynet.bd
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>Time Zone: Asia/Dhaka
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>Description: Primary POP serving Mirpur area. Approximately 4000 customers.
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>Comments: 
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>  - Established: January 2023
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>  - Building: 3-story commercial building
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>  - Power: Dual utility feed + 50 KVA generator backup
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>  - Cooling: 2x 5-ton AC units
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p><strong>GPS Coordinates কীভাবে পাবেন?</strong></p>
+<p>Google Maps এ যান → আপনার লোকেশন সার্চ করুন → রাইট ক্লিক → "What's here?" → নিচে coordinates দেখাবে → কপি করুন।</p>
+<p>এখন একইভাবে Uttara Cluster এবং Uttara POP তৈরি করুন:</p>
+<p><strong>Uttara Cluster:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Name: Uttara Cluster
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Location Type: Cluster
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Status: Active
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>Parent Location: Dhaka North Zone
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Description: Uttara and Baridhara area operations cluster
+</span></code></pre></div>
+<p><strong>Uttara POP:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Name: Uttara POP
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Location Type: POP
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Status: Active
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Parent Location: Uttara Cluster
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>Facility: Uttara Sector-7 Office
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>Physical Address: Plot 15, Road 12, Sector-7, Uttara, Dhaka-1230, Bangladesh
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>Latitude: 23.8759
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>Longitude: 90.3795
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>Contact Name: Asif Rahman
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>Contact Phone: +880 1811-234567
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>Contact Email: asif@skynet.bd
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>Time Zone: Asia/Dhaka
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>Description: Secondary POP serving Uttara area. Approximately 4000 customers.
+</span></code></pre></div>
+<p>এখন <strong>Organization → Locations</strong> এ যান। আপনার লোকেশন হায়ারার্কি দেখুন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Dhaka North Zone
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  ├── Mirpur Cluster
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  │    └── Mirpur POP
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  └── Uttara Cluster
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>       └── Uttara POP
+</span></code></pre></div>
+<p>চমৎকার! লোকেশন স্ট্রাকচার রেডি।</p>
+<hr />
+<h3 id="unified-roles">Unified Roles সেটআপ<a class="headerlink" href="#unified-roles" title="Permanent link">&para;</a></h3>
+<p>Nautobot 3.0 এর একটা বড় চেঞ্জ হলো Unified Roles। এখন <strong>Extras → Roles</strong> এ সব roles থাকবে।</p>
+<h4 id="roles">ডিভাইস Roles তৈরি করা<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h4>
+<p><strong>Extras → Roles</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<p><strong>প্রথম Role: Core Router</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Name: Core Router
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Content Types: dcim | device (এটা খুব ইম্পর্ট্যান্ট - এই dropdown থেকে সিলেক্ট করুন)
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Color: f44336 (লাল রঙের হেক্স কোড)
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>Weight: 1000 (যত বেশি, তত important)
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>Description: Core routing equipment at the heart of the network
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p>কালার কীভাবে বেছে নেবেন? Color picker দেখাবে অথবা hex code সরাসরি দিতে পারেন:
+- Red: f44336
+- Orange: ff9800
+- Green: 4caf50
+- Blue: 2196f3
+- Purple: 9c27b0</p>
+<p>এখন আরো কয়েকটা role তৈরি করুন:</p>
+<p><strong>Distribution Switch:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Name: Distribution Switch
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Content Types: dcim | device
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Color: ff9800 (Orange)
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>Weight: 800
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>Description: Distribution layer switches aggregating access switches
+</span></code></pre></div>
+<p><strong>Access Switch:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Name: Access Switch
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Content Types: dcim | device
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Color: 4caf50 (Green)
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>Weight: 600
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>Description: Access layer switches connecting to customers
+</span></code></pre></div>
+<p><strong>Firewall:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Name: Firewall
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Content Types: dcim | device
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Color: 9c27b0 (Purple)
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>Weight: 950
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>Description: Security devices and firewalls
+</span></code></pre></div>
+<p>এখন <strong>Extras → Roles</strong> এ গিয়ে দেখুন - চারটা role দেখাবে কালারফুল badges সহ।</p>
+<hr />
+<h3 id="manufacturers-device-types">Manufacturers এবং Device Types<a class="headerlink" href="#manufacturers-device-types" title="Permanent link">&para;</a></h3>
+<p>ডিভাইস যোগ করার আগে তাদের টাইপ ডিফাইন করতে হবে।</p>
+<h4 id="manufacturers">Manufacturers যোগ করা<a class="headerlink" href="#manufacturers" title="Permanent link">&para;</a></h4>
+<p><strong>Devices → Manufacturers</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<p><strong>MikroTik:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Name: MikroTik
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Description: Latvian network equipment manufacturer specializing in routers and wireless systems
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p>একইভাবে আরো:</p>
+<p><strong>TP-Link:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Name: TP-Link
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Description: Chinese networking equipment manufacturer
+</span></code></pre></div>
+<p><strong>Cisco:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Name: Cisco
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>Description: American multinational technology company - networking equipment
+</span></code></pre></div>
+<h4 id="device-types">Device Types তৈরি করা<a class="headerlink" href="#device-types" title="Permanent link">&para;</a></h4>
+<p>এখন ডিভাইস টাইপ বানাবেন। এটা একটু সময় নেয় কারণ interface templates যোগ করতে হয়।</p>
+<p><strong>Devices → Device Types</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<p><strong>MikroTik CCR2004:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Manufacturer: MikroTik (ড্রপডাউন থেকে)
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>Model: CCR2004-1G-12S+2XS
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>Part Number: CCR2004-1G-12S+2XS
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>Height (U): 1
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>Is Full Depth: ✓
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>Subdevice Role: None
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>Description: Cloud Core Router with 1x 1G, 12x 10G SFP+, 2x 25G SFP28 ports
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>Comments: Typical use - Core router for small to medium ISPs
+</span></code></pre></div>
+<p><strong>Create</strong> ক্লিক করুন।</p>
+<p>এখন ইন্টারফেস টেমপ্লেট যোগ করতে হবে। Device Type এর ডিটেইল পেজে আসবেন।</p>
+<p><strong>Interface Templates</strong> ট্যাবে ক্লিক করুন। <strong>+ Add Interface Templates</strong> বাটনে ক্লিক করুন।</p>
+<p>একসাথে একাধিক ইন্টারফেস যোগ করতে পারবেন:</p>
+<p><strong>Management Interface:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Name: ether1
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>Type: 1000BASE-T (1GE)
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>Management Only: ✓ (চেক করুন - এটা ম্যানেজমেন্ট পোর্ট)
+</span></code></pre></div>
+<p><strong>Create and Add Another</strong> ক্লিক করুন।</p>
+<p><strong>SFP+ Ports (একটা একটা করে বা pattern ব্যবহার করে):</strong></p>
+<p>Nautobot smart - আপনি pattern ব্যবহার করতে পারেন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Name: sfp-sfpplus[1-12]
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Type: 10GBASE-X-SFP+
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>Management Only: (আনচেক)
+</span></code></pre></div>
+<p>এটা করলে sfp-sfpplus1 থেকে sfp-sfpplus12 পর্যন্ত ১২টা ইন্টারফেস একসাথে তৈরি হবে।</p>
+<p><strong>Create and Add Another</strong> ক্লিক করুন।</p>
+<p><strong>SFP28 Ports:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Name: sfp28-[1-2]
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>Type: 25GBASE-X-SFP28
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>Management Only: (আনচেক)
+</span></code></pre></div>
+<p>এখন <strong>Create</strong> ক্লিক করুন (শেষ যেহেতু)।</p>
+<p>Interface Templates ট্যাবে গিয়ে দেখুন - ১৫টা ইন্টারফেস দেখাবে (১ + ১২ + ২)।</p>
+<p>চমৎকার! এখন যখনই এই ডিভাইস টাইপের একটা নতুন ডিভাইস তৈরি করবেন, সব ইন্টারফেস অটোমেটিক্যালি কপি হয়ে যাবে।</p>
+<p>একইভাবে আরো দুটো ডিভাইস টাইপ তৈরি করুন:</p>
+<p><strong>TP-Link TL-SG3428:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Manufacturer: TP-Link
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>Model: TL-SG3428
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>Height (U): 1
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>Is Full Depth: ✓
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>Description: 28-Port Gigabit L2+ Managed Switch with 4 SFP slots
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>Interface Templates:
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>  - ether[1-24]: Type 1000BASE-T
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>  - sfp[1-4]: Type 1000BASE-X-SFP
+</span></code></pre></div>
+<p><strong>TP-Link TL-SG1024D:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Manufacturer: TP-Link
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>Model: TL-SG1024D
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>Height (U): 1
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>Is Full Depth: ✓
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>Description: 24-Port Gigabit Unmanaged Switch
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>Interface Templates:
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>  - ether[1-24]: Type 1000BASE-T
+</span></code></pre></div>
+<hr />
+<h3 id="racks">Racks তৈরি করা<a class="headerlink" href="#racks" title="Permanent link">&para;</a></h3>
+<p>এখন র‍্যাক যোগ করব যেখানে ডিভাইস মাউন্ট করা হবে।</p>
+<p><strong>Devices → Racks</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<p><strong>Mirpur POP Rack A:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Name: Rack A
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>Location: Mirpur POP (ড্রপডাউন থেকে সিলেক্ট করুন - এটা hierarchy তে দেখাবে)
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>Status: Active
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>Facility ID: MIR-RACK-A
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>Type: 4-post cabinet
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>Width: 19 inches
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>Height (U): 42
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>Outer Width: 600 (mm)
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>Outer Depth: 1000 (mm)
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>Description: Primary equipment rack in Mirpur POP
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>Comments: Rack installed January 2023. APC NetShelter SV 42U.
+</span></code></pre></div>
+<p><strong>Create and Add Another</strong> ক্লিক করুন (যদি আরো র‍্যাক যোগ করতে চান)।</p>
+<p><strong>Mirpur POP Rack B:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>Name: Rack B
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>Location: Mirpur POP
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>Status: Active
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>Facility ID: MIR-RACK-B
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>Type: 4-post cabinet
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>Width: 19 inches
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>Height (U): 42
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>Description: Secondary equipment rack in Mirpur POP
+</span></code></pre></div>
+<p><strong>Create</strong> ক্লিক করুন।</p>
+<p>একইভাবে Uttara POP এর জন্য:</p>
+<p><strong>Uttara POP Rack A:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Name: Rack A
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>Location: Uttara POP
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>Status: Active
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>Facility ID: UTT-RACK-A
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>Type: 4-post cabinet
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>Width: 19 inches
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>Height (U): 42
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>Description: Primary equipment rack in Uttara POP
+</span></code></pre></div>
+<p>এখন <strong>Devices → Racks</strong> লিস্টে গিয়ে দেখুন - তিনটা র‍্যাক দেখাবে।</p>
+<hr />
+<h3 id="device-">প্রথম Device এন্ট্রি - মিরপুর কোর রাউটার<a class="headerlink" href="#device-" title="Permanent link">&para;</a></h3>
+<p>এখন সবচেয়ে exciting অংশ - প্রথম ডিভাইস যোগ করা!</p>
+<p><strong>Devices → Devices</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<p>একটা বড় ফর্ম আসবে। ঘাবড়াবেন না - ধাপে ধাপে পূরণ করব।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Name: R-DN-MIR-CORE-01
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>Device Type: MikroTik CCR2004-1G-12S+2XS (টাইপ করলে autocomplete আসবে)
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>Role: Core Router
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>Location: Mirpur POP (Hierarchy দেখাবে: Dhaka North Zone &gt; Mirpur Cluster &gt; Mirpur POP)
+</span></code></pre></div>
+<p>এই চারটা ফিল্ড সবচেয়ে ইম্পর্ট্যান্ট। এগুলো required।</p>
+<p>এখন optional কিন্তু recommended ফিল্ডগুলো:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Rack: Rack A
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>Position: 25 (মানে র‍্যাকের ২৫U পজিশনে)
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>Face: Front
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>Status: Active
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>Tenant: (খালি রাখুন - SkyNets একটাই organization)
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>Platform: (খালি রাখুন - এটা OS platform এর জন্য, optional)
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>
+</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>Serial Number: ABC1234MIR001
+</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>Asset Tag: SKY-RTR-001
+</span><span id="__span-29-12"><a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>
+</span><span id="__span-29-13"><a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a>Description: Primary core router for Mirpur POP serving approximately 4000 customers
+</span><span id="__span-29-14"><a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a>
+</span><span id="__span-29-15"><a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a>Comments:
+</span><span id="__span-29-16"><a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a>  - Purchased: December 2022
+</span><span id="__span-29-17"><a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a>  - Vendor: TechSource Bangladesh
+</span><span id="__span-29-18"><a id="__codelineno-29-18" name="__codelineno-29-18" href="#__codelineno-29-18"></a>  - Purchase Order: PO-2022-12-015
+</span><span id="__span-29-19"><a id="__codelineno-29-19" name="__codelineno-29-19" href="#__codelineno-29-19"></a>  - Warranty: 3 years (expires Dec 2025)
+</span><span id="__span-29-20"><a id="__codelineno-29-20" name="__codelineno-29-20" href="#__codelineno-29-20"></a>  - Installation Date: January 15, 2023
+</span></code></pre></div>
+<p>সব পূরণ হয়ে গেলে <strong>Create</strong> ক্লিক করুন।</p>
+<p>আপনার প্রথম ডিভাইস তৈরি হয়ে গেছে!</p>
+<p>ডিভাইস ডিটেইল পেজে চলে যাবেন। এখানে দেখবেন:</p>
+<ul>
+<li><strong>Device Info:</strong> নাম, টাইপ, লোকেশন, status</li>
+<li><strong>Rack Position:</strong> একটা visual diagram যেখানে র‍্যাকে ডিভাইসের পজিশন দেখাচ্ছে</li>
+<li><strong>Interfaces:</strong> সব ইন্টারফেসের লিস্ট (১৫টা - Device Type থেকে কপি হয়েছে)</li>
+</ul>
+<p><strong>Interfaces</strong> ট্যাবে ক্লিক করুন। দেখবেন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>ether1
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>sfp-sfpplus1
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>sfp-sfpplus2
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>...
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>sfp-sfpplus12
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>sfp28-1
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>sfp28-2
+</span></code></pre></div>
+<p>চমৎকার! সব ইন্টারফেস অটোমেটিক্যালি এসেছে।</p>
+<hr />
+<h3 id="interface-details">Interface কনফিগারেশন - Details যোগ করা<a class="headerlink" href="#interface-details" title="Permanent link">&para;</a></h3>
+<p>এখন ইন্টারফেসগুলোতে কিছু ডিটেইলস যোগ করব।</p>
+<p>ether1 ইন্টারফেসে ক্লিক করুন। একটা ডিটেইল পেজ আসবে। <strong>Edit</strong> বাটনে ক্লিক করুন।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>Name: ether1 (ইতিমধ্যে আছে)
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>Type: 1000BASE-T (ইতিমধ্যে সেট)
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>Label: MGMT (optional - physical label)
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>Enabled: ✓ (চেক করুন - এই পোর্ট চালু আছে)
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>Speed: 1000000 (1 Gbps - Kbps এ)
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>Duplex: Full
+</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>
+</span><span id="__span-31-10"><a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>MTU: 1500
+</span><span id="__span-31-11"><a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>
+</span><span id="__span-31-12"><a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a>Mode: Access (না Tagged)
+</span><span id="__span-31-13"><a id="__codelineno-31-13" name="__codelineno-31-13" href="#__codelineno-31-13"></a>
+</span><span id="__span-31-14"><a id="__codelineno-31-14" name="__codelineno-31-14" href="#__codelineno-31-14"></a>Description: Management interface - connected to management VLAN
+</span></code></pre></div>
+<p><strong>Update</strong> ক্লিক করুন।</p>
+<p>একইভাবে uplink interface:</p>
+<p>sfp-sfpplus1 এ যান → <strong>Edit</strong> ক্লিক করুন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>Label: UPLINK-BTCL
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>Enabled: ✓
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>Speed: 10000000 (10 Gbps)
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>MTU: 1500
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>Description: Primary uplink to BTCL - 5 Gbps circuit
+</span></code></pre></div>
+<p><strong>Update</strong> করুন।</p>
+<p>আপনি চাইলে সব ইন্টারফেসে description দিতে পারেন। তবে শুধু যেগুলো ব্যবহার হচ্ছে সেগুলোতে দিলেই চলবে।</p>
+<hr />
+<h3 id="devices-bulk">আরো Devices যোগ করা - Bulk এর জন্য প্রস্তুতি<a class="headerlink" href="#devices-bulk" title="Permanent link">&para;</a></h3>
+<p>এখন আরো কিছু ডিভাইস যোগ করব। Distribution switch এবং access switches।</p>
+<p><strong>Distribution Switch - মিরপুর:</strong></p>
+<p><strong>Devices → Devices → + Add</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>Name: SW-DN-MIR-DIST-01
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>Device Type: TP-Link TL-SG3428
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>Role: Distribution Switch
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>Location: Mirpur POP
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>Rack: Rack A
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>Position: 20
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>Face: Front
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>Status: Active
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>Serial Number: TPL1234DIST01
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>Asset Tag: SKY-SW-001
+</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>Description: Primary distribution switch for Mirpur POP
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p><strong>Access Switches - একটা একটা করে (পরে CSV দেখাব):</strong></p>
+<p>প্রথম Access Switch:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>Name: SW-DN-MIR-ACC-01
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>Device Type: TP-Link TL-SG1024D
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>Role: Access Switch
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>Location: Mirpur POP
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>Rack: Rack B
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>Position: 15
+</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>Status: Active
+</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>Serial Number: TPLACC001
+</span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>Asset Tag: SKY-SW-011
+</span><span id="__span-34-10"><a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a>Description: Building A access switch
+</span></code></pre></div>
+<p>দ্বিতীয় Access Switch:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>Name: SW-DN-MIR-ACC-02
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>Device Type: TP-Link TL-SG1024D
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>Role: Access Switch
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>Location: Mirpur POP
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>Rack: Rack B
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>Position: 14
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>Status: Active
+</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>Serial Number: TPLACC002
+</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>Asset Tag: SKY-SW-012
+</span><span id="__span-35-10"><a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a>Description: Building B access switch
+</span></code></pre></div>
+<p>এভাবে একটা একটা করে করা বিরক্তিকর। দশটা access switch থাকলে তো পুরো দিন চলে যাবে!</p>
+<hr />
+<h3 id="csv-bulk-import-">CSV Bulk Import - দ্রুত ডেটা এন্ট্রি<a class="headerlink" href="#csv-bulk-import-" title="Permanent link">&para;</a></h3>
+<p>Nautobot এ CSV দিয়ে bulk import করার সুবিধা আছে। চলুন দেখি কীভাবে।</p>
+<h4 id="csv-template">CSV Template ডাউনলোড করা<a class="headerlink" href="#csv-template" title="Permanent link">&para;</a></h4>
+<p><strong>Devices → Devices</strong> লিস্ট পেজে যান।</p>
+<p>উপরে ডান দিকে <strong>Import</strong> বাটন দেখবেন। ক্লিক করুন।</p>
+<p>একটা পেজ আসবে যেখানে CSV ফরম্যাট দেখানো আছে। নিচে <strong>CSV Field Mapping</strong> সেকশনে সব ফিল্ডের লিস্ট আছে।</p>
+<h4 id="csv">CSV ফাইল তৈরি করা<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h4>
+<p>Excel বা Google Sheets এ একটা নতুন ফাইল তৈরি করুন।</p>
+<p>প্রথম রো তে হেডার:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>name,device_type,role,location,rack,position,status,serial,asset_tag,description
+</span></code></pre></div>
+<p>এখন ডেটা রো:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>name,device_type,role,location,rack,position,status,serial,asset_tag,description
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>SW-DN-MIR-ACC-03,TP-Link TL-SG1024D,Access Switch,Mirpur POP,Rack B,13,Active,TPLACC003,SKY-SW-013,Building C access switch
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>SW-DN-MIR-ACC-04,TP-Link TL-SG1024D,Access Switch,Mirpur POP,Rack B,12,Active,TPLACC004,SKY-SW-014,Building D access switch
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>SW-DN-MIR-ACC-05,TP-Link TL-SG1024D,Access Switch,Mirpur POP,Rack B,11,Active,TPLACC005,SKY-SW-015,Building E access switch
+</span></code></pre></div>
+<p><strong>গুরুত্বপূর্ণ নোট:</strong></p>
+<ul>
+<li>Device Type, Role, Location, Rack এর নাম হুবহু Nautobot এ যেভাবে লেখা আছে সেভাবে লিখতে হবে</li>
+<li>Status ও exact মিলতে হবে (Active, Planned, Offline ইত্যাদি)</li>
+<li>Position একটা নাম্বার</li>
+<li>Serial এবং Asset Tag unique হতে হবে</li>
+</ul>
+<p>ফাইল CSV ফরম্যাটে সেভ করুন (<code>devices.csv</code>)।</p>
+<h4 id="csv_1">CSV ইমপোর্ট করা<a class="headerlink" href="#csv_1" title="Permanent link">&para;</a></h4>
+<p><strong>Devices → Devices → Import</strong> যান।</p>
+<p><strong>CSV Data</strong> বক্সে আপনার CSV ফাইলের কন্টেন্ট পেস্ট করুন। অথবা <strong>Browse</strong> বাটনে ক্লিক করে ফাইল আপলোড করুন।</p>
+<p><strong>Submit</strong> ক্লিক করুন।</p>
+<p>Nautobot CSV parse করবে এবং একটা preview দেখাবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>Found 3 objects to import:
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>  - SW-DN-MIR-ACC-03
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>  - SW-DN-MIR-ACC-04
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>  - SW-DN-MIR-ACC-05
+</span></code></pre></div>
+<p>যদি কোনো এরর থাকে (যেমন Device Type নাম ভুল), তাহলে সেটা লাল করে দেখাবে।</p>
+<p>সব ঠিক থাকলে <strong>Confirm Import</strong> বাটনে ক্লিক করুন।</p>
+<p>তিনটা ডিভাইস একসাথে তৈরি হয়ে যাবে!</p>
+<p><strong>Devices → Devices</strong> লিস্টে গিয়ে দেখুন - এখন আপনার মোট ৭টা ডিভাইস আছে:
+- ১টা Router
+- ১টা Distribution Switch
+- ৫টা Access Switch</p>
+<hr />
+<h3 id="ip-address-assignment-logical">IP Address Assignment - Logical কানেকশন<a class="headerlink" href="#ip-address-assignment-logical" title="Permanent link">&para;</a></h3>
+<p>এখন ডিভাইসগুলোতে IP address assign করব।</p>
+<h4 id="ip-namespace">প্রথমে IP Namespace তৈরি<a class="headerlink" href="#ip-namespace" title="Permanent link">&para;</a></h4>
+<p><strong>IPAM → Namespaces</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>Name: Global
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>Description: Primary IP namespace for SkyNet Bangladesh
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<h4 id="ip-prefixes">IP Prefixes তৈরি করা<a class="headerlink" href="#ip-prefixes" title="Permanent link">&para;</a></h4>
+<p>IP addresses assign করার আগে prefixes তৈরি করতে হবে।</p>
+<p><strong>IPAM → Prefixes</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<p><strong>Parent Prefix - Private Management Network:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>Prefix: 10.10.0.0/16
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>Type: Container
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>Status: Active
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>Namespace: Global
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>Description: Internal management network for all SkyNet equipment
+</span></code></pre></div>
+<p><strong>Create and Add Another</strong> করুন।</p>
+<p><strong>Child Prefix - Mirpur Management:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>Prefix: 10.10.10.0/24
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>Type: Network
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>Status: Active
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>Namespace: Global
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>Parent: 10.10.0.0/16 (ড্রপডাউন থেকে সিলেক্ট করুন)
+</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>Location: Mirpur POP
+</span><span id="__span-41-7"><a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>Description: Management IPs for Mirpur POP devices
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<h4 id="ip-addresses-interface-assign">IP Addresses তৈরি এবং Interface এ Assign করা<a class="headerlink" href="#ip-addresses-interface-assign" title="Permanent link">&para;</a></h4>
+<p><strong>IPAM → IP Addresses</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<p><strong>Core Router Loopback:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>IP Address: 10.10.1.1/32
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>Type: Host
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>Status: Active
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>Role: Loopback (ড্রপডাউন থেকে)
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>Namespace: Global
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>Parent Prefix: (খালি রাখুন - auto-detect হবে)
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>
+</span><span id="__span-42-8"><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>Assigned Object Type: dcim &gt; interface
+</span><span id="__span-42-9"><a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>Assigned Object: 
+</span><span id="__span-42-10"><a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>  - Device: R-DN-MIR-CORE-01
+</span><span id="__span-42-11"><a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>  - Interface: ether1 (ড্রপডাউনে দেখাবে)
+</span><span id="__span-42-12"><a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>
+</span><span id="__span-42-13"><a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a>DNS Name: r-mir-core-01.skynet.bd
+</span><span id="__span-42-14"><a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a>Description: Management loopback for Mirpur core router
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p>লক্ষ্য করুন - Assigned Object টা একটু tricky। প্রথমে Type সিলেক্ট করতে হবে <code>dcim &gt; interface</code>, তারপর দুটো ড্রপডাউন আসবে - Device এবং Interface।</p>
+<p><strong>Distribution Switch Management IP:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>IP Address: 10.10.10.11/24
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>Type: Host
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>Status: Active
+</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>Namespace: Global
+</span><span id="__span-43-5"><a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>
+</span><span id="__span-43-6"><a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>Assigned Object Type: dcim &gt; interface
+</span><span id="__span-43-7"><a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>Assigned Object:
+</span><span id="__span-43-8"><a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a>  - Device: SW-DN-MIR-DIST-01
+</span><span id="__span-43-9"><a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a>  - Interface: (এখানে একটু সমস্যা - TP-Link switch এ VLAN interface নেই)
+</span></code></pre></div>
+<p>একটু দাঁড়ান - TP-Link TL-SG3428 এ management VLAN interface যোগ করা হয়নি। চলুন যোগ করি।</p>
+<p><strong>Devices → Devices → SW-DN-MIR-DIST-01</strong> এ যান।</p>
+<p><strong>Interfaces</strong> ট্যাবে → <strong>+ Add Interfaces</strong> ক্লিক করুন।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>Name: vlan10
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>Type: Virtual
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>Enabled: ✓
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>Description: Management VLAN interface
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p>এখন আবার IP address assignment এ ফিরে যান:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>IP Address: 10.10.10.11/24
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>Assigned Object:
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>  - Device: SW-DN-MIR-DIST-01
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>  - Interface: vlan10
+</span><span id="__span-45-5"><a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>
+</span><span id="__span-45-6"><a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>DNS Name: sw-mir-dist-01.skynet.bd
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p>একইভাবে access switches এ:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>10.10.10.21/24 → SW-DN-MIR-ACC-01 (vlan10 interface তৈরি করে)
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>10.10.10.22/24 → SW-DN-MIR-ACC-02
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>10.10.10.23/24 → SW-DN-MIR-ACC-03
+</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>...
+</span></code></pre></div>
+<p>এগুলো CSV দিয়েও করা যায়, কিন্তু Interface assignment একটু tricky CSV এ।</p>
+<h4 id="vlan-management-layer-2">VLAN Management - Layer 2 সেগমেন্টেশন<a class="headerlink" href="#vlan-management-layer-2" title="Permanent link">&para;</a></h4>
+<p>SkyNets Bangladesh এর নেটওয়ার্কে বিভিন্ন ধরনের ট্রাফিক আছে - ম্যানেজমেন্ট, কাস্টমার, আপলিংক। এগুলো আলাদা করার জন্য VLAN ব্যবহার করা হয়।</p>
+<h5 id="vlan-groups-recommended">VLAN Groups তৈরি করা (অপশনাল কিন্তু recommended)<a class="headerlink" href="#vlan-groups-recommended" title="Permanent link">&para;</a></h5>
+<p>VLAN Groups দিয়ে VLANs organize করা যায়। বিশেষ করে যখন একই VLAN ID বিভিন্ন সাইটে ভিন্ন purpose এ ব্যবহার হয়।</p>
+<p><strong>IPAM → VLAN Groups</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>Name: Mirpur POP VLANs
+</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>Location: Mirpur POP
+</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>Description: VLAN assignments for Mirpur Point of Presence
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p>একইভাবে Uttara POP এর জন্য:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>Name: Uttara POP VLANs
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>Location: Uttara POP
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>Description: VLAN assignments for Uttara Point of Presence
+</span></code></pre></div>
+<h4 id="vlans">VLANs তৈরি করা<a class="headerlink" href="#vlans" title="Permanent link">&para;</a></h4>
+<p>এখন actual VLANs তৈরি করব।</p>
+<p><strong>IPAM → VLANs</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<p><strong>VLAN 10 - Management (Mirpur):</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>VLAN ID: 10
+</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>Name: MGMT_MIRPUR
+</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>Status: Active
+</span><span id="__span-49-4"><a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>Group: Mirpur POP VLANs (ড্রপডাউন থেকে)
+</span><span id="__span-49-5"><a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>Location: Mirpur POP
+</span><span id="__span-49-6"><a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a>Tenant: (খালি)
+</span><span id="__span-49-7"><a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a>Description: Management VLAN for network devices in Mirpur POP
+</span></code></pre></div>
+<p><strong>Create and Add Another</strong> করুন।</p>
+<p><strong>VLAN 20 - Uplink (Mirpur):</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>VLAN ID: 20
+</span><span id="__span-50-2"><a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>Name: UPLINK_MIRPUR
+</span><span id="__span-50-3"><a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>Status: Active
+</span><span id="__span-50-4"><a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a>Group: Mirpur POP VLANs
+</span><span id="__span-50-5"><a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a>Location: Mirpur POP
+</span><span id="__span-50-6"><a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a>Description: Uplink traffic to BTCL from Mirpur
+</span></code></pre></div>
+<p><strong>Create and Add Another</strong> করুন।</p>
+<p><strong>VLAN 100 - Residential (Mirpur):</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>VLAN ID: 100
+</span><span id="__span-51-2"><a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>Name: RESIDENTIAL_MIR
+</span><span id="__span-51-3"><a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a>Status: Active
+</span><span id="__span-51-4"><a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a>Group: Mirpur POP VLANs
+</span><span id="__span-51-5"><a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a>Location: Mirpur POP
+</span><span id="__span-51-6"><a id="__codelineno-51-6" name="__codelineno-51-6" href="#__codelineno-51-6"></a>Description: Residential customer traffic - Mirpur area
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p>একইভাবে Uttara POP এর জন্য VLANs তৈরি করুন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>VLAN 10: MGMT_UTTARA (Group: Uttara POP VLANs, Location: Uttara POP)
+</span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>VLAN 21: UPLINK_UTTARA (Group: Uttara POP VLANs)
+</span><span id="__span-52-3"><a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>VLAN 101: RESIDENTIAL_UTT (Group: Uttara POP VLANs)
+</span></code></pre></div>
+<p><strong>Site-Agnostic VLAN (সব সাইটে একই):</strong></p>
+<p>কিছু VLAN সব সাইটে একই purpose এ ব্যবহার হয়:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>VLAN ID: 200
+</span><span id="__span-53-2"><a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>Name: CORPORATE
+</span><span id="__span-53-3"><a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>Status: Active
+</span><span id="__span-53-4"><a id="__codelineno-53-4" name="__codelineno-53-4" href="#__codelineno-53-4"></a>Group: (খালি - কোনো specific group এ নেই)
+</span><span id="__span-53-5"><a id="__codelineno-53-5" name="__codelineno-53-5" href="#__codelineno-53-5"></a>Location: (খালি - সব সাইটে ব্যবহার হয়)
+</span><span id="__span-53-6"><a id="__codelineno-53-6" name="__codelineno-53-6" href="#__codelineno-53-6"></a>Description: Corporate client connections across all POPs
+</span></code></pre></div>
+<p>এখন <strong>IPAM → VLANs</strong> লিস্টে গিয়ে দেখুন - আপনার সব VLANs দেখাবে VLAN ID, Name, Location সহ।</p>
+<h4 id="vlan-prefix">VLAN এবং Prefix এর সম্পর্ক<a class="headerlink" href="#vlan-prefix" title="Permanent link">&para;</a></h4>
+<p>এখন VLANs এর সাথে IP Prefixes link করব।</p>
+<p><strong>IPAM → Prefixes</strong> এ যান। আগে তৈরি করা 10.10.10.0/24 prefix খুঁজুন। ক্লিক করে ডিটেইল পেজে যান।</p>
+<p><strong>Edit</strong> বাটনে ক্লিক করুন।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>Prefix: 10.10.10.0/24
+</span><span id="__span-54-2"><a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>...
+</span><span id="__span-54-3"><a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a>(সব ফিল্ড আগের মতো)
+</span><span id="__span-54-4"><a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a>
+</span><span id="__span-54-5"><a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a>VLAN: MGMT_MIRPUR (এটা নতুন যোগ করুন - ড্রপডাউন থেকে সিলেক্ট)
+</span></code></pre></div>
+<p><strong>Update</strong> করুন।</p>
+<p>এখন Nautobot জানে 10.10.10.0/24 prefix টা VLAN 10 (MGMT_MIRPUR) এ ব্যবহার হয়।</p>
+<hr />
+<h3 id="cable-management-physical-connections">Cable Management - Physical Connections<a class="headerlink" href="#cable-management-physical-connections" title="Permanent link">&para;</a></h3>
+<p>এখন ডিভাইসগুলোর মধ্যে physical cable connections ডকুমেন্ট করব।</p>
+<h4 id="cable-method-1-interface">Cable তৈরি করা - Method 1 (Interface থেকে)<a class="headerlink" href="#cable-method-1-interface" title="Permanent link">&para;</a></h4>
+<p>সবচেয়ে সহজ পদ্ধতি হলো একটা interface থেকে সরাসরি cable connect করা।</p>
+<p><strong>Devices → Devices → R-DN-MIR-CORE-01</strong> এ যান।</p>
+<p><strong>Interfaces</strong> ট্যাবে ক্লিক করুন।</p>
+<p><strong>sfp-sfpplus2</strong> interface খুঁজুন (এটা distribution switch এ যাবে)। ক্লিক করুন।</p>
+<p>Interface ডিটেইল পেজে <strong>Connect Cable</strong> বাটন দেখবেন। ক্লিক করুন।</p>
+<p>একটা ফর্ম আসবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>Termination A (already filled):
+</span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>  - Device: R-DN-MIR-CORE-01
+</span><span id="__span-55-3"><a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>  - Interface: sfp-sfpplus2
+</span><span id="__span-55-4"><a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a>
+</span><span id="__span-55-5"><a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a>Termination B:
+</span><span id="__span-55-6"><a id="__codelineno-55-6" name="__codelineno-55-6" href="#__codelineno-55-6"></a>  - Termination Type: Interface (default selected)
+</span><span id="__span-55-7"><a id="__codelineno-55-7" name="__codelineno-55-7" href="#__codelineno-55-7"></a>  - Device: SW-DN-MIR-DIST-01 (ড্রপডাউন থেকে সিলেক্ট করুন)
+</span><span id="__span-55-8"><a id="__codelineno-55-8" name="__codelineno-55-8" href="#__codelineno-55-8"></a>  - Name: sfp1 (এই switch এর SFP port)
+</span><span id="__span-55-9"><a id="__codelineno-55-9" name="__codelineno-55-9" href="#__codelineno-55-9"></a>
+</span><span id="__span-55-10"><a id="__codelineno-55-10" name="__codelineno-55-10" href="#__codelineno-55-10"></a>Cable:
+</span><span id="__span-55-11"><a id="__codelineno-55-11" name="__codelineno-55-11" href="#__codelineno-55-11"></a>  - Type: Single-Mode Fiber (SMF) (ড্রপডাউন থেকে)
+</span><span id="__span-55-12"><a id="__codelineno-55-12" name="__codelineno-55-12" href="#__codelineno-55-12"></a>  - Status: Connected
+</span><span id="__span-55-13"><a id="__codelineno-55-13" name="__codelineno-55-13" href="#__codelineno-55-13"></a>  - Color: 0000ff (Blue - হেক্স কোড)
+</span><span id="__span-55-14"><a id="__codelineno-55-14" name="__codelineno-55-14" href="#__codelineno-55-14"></a>  - Length: 5
+</span><span id="__span-55-15"><a id="__codelineno-55-15" name="__codelineno-55-15" href="#__codelineno-55-15"></a>  - Length Unit: Meters
+</span><span id="__span-55-16"><a id="__codelineno-55-16" name="__codelineno-55-16" href="#__codelineno-55-16"></a>  - Label: CORE-TO-DIST-01
+</span><span id="__span-55-17"><a id="__codelineno-55-17" name="__codelineno-55-17" href="#__codelineno-55-17"></a>
+</span><span id="__span-55-18"><a id="__codelineno-55-18" name="__codelineno-55-18" href="#__codelineno-55-18"></a>Description: Core router to distribution switch - 10G fiber link
+</span></code></pre></div>
+<p><strong>Create</strong> ক্লিক করুন।</p>
+<p>Cable তৈরি হয়ে গেছে! এখন R-DN-MIR-CORE-01 এর sfp-sfpplus2 interface এ গেলে দেখবেন "Cable: CORE-TO-DIST-01" লেখা আছে। ক্লিক করলে cable details দেখাবে।</p>
+<h4 id="cable-method-2-cable-object">Cable তৈরি করা - Method 2 (সরাসরি Cable object)<a class="headerlink" href="#cable-method-2-cable-object" title="Permanent link">&para;</a></h4>
+<p>আরেকটা পদ্ধতি হলো সরাসরি Cable object তৈরি করা।</p>
+<p><strong>Devices → Cables</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>Termination A:
+</span><span id="__span-56-2"><a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>  - Termination Type: dcim &gt; interface
+</span><span id="__span-56-3"><a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>  - Device: SW-DN-MIR-DIST-01
+</span><span id="__span-56-4"><a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a>  - Name: ether1
+</span><span id="__span-56-5"><a id="__codelineno-56-5" name="__codelineno-56-5" href="#__codelineno-56-5"></a>
+</span><span id="__span-56-6"><a id="__codelineno-56-6" name="__codelineno-56-6" href="#__codelineno-56-6"></a>Termination B:
+</span><span id="__span-56-7"><a id="__codelineno-56-7" name="__codelineno-56-7" href="#__codelineno-56-7"></a>  - Termination Type: dcim &gt; interface
+</span><span id="__span-56-8"><a id="__codelineno-56-8" name="__codelineno-56-8" href="#__codelineno-56-8"></a>  - Device: SW-DN-MIR-ACC-01
+</span><span id="__span-56-9"><a id="__codelineno-56-9" name="__codelineno-56-9" href="#__codelineno-56-9"></a>  - Name: ether24
+</span><span id="__span-56-10"><a id="__codelineno-56-10" name="__codelineno-56-10" href="#__codelineno-56-10"></a>
+</span><span id="__span-56-11"><a id="__codelineno-56-11" name="__codelineno-56-11" href="#__codelineno-56-11"></a>Cable:
+</span><span id="__span-56-12"><a id="__codelineno-56-12" name="__codelineno-56-12" href="#__codelineno-56-12"></a>  - Type: Cat6 (Category 6 Ethernet)
+</span><span id="__span-56-13"><a id="__codelineno-56-13" name="__codelineno-56-13" href="#__codelineno-56-13"></a>  - Status: Connected
+</span><span id="__span-56-14"><a id="__codelineno-56-14" name="__codelineno-56-14" href="#__codelineno-56-14"></a>  - Color: ffeb3b (Yellow)
+</span><span id="__span-56-15"><a id="__codelineno-56-15" name="__codelineno-56-15" href="#__codelineno-56-15"></a>  - Length: 20
+</span><span id="__span-56-16"><a id="__codelineno-56-16" name="__codelineno-56-16" href="#__codelineno-56-16"></a>  - Length Unit: Meters
+</span><span id="__span-56-17"><a id="__codelineno-56-17" name="__codelineno-56-17" href="#__codelineno-56-17"></a>  - Label: DIST-TO-ACC-01
+</span><span id="__span-56-18"><a id="__codelineno-56-18" name="__codelineno-56-18" href="#__codelineno-56-18"></a>
+</span><span id="__span-56-19"><a id="__codelineno-56-19" name="__codelineno-56-19" href="#__codelineno-56-19"></a>Description: Distribution to access switch - Building A
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p>একইভাবে আরো কয়েকটা cable তৈরি করুন:</p>
+<p><strong>Distribution to Access Switch 02:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>SW-DN-MIR-DIST-01 (ether2) ↔ SW-DN-MIR-ACC-02 (ether24)
+</span><span id="__span-57-2"><a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>Type: Cat6, Color: Yellow, Length: 22m
+</span><span id="__span-57-3"><a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>Label: DIST-TO-ACC-02
+</span></code></pre></div>
+<p><strong>Distribution to Access Switch 03:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>SW-DN-MIR-DIST-01 (ether3) ↔ SW-DN-MIR-ACC-03 (ether24)
+</span><span id="__span-58-2"><a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>Type: Cat6, Color: Yellow, Length: 25m
+</span><span id="__span-58-3"><a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>Label: DIST-TO-ACC-03
+</span></code></pre></div>
+<h4 id="cable-types-available">Cable Types - কোনগুলো available?<a class="headerlink" href="#cable-types-available" title="Permanent link">&para;</a></h4>
+<p>Nautobot এ built-in cable types আছে:</p>
+<p><strong>Copper:</strong>
+- Cat3, Cat5, Cat5e, Cat6, Cat6a, Cat7, Cat8
+- Coaxial
+- Direct Attach Copper (DAC)</p>
+<p><strong>Fiber:</strong>
+- Multi-Mode Fiber (MMF)
+- Single-Mode Fiber (SMF)
+- Active Optical Cabling (AOC)</p>
+<p><strong>Power:</strong>
+- AC Power
+- DC Power</p>
+<p>আপনার যেটা দরকার সেটা সিলেক্ট করুন।</p>
+<h4 id="cable-trace">Cable Trace ব্যবহার করা<a class="headerlink" href="#cable-trace" title="Permanent link">&para;</a></h4>
+<p>এখন একটা powerful ফিচার দেখি - Cable Trace।</p>
+<p><strong>Devices → Devices → SW-DN-MIR-ACC-01</strong> এ যান।</p>
+<p><strong>Interfaces</strong> ট্যাবে → <strong>ether24</strong> interface ক্লিক করুন।</p>
+<p>Interface পেজে <strong>Trace</strong> বাটন দেখবেন। ক্লিক করুন।</p>
+<p>একটা visual diagram দেখাবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>SW-DN-MIR-ACC-01 (ether24)
+</span><span id="__span-59-2"><a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>    |
+</span><span id="__span-59-3"><a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>    | Cable: DIST-TO-ACC-01 (Cat6, 20m, Yellow)
+</span><span id="__span-59-4"><a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a>    ↓
+</span><span id="__span-59-5"><a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a>SW-DN-MIR-DIST-01 (ether1)
+</span><span id="__span-59-6"><a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a>    |
+</span><span id="__span-59-7"><a id="__codelineno-59-7" name="__codelineno-59-7" href="#__codelineno-59-7"></a>    | Cable: CORE-TO-DIST-01 (SMF, 5m, Blue)
+</span><span id="__span-59-8"><a id="__codelineno-59-8" name="__codelineno-59-8" href="#__codelineno-59-8"></a>    ↓
+</span><span id="__span-59-9"><a id="__codelineno-59-9" name="__codelineno-59-9" href="#__codelineno-59-9"></a>R-DN-MIR-CORE-01 (sfp-sfpplus2)
+</span></code></pre></div>
+<p>এভাবে পুরো physical path দেখতে পাবেন। এটা troubleshooting এর সময় অসাধারণ কাজে লাগে।</p>
+<hr />
+<h3 id="provider-circuit">Provider এবং Circuit সেটআপ<a class="headerlink" href="#provider-circuit" title="Permanent link">&para;</a></h3>
+<p>SkyNets Bangladesh এর upstream connectivity BTCL থেকে। চলুন এটা ডকুমেন্ট করি।</p>
+<h4 id="provider">Provider তৈরি করা<a class="headerlink" href="#provider" title="Permanent link">&para;</a></h4>
+<p><strong>Circuits → Providers</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>Name: BTCL
+</span><span id="__span-60-2"><a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>ASN: 17494
+</span><span id="__span-60-3"><a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>Account Number: SKYN-BTCL-2023-MIR
+</span><span id="__span-60-4"><a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>Portal URL: https://isp.btcl.gov.bd
+</span><span id="__span-60-5"><a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a>NOC Contact: +880 2-9555555
+</span><span id="__span-60-6"><a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a>Admin Contact: noc@btcl.gov.bd
+</span><span id="__span-60-7"><a id="__codelineno-60-7" name="__codelineno-60-7" href="#__codelineno-60-7"></a>
+</span><span id="__span-60-8"><a id="__codelineno-60-8" name="__codelineno-60-8" href="#__codelineno-60-8"></a>Description: Bangladesh Telecommunications Company Limited - Primary upstream provider
+</span><span id="__span-60-9"><a id="__codelineno-60-9" name="__codelineno-60-9" href="#__codelineno-60-9"></a>
+</span><span id="__span-60-10"><a id="__codelineno-60-10" name="__codelineno-60-10" href="#__codelineno-60-10"></a>Comments:
+</span><span id="__span-60-11"><a id="__codelineno-60-11" name="__codelineno-60-11" href="#__codelineno-60-11"></a>  - Account Manager: Mr. Kamal Hossain
+</span><span id="__span-60-12"><a id="__codelineno-60-12" name="__codelineno-60-12" href="#__codelineno-60-12"></a>  - Sales Contact: +880 2-9555556
+</span><span id="__span-60-13"><a id="__codelineno-60-13" name="__codelineno-60-13" href="#__codelineno-60-13"></a>  - Technical Support: support@btcl.gov.bd
+</span><span id="__span-60-14"><a id="__codelineno-60-14" name="__codelineno-60-14" href="#__codelineno-60-14"></a>  - 24/7 NOC: +880 1700-000000
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<h4 id="circuit-type">Circuit Type তৈরি করা<a class="headerlink" href="#circuit-type" title="Permanent link">&para;</a></h4>
+<p><strong>Circuits → Circuit Types</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>Name: Fiber Optic
+</span><span id="__span-61-2"><a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>Description: Fiber optic connectivity - single-mode or multi-mode
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<h4 id="circuit">Circuit তৈরি করা<a class="headerlink" href="#circuit" title="Permanent link">&para;</a></h4>
+<p><strong>Circuits → Circuits</strong> যান। <strong>+ Add</strong> ক্লিক করুন।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>Circuit ID: BTCL-MIR-001
+</span><span id="__span-62-2"><a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>Provider: BTCL (ড্রপডাউন থেকে)
+</span><span id="__span-62-3"><a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>Type: Fiber Optic
+</span><span id="__span-62-4"><a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a>Status: Active
+</span><span id="__span-62-5"><a id="__codelineno-62-5" name="__codelineno-62-5" href="#__codelineno-62-5"></a>
+</span><span id="__span-62-6"><a id="__codelineno-62-6" name="__codelineno-62-6" href="#__codelineno-62-6"></a>Install Date: 2023-03-15
+</span><span id="__span-62-7"><a id="__codelineno-62-7" name="__codelineno-62-7" href="#__codelineno-62-7"></a>Termination Date: (খালি - চলমান)
+</span><span id="__span-62-8"><a id="__codelineno-62-8" name="__codelineno-62-8" href="#__codelineno-62-8"></a>Commit Rate: 5000 (Mbps - ৫ Gbps)
+</span><span id="__span-62-9"><a id="__codelineno-62-9" name="__codelineno-62-9" href="#__codelineno-62-9"></a>
+</span><span id="__span-62-10"><a id="__codelineno-62-10" name="__codelineno-62-10" href="#__codelineno-62-10"></a>Description: Primary 5Gbps internet uplink from Mirpur POP
+</span><span id="__span-62-11"><a id="__codelineno-62-11" name="__codelineno-62-11" href="#__codelineno-62-11"></a>
+</span><span id="__span-62-12"><a id="__codelineno-62-12" name="__codelineno-62-12" href="#__codelineno-62-12"></a>Comments:
+</span><span id="__span-62-13"><a id="__codelineno-62-13" name="__codelineno-62-13" href="#__codelineno-62-13"></a>  - Contract Start: 2023-03-01
+</span><span id="__span-62-14"><a id="__codelineno-62-14" name="__codelineno-62-14" href="#__codelineno-62-14"></a>  - Contract Duration: 2 years
+</span><span id="__span-62-15"><a id="__codelineno-62-15" name="__codelineno-62-15" href="#__codelineno-62-15"></a>  - Monthly Cost: BDT 400,000
+</span><span id="__span-62-16"><a id="__codelineno-62-16" name="__codelineno-62-16" href="#__codelineno-62-16"></a>  - Contract Renewal Date: 2025-03-01
+</span><span id="__span-62-17"><a id="__codelineno-62-17" name="__codelineno-62-17" href="#__codelineno-62-17"></a>  - Bandwidth Burstable: Up to 6 Gbps
+</span><span id="__span-62-18"><a id="__codelineno-62-18" name="__codelineno-62-18" href="#__codelineno-62-18"></a>  - SLA: 99.5% uptime guarantee
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p>এখন Circuit Terminations যোগ করতে হবে।</p>
+<p>Circuit ডিটেইল পেজে <strong>Terminations</strong> ট্যাবে যান। <strong>+ Add Termination</strong> ক্লিক করুন।</p>
+<p><strong>Termination A (Provider Side):</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>Circuit: BTCL-MIR-001 (already selected)
+</span><span id="__span-63-2"><a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a>Term Side: A
+</span><span id="__span-63-3"><a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a>Location: (খালি - provider সাইড)
+</span><span id="__span-63-4"><a id="__codelineno-63-4" name="__codelineno-63-4" href="#__codelineno-63-4"></a>Provider Network: (খালি)
+</span><span id="__span-63-5"><a id="__codelineno-63-5" name="__codelineno-63-5" href="#__codelineno-63-5"></a>Port Speed: 5000 (Mbps)
+</span><span id="__span-63-6"><a id="__codelineno-63-6" name="__codelineno-63-6" href="#__codelineno-63-6"></a>Upstream Speed: 5000 (Mbps)
+</span><span id="__span-63-7"><a id="__codelineno-63-7" name="__codelineno-63-7" href="#__codelineno-63-7"></a>Cross Connect ID: BTCL-XC-MIR-12345
+</span><span id="__span-63-8"><a id="__codelineno-63-8" name="__codelineno-63-8" href="#__codelineno-63-8"></a>Patch Panel/Port: PP-BTCL-MIR-001
+</span><span id="__span-63-9"><a id="__codelineno-63-9" name="__codelineno-63-9" href="#__codelineno-63-9"></a>Description: BTCL side termination at their Mirpur exchange
+</span></code></pre></div>
+<p><strong>Create and Add Another</strong> করুন।</p>
+<p><strong>Termination Z (SkyNets Bangladesh Side):</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>Circuit: BTCL-MIR-001
+</span><span id="__span-64-2"><a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>Term Side: Z
+</span><span id="__span-64-3"><a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>Location: Mirpur POP (ড্রপডাউন থেকে)
+</span><span id="__span-64-4"><a id="__codelineno-64-4" name="__codelineno-64-4" href="#__codelineno-64-4"></a>Device: R-DN-MIR-CORE-01
+</span><span id="__span-64-5"><a id="__codelineno-64-5" name="__codelineno-64-5" href="#__codelineno-64-5"></a>Interface: sfp-sfpplus1
+</span><span id="__span-64-6"><a id="__codelineno-64-6" name="__codelineno-64-6" href="#__codelineno-64-6"></a>Port Speed: 5000 (Mbps)
+</span><span id="__span-64-7"><a id="__codelineno-64-7" name="__codelineno-64-7" href="#__codelineno-64-7"></a>Description: Connected to core router uplink port
+</span></code></pre></div>
+<p><strong>Create</strong> করুন।</p>
+<p>এখন Circuit এবং Device পুরোপুরি linked। Circuit ডিটেইল পেজে দেখবেন Termination Z এ device এবং interface এর লিংক আছে। ক্লিক করলে সরাসরি সেই interface এ যাবেন।</p>
+<p>একইভাবে উত্তরা পপের জন্য Summit Communications এর circuit তৈরি করুন (যদি থাকে)।</p>
+<hr />
+<h3 id="data-validation-quality-check">Data Validation এবং Quality Check<a class="headerlink" href="#data-validation-quality-check" title="Permanent link">&para;</a></h3>
+<p>এতক্ষণ অনেক ডেটা এন্ট্রি করলাম। এখন চেক করা দরকার সব ঠিক আছে কিনা।</p>
+<h4 id="device-list-review">Device List Review<a class="headerlink" href="#device-list-review" title="Permanent link">&para;</a></h4>
+<p><strong>Devices → Devices</strong> যান।</p>
+<p>উপরে ডান দিকে <strong>Filters</strong> প্যানেল দেখবেন। এখান থেকে filter করতে পারবেন:</p>
+<p><strong>Location দিয়ে filter:</strong>
+- Location: Mirpur POP সিলেক্ট করুন
+- শুধু মিরপুর পপের ডিভাইস দেখাবে</p>
+<p><strong>Role দিয়ে filter:</strong>
+- Role: Core Router সিলেক্ট করুন
+- শুধু core routers দেখাবে</p>
+<p><strong>Status দিয়ে filter:</strong>
+- Status: Active সিলেক্ট করুন
+- শুধু active ডিভাইস দেখাবে</p>
+<h4 id="missing-information">Missing Information চেক করা<a class="headerlink" href="#missing-information" title="Permanent link">&para;</a></h4>
+<p>কিছু common issues খুঁজুন:</p>
+<p><strong>Devices without Serial Numbers:</strong></p>
+<p>Filters প্যানেলে:
+- Has Serial Number: No সিলেক্ট করুন</p>
+<p>যদি কোনো device আসে, তাহলে সেগুলোতে serial number যোগ করুন।</p>
+<p><strong>Devices without Location:</strong></p>
+<p>Filters:
+- Location: (empty) - অর্থাৎ কোনো location নেই</p>
+<p>এরকম device থাকা উচিত না। থাকলে সংশোধন করুন।</p>
+<h4 id="ip-address-utilization">IP Address Utilization দেখা<a class="headerlink" href="#ip-address-utilization" title="Permanent link">&para;</a></h4>
+<p><strong>IPAM → Prefixes</strong> যান।</p>
+<p>10.10.10.0/24 prefix ক্লিক করুন।</p>
+<p>ডিটেইল পেজে দেখবেন:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>Utilization: 23% (6 of 256 IPs used)
+</span></code></pre></div>
+<p>একটা ভিজুয়াল বার দেখাবে কতটুকু ব্যবহৃত। যদি 80% এর উপরে যায়, তাহলে নতুন prefix প্ল্যান করুন।</p>
+<p><strong>IP Addresses</strong> ট্যাবে ক্লিক করলে এই prefix এর সব IPs দেখাবে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>10.10.10.11/24 - SW-DN-MIR-DIST-01 (Active)
+</span><span id="__span-66-2"><a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>10.10.10.21/24 - SW-DN-MIR-ACC-01 (Active)
+</span><span id="__span-66-3"><a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a>10.10.10.22/24 - SW-DN-MIR-ACC-02 (Active)
+</span><span id="__span-66-4"><a id="__codelineno-66-4" name="__codelineno-66-4" href="#__codelineno-66-4"></a>...
+</span></code></pre></div>
+<h4 id="duplicate-name">Duplicate Name চেক<a class="headerlink" href="#duplicate-name" title="Permanent link">&para;</a></h4>
+<p>Nautobot automatically duplicate names prevent করে, কিন্তু double-check করা ভালো।</p>
+<p><strong>Devices → Devices</strong> লিস্টে name column এ sort করুন (column header এ ক্লিক করুন)। দেখুন কোনো duplicate আছে কিনা।</p>
+<hr />
+<h3 id="common-mistakes">Common Mistakes এবং কীভাবে এড়াবেন<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h3>
+<p>SkyNets Bangladesh এর NOC টিম প্রথমে কিছু ভুল করেছিল। চলুন সেগুলো দেখি যাতে আপনি এড়াতে পারেন।</p>
+<h4 id="mistake-1-location-hierarchy">Mistake 1: Location Hierarchy ভুল<a class="headerlink" href="#mistake-1-location-hierarchy" title="Permanent link">&para;</a></h4>
+<p><strong>ভুল করা হয়েছিল:</strong></p>
+<p>Mirpur POP তৈরি করার সময় Parent Location দেওয়া হয়নি। ফলে এটা top-level এ চলে গিয়েছিল।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>(ভুল hierarchy)
+</span><span id="__span-67-2"><a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>Dhaka North Zone
+</span><span id="__span-67-3"><a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a>Mirpur Cluster
+</span><span id="__span-67-4"><a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a>Mirpur POP (parent নেই - top level এ!)
+</span></code></pre></div>
+<p><strong>সমাধান:</strong></p>
+<p>Mirpur POP edit করে Parent Location = Mirpur Cluster সেট করতে হয়েছে।</p>
+<p><strong>শিক্ষা:</strong> Location তৈরি করার সময় সবসময় Parent Location চেক করুন।</p>
+<h4 id="mistake-2-device-type-interface-templates">Mistake 2: Device Type এ Interface Templates ভুলে যাওয়া<a class="headerlink" href="#mistake-2-device-type-interface-templates" title="Permanent link">&para;</a></h4>
+<p><strong>ভুল:</strong></p>
+<p>TP-Link TL-SG1024D device type তৈরি করা হয়েছিল কিন্তু interface templates যোগ করা হয়নি। ফলে device তৈরি করার পরে manually ২৪টা interface যোগ করতে হয়েছে প্রতিটা device এ!</p>
+<p><strong>সমাধান:</strong></p>
+<p>Device Type এ একবার interface templates ঠিকমতো যোগ করার পরে সব ঠিক হয়েছে।</p>
+<p><strong>শিক্ষা:</strong> Device Type তৈরি করার সময় অবশ্যই Interface Templates যোগ করুন। একটু সময় লাগবে, কিন্তু পরে অনেক সময় বাঁচবে।</p>
+<h4 id="mistake-3-ip-address-prefix-mask">Mistake 3: IP Address এ Prefix Mask ভুল<a class="headerlink" href="#mistake-3-ip-address-prefix-mask" title="Permanent link">&para;</a></h4>
+<p><strong>ভুল:</strong></p>
+<p>Management IP দেওয়া হয়েছিল 10.10.10.11/32 (একটা host IP হিসেবে)। কিন্তু আসলে এটা একটা network এর part, তাই হওয়া উচিত ছিল 10.10.10.11/24।</p>
+<p><strong>সমস্যা:</strong></p>
+<p>/32 দিলে ওই IP শুধু নিজের সাথে communicate করতে পারে, network এর অন্য কারো সাথে না!</p>
+<p><strong>সমাধান:</strong></p>
+<p>সব IP addresses review করে সঠিক subnet mask দিতে হয়েছে।</p>
+<p><strong>শিক্ষা:</strong> 
+- Host IPs (loopbacks, point-to-point links): /32 বা /30, /31
+- Network IPs (management, LANs): /24, /25, /26 ইত্যাদি</p>
+<h4 id="mistake-4-cable-color-coding">Mistake 4: Cable Color Coding না মানা<a class="headerlink" href="#mistake-4-cable-color-coding" title="Permanent link">&para;</a></h4>
+<p><strong>ভুল:</strong></p>
+<p>প্রথমে সব cable এ random color দেওয়া হয়েছিল। ফলে physical rack এ গিয়ে কোন cable কী বোঝা যাচ্ছিল না।</p>
+<p><strong>সমাধান:</strong></p>
+<p>একটা color coding scheme বানানো হয়েছে:
+- Blue: Fiber cables
+- Yellow: Cat6 ethernet (access to distribution)
+- Green: Cat6 ethernet (customer connections)
+- Red: Critical uplink/backbone</p>
+<p>Nautobot এ সব cable update করা হয়েছে এই color scheme অনুযায়ী।</p>
+<p><strong>শিক্ষা:</strong> একটা consistent naming এবং color scheme follow করুন।</p>
+<h4 id="mistake-5-description">Mistake 5: Description ফিল্ড খালি রাখা<a class="headerlink" href="#mistake-5-description" title="Permanent link">&para;</a></h4>
+<p><strong>ভুল:</strong></p>
+<p>প্রথম দিকে শুধু device name দেওয়া হয়েছিল, description খালি ছিল।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>Name: SW-DN-MIR-ACC-03
+</span><span id="__span-68-2"><a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a>Description: (empty)
+</span></code></pre></div>
+<p>ছয় মাস পরে যখন দেখা গেল, কেউ বুঝতে পারছিল না এই switch কোন building এ, কী purpose এ।</p>
+<p><strong>সমাধান:</strong></p>
+<p>সব device এ proper description যোগ করা হয়েছে:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-69-1"><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>Name: SW-DN-MIR-ACC-03
+</span><span id="__span-69-2"><a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a>Description: Building C access switch serving 280 residential customers in Mirpur Sector 12
+</span></code></pre></div>
+<p><strong>শিক্ষা:</strong> Description এবং Comments ফিল্ড সবসময় পূরণ করুন। ভবিষ্যতে নিজেই নিজেকে ধন্যবাদ দেবেন।</p>
+<h4 id="mistake-6-status">Mistake 6: Status সঠিকভাবে সেট না করা<a class="headerlink" href="#mistake-6-status" title="Permanent link">&para;</a></h4>
+<p><strong>ভুল:</strong></p>
+<p>একটা old switch যেটা আর ব্যবহার হয় না, সেটার status ছিল "Active"।</p>
+<p><strong>সমস্যা:</strong></p>
+<p>Reports এ এটা count হচ্ছিল। ফলে actual active devices count ভুল আসছিল।</p>
+<p><strong>সমাধান:</strong></p>
+<p>Device status "Decommissioned" করা হয়েছে। অথবা একদম delete করে দেওয়া হয়েছে।</p>
+<p><strong>শিক্ষা:</strong> Device lifecycle maintain করুন - Active, Offline, Decommissioned, Retired ইত্যাদি সঠিক status দিন।</p>
+<hr />
+<h3 id="naming-convention-standards-skynets-bangladesh-example">Naming Convention Standards - SkyNets Bangladesh এর Example<a class="headerlink" href="#naming-convention-standards-skynets-bangladesh-example" title="Permanent link">&para;</a></h3>
+<p>SkyNets Bangladesh একটা documented naming convention তৈরি করেছে। এটা একটা Word ডকুমেন্টে রাখা আছে এবং সব team members কে দেওয়া হয়েছে।</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-70-1"><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>========================================
+</span><span id="__span-70-2"><a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a>SkyNets Bangladesh Naming Convention
+</span><span id="__span-70-3"><a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a>Version 1.0 - Updated: February 2025
+</span><span id="__span-70-4"><a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a>========================================
+</span><span id="__span-70-5"><a id="__codelineno-70-5" name="__codelineno-70-5" href="#__codelineno-70-5"></a>
+</span><span id="__span-70-6"><a id="__codelineno-70-6" name="__codelineno-70-6" href="#__codelineno-70-6"></a>1. DEVICES
+</span><span id="__span-70-7"><a id="__codelineno-70-7" name="__codelineno-70-7" href="#__codelineno-70-7"></a>----------
+</span><span id="__span-70-8"><a id="__codelineno-70-8" name="__codelineno-70-8" href="#__codelineno-70-8"></a>Format: [Type]-[Zone]-[Site]-[Role]-[Number]
+</span><span id="__span-70-9"><a id="__codelineno-70-9" name="__codelineno-70-9" href="#__codelineno-70-9"></a>
+</span><span id="__span-70-10"><a id="__codelineno-70-10" name="__codelineno-70-10" href="#__codelineno-70-10"></a>Type Codes:
+</span><span id="__span-70-11"><a id="__codelineno-70-11" name="__codelineno-70-11" href="#__codelineno-70-11"></a>  R  = Router
+</span><span id="__span-70-12"><a id="__codelineno-70-12" name="__codelineno-70-12" href="#__codelineno-70-12"></a>  SW = Switch
+</span><span id="__span-70-13"><a id="__codelineno-70-13" name="__codelineno-70-13" href="#__codelineno-70-13"></a>  FW = Firewall
+</span><span id="__span-70-14"><a id="__codelineno-70-14" name="__codelineno-70-14" href="#__codelineno-70-14"></a>  OLT = Optical Line Terminal
+</span><span id="__span-70-15"><a id="__codelineno-70-15" name="__codelineno-70-15" href="#__codelineno-70-15"></a>
+</span><span id="__span-70-16"><a id="__codelineno-70-16" name="__codelineno-70-16" href="#__codelineno-70-16"></a>Zone Codes:
+</span><span id="__span-70-17"><a id="__codelineno-70-17" name="__codelineno-70-17" href="#__codelineno-70-17"></a>  DN = Dhaka North
+</span><span id="__span-70-18"><a id="__codelineno-70-18" name="__codelineno-70-18" href="#__codelineno-70-18"></a>  DS = Dhaka South (future)
+</span><span id="__span-70-19"><a id="__codelineno-70-19" name="__codelineno-70-19" href="#__codelineno-70-19"></a>  CT = Chittagong (future)
+</span><span id="__span-70-20"><a id="__codelineno-70-20" name="__codelineno-70-20" href="#__codelineno-70-20"></a>
+</span><span id="__span-70-21"><a id="__codelineno-70-21" name="__codelineno-70-21" href="#__codelineno-70-21"></a>Site Codes (3 letters):
+</span><span id="__span-70-22"><a id="__codelineno-70-22" name="__codelineno-70-22" href="#__codelineno-70-22"></a>  MIR = Mirpur
+</span><span id="__span-70-23"><a id="__codelineno-70-23" name="__codelineno-70-23" href="#__codelineno-70-23"></a>  UTT = Uttara
+</span><span id="__span-70-24"><a id="__codelineno-70-24" name="__codelineno-70-24" href="#__codelineno-70-24"></a>  KAL = Kalyanpur (future)
+</span><span id="__span-70-25"><a id="__codelineno-70-25" name="__codelineno-70-25" href="#__codelineno-70-25"></a>  BAN = Banani (future)
+</span><span id="__span-70-26"><a id="__codelineno-70-26" name="__codelineno-70-26" href="#__codelineno-70-26"></a>
+</span><span id="__span-70-27"><a id="__codelineno-70-27" name="__codelineno-70-27" href="#__codelineno-70-27"></a>Role Codes:
+</span><span id="__span-70-28"><a id="__codelineno-70-28" name="__codelineno-70-28" href="#__codelineno-70-28"></a>  CORE = Core
+</span><span id="__span-70-29"><a id="__codelineno-70-29" name="__codelineno-70-29" href="#__codelineno-70-29"></a>  DIST = Distribution
+</span><span id="__span-70-30"><a id="__codelineno-70-30" name="__codelineno-70-30" href="#__codelineno-70-30"></a>  ACC  = Access
+</span><span id="__span-70-31"><a id="__codelineno-70-31" name="__codelineno-70-31" href="#__codelineno-70-31"></a>  EDGE = Edge
+</span><span id="__span-70-32"><a id="__codelineno-70-32" name="__codelineno-70-32" href="#__codelineno-70-32"></a>
+</span><span id="__span-70-33"><a id="__codelineno-70-33" name="__codelineno-70-33" href="#__codelineno-70-33"></a>Number: 01, 02, 03... (zero-padded, 2 digits)
+</span><span id="__span-70-34"><a id="__codelineno-70-34" name="__codelineno-70-34" href="#__codelineno-70-34"></a>
+</span><span id="__span-70-35"><a id="__codelineno-70-35" name="__codelineno-70-35" href="#__codelineno-70-35"></a>Examples:
+</span><span id="__span-70-36"><a id="__codelineno-70-36" name="__codelineno-70-36" href="#__codelineno-70-36"></a>  R-DN-MIR-CORE-01
+</span><span id="__span-70-37"><a id="__codelineno-70-37" name="__codelineno-70-37" href="#__codelineno-70-37"></a>  SW-DN-UTT-DIST-01
+</span><span id="__span-70-38"><a id="__codelineno-70-38" name="__codelineno-70-38" href="#__codelineno-70-38"></a>  SW-DN-MIR-ACC-15
+</span><span id="__span-70-39"><a id="__codelineno-70-39" name="__codelineno-70-39" href="#__codelineno-70-39"></a>
+</span><span id="__span-70-40"><a id="__codelineno-70-40" name="__codelineno-70-40" href="#__codelineno-70-40"></a>2. INTERFACES
+</span><span id="__span-70-41"><a id="__codelineno-70-41" name="__codelineno-70-41" href="#__codelineno-70-41"></a>-------------
+</span><span id="__span-70-42"><a id="__codelineno-70-42" name="__codelineno-70-42" href="#__codelineno-70-42"></a>Use manufacturer&#39;s default naming.
+</span><span id="__span-70-43"><a id="__codelineno-70-43" name="__codelineno-70-43" href="#__codelineno-70-43"></a>Add clear descriptions:
+</span><span id="__span-70-44"><a id="__codelineno-70-44" name="__codelineno-70-44" href="#__codelineno-70-44"></a>
+</span><span id="__span-70-45"><a id="__codelineno-70-45" name="__codelineno-70-45" href="#__codelineno-70-45"></a>Format: [Purpose] - [Remote End/Details]
+</span><span id="__span-70-46"><a id="__codelineno-70-46" name="__codelineno-70-46" href="#__codelineno-70-46"></a>
+</span><span id="__span-70-47"><a id="__codelineno-70-47" name="__codelineno-70-47" href="#__codelineno-70-47"></a>Examples:
+</span><span id="__span-70-48"><a id="__codelineno-70-48" name="__codelineno-70-48" href="#__codelineno-70-48"></a>  &quot;Uplink to BTCL - 5 Gbps circuit&quot;
+</span><span id="__span-70-49"><a id="__codelineno-70-49" name="__codelineno-70-49" href="#__codelineno-70-49"></a>  &quot;Link to SW-DN-MIR-DIST-01 port sfp1&quot;
+</span><span id="__span-70-50"><a id="__codelineno-70-50" name="__codelineno-70-50" href="#__codelineno-70-50"></a>  &quot;Customer: ABC Corporation - VLAN 200&quot;
+</span><span id="__span-70-51"><a id="__codelineno-70-51" name="__codelineno-70-51" href="#__codelineno-70-51"></a>
+</span><span id="__span-70-52"><a id="__codelineno-70-52" name="__codelineno-70-52" href="#__codelineno-70-52"></a>3. CABLES
+</span><span id="__span-70-53"><a id="__codelineno-70-53" name="__codelineno-70-53" href="#__codelineno-70-53"></a>---------
+</span><span id="__span-70-54"><a id="__codelineno-70-54" name="__codelineno-70-54" href="#__codelineno-70-54"></a>Format: [Source Device Type]-TO-[Dest Device Type]-[Number]
+</span><span id="__span-70-55"><a id="__codelineno-70-55" name="__codelineno-70-55" href="#__codelineno-70-55"></a>
+</span><span id="__span-70-56"><a id="__codelineno-70-56" name="__codelineno-70-56" href="#__codelineno-70-56"></a>Examples:
+</span><span id="__span-70-57"><a id="__codelineno-70-57" name="__codelineno-70-57" href="#__codelineno-70-57"></a>  CORE-TO-DIST-01
+</span><span id="__span-70-58"><a id="__codelineno-70-58" name="__codelineno-70-58" href="#__codelineno-70-58"></a>  DIST-TO-ACC-03
+</span><span id="__span-70-59"><a id="__codelineno-70-59" name="__codelineno-70-59" href="#__codelineno-70-59"></a>  UPLINK-BTCL-01
+</span><span id="__span-70-60"><a id="__codelineno-70-60" name="__codelineno-70-60" href="#__codelineno-70-60"></a>
+</span><span id="__span-70-61"><a id="__codelineno-70-61" name="__codelineno-70-61" href="#__codelineno-70-61"></a>4. IP ADDRESSES
+</span><span id="__span-70-62"><a id="__codelineno-70-62" name="__codelineno-70-62" href="#__codelineno-70-62"></a>---------------
+</span><span id="__span-70-63"><a id="__codelineno-70-63" name="__codelineno-70-63" href="#__codelineno-70-63"></a>Management IPs:
+</span><span id="__span-70-64"><a id="__codelineno-70-64" name="__codelineno-70-64" href="#__codelineno-70-64"></a>  Core Routers: 10.10.X.1/24
+</span><span id="__span-70-65"><a id="__codelineno-70-65" name="__codelineno-70-65" href="#__codelineno-70-65"></a>  Dist Switches: 10.10.X.11-20/24
+</span><span id="__span-70-66"><a id="__codelineno-70-66" name="__codelineno-70-66" href="#__codelineno-70-66"></a>  Access Switches: 10.10.X.21-99/24
+</span><span id="__span-70-67"><a id="__codelineno-70-67" name="__codelineno-70-67" href="#__codelineno-70-67"></a>
+</span><span id="__span-70-68"><a id="__codelineno-70-68" name="__codelineno-70-68" href="#__codelineno-70-68"></a>DNS Naming:
+</span><span id="__span-70-69"><a id="__codelineno-70-69" name="__codelineno-70-69" href="#__codelineno-70-69"></a>  Format: [device-name].skynet.bd
+</span><span id="__span-70-70"><a id="__codelineno-70-70" name="__codelineno-70-70" href="#__codelineno-70-70"></a>  Example: r-mir-core-01.skynet.bd
+</span><span id="__span-70-71"><a id="__codelineno-70-71" name="__codelineno-70-71" href="#__codelineno-70-71"></a>
+</span><span id="__span-70-72"><a id="__codelineno-70-72" name="__codelineno-70-72" href="#__codelineno-70-72"></a>5. VLANs
+</span><span id="__span-70-73"><a id="__codelineno-70-73" name="__codelineno-70-73" href="#__codelineno-70-73"></a>--------
+</span><span id="__span-70-74"><a id="__codelineno-70-74" name="__codelineno-70-74" href="#__codelineno-70-74"></a>Format: [Purpose]_[Site]
+</span><span id="__span-70-75"><a id="__codelineno-70-75" name="__codelineno-70-75" href="#__codelineno-70-75"></a>
+</span><span id="__span-70-76"><a id="__codelineno-70-76" name="__codelineno-70-76" href="#__codelineno-70-76"></a>Examples:
+</span><span id="__span-70-77"><a id="__codelineno-70-77" name="__codelineno-70-77" href="#__codelineno-70-77"></a>  MGMT_MIRPUR
+</span><span id="__span-70-78"><a id="__codelineno-70-78" name="__codelineno-70-78" href="#__codelineno-70-78"></a>  RESIDENTIAL_MIR
+</span><span id="__span-70-79"><a id="__codelineno-70-79" name="__codelineno-70-79" href="#__codelineno-70-79"></a>  CORPORATE (global, no site suffix)
+</span><span id="__span-70-80"><a id="__codelineno-70-80" name="__codelineno-70-80" href="#__codelineno-70-80"></a>
+</span><span id="__span-70-81"><a id="__codelineno-70-81" name="__codelineno-70-81" href="#__codelineno-70-81"></a>6. LOCATIONS
+</span><span id="__span-70-82"><a id="__codelineno-70-82" name="__codelineno-70-82" href="#__codelineno-70-82"></a>------------
+</span><span id="__span-70-83"><a id="__codelineno-70-83" name="__codelineno-70-83" href="#__codelineno-70-83"></a>Use full descriptive names:
+</span><span id="__span-70-84"><a id="__codelineno-70-84" name="__codelineno-70-84" href="#__codelineno-70-84"></a>  Dhaka North Zone
+</span><span id="__span-70-85"><a id="__codelineno-70-85" name="__codelineno-70-85" href="#__codelineno-70-85"></a>  Mirpur POP
+</span><span id="__span-70-86"><a id="__codelineno-70-86" name="__codelineno-70-86" href="#__codelineno-70-86"></a>  Rack A
+</span><span id="__span-70-87"><a id="__codelineno-70-87" name="__codelineno-70-87" href="#__codelineno-70-87"></a>
+</span><span id="__span-70-88"><a id="__codelineno-70-88" name="__codelineno-70-88" href="#__codelineno-70-88"></a>Avoid abbreviations in location names.
+</span><span id="__span-70-89"><a id="__codelineno-70-89" name="__codelineno-70-89" href="#__codelineno-70-89"></a>
+</span><span id="__span-70-90"><a id="__codelineno-70-90" name="__codelineno-70-90" href="#__codelineno-70-90"></a>========================================
+</span></code></pre></div>
+<p>এই document টা print করে NOC তে টাঙিয়ে রাখা আছে। নতুন কেউ join করলে তাকে এটা পড়তে দেওয়া হয়।</p>
+<hr />
+<h3 id="export-backup-">Export এবং Backup - ডেটা সংরক্ষণ<a class="headerlink" href="#export-backup-" title="Permanent link">&para;</a></h3>
+<p>কিছু ডেটা এন্ট্রি হয়ে গেলে backup নেওয়া জরুরি।</p>
+<h4 id="csv-export">CSV Export<a class="headerlink" href="#csv-export" title="Permanent link">&para;</a></h4>
+<p>যেকোনো object list থেকে CSV export করা যায়।</p>
+<p><strong>Devices → Devices</strong> লিস্টে যান।</p>
+<p>উপরে ডান দিকে <strong>Export</strong> বাটন দেখবেন। ক্লিক করলে একটা ড্রপডাউন:</p>
+<ul>
+<li><strong>Export All</strong>: সব devices</li>
+<li><strong>Export Selected</strong>: যেগুলো checkbox দিয়ে সিলেক্ট করেছেন</li>
+<li><strong>Export as CSV</strong>: CSV format</li>
+<li><strong>Export as YAML</strong>: YAML format</li>
+</ul>
+<p><strong>Export All → CSV</strong> সিলেক্ট করুন।</p>
+<p>একটা CSV ফাইল ডাউনলোড হবে যেখানে সব devices এর সব information থাকবে।</p>
+<p>এই ফাইল একটা safe জায়গায় রাখুন। যদি কখনো ভুল করে কিছু delete হয়ে যায়, এই CSV দিয়ে import করে recover করতে পারবেন।</p>
+<h4 id="monthly-data-snapshot">Monthly Data Snapshot<a class="headerlink" href="#monthly-data-snapshot" title="Permanent link">&para;</a></h4>
+<p>SkyNets Bangladesh প্রতি মাসের ১ তারিখে একটা snapshot নেয়:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-71-1"><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="c1"># Create backup directory</span>
+</span><span id="__span-71-2"><a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/backup/nautobot/monthly/2025-02
+</span><span id="__span-71-3"><a id="__codelineno-71-3" name="__codelineno-71-3" href="#__codelineno-71-3"></a>
+</span><span id="__span-71-4"><a id="__codelineno-71-4" name="__codelineno-71-4" href="#__codelineno-71-4"></a><span class="c1"># Export all key data types</span>
+</span><span id="__span-71-5"><a id="__codelineno-71-5" name="__codelineno-71-5" href="#__codelineno-71-5"></a><span class="c1"># Devices</span>
+</span><span id="__span-71-6"><a id="__codelineno-71-6" name="__codelineno-71-6" href="#__codelineno-71-6"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Token YOUR_TOKEN&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-71-7"><a id="__codelineno-71-7" name="__codelineno-71-7" href="#__codelineno-71-7"></a><span class="w">  </span><span class="s2">&quot;https://nautobot.skynet.bd/api/dcim/devices/?limit=0&amp;format=csv&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-71-8"><a id="__codelineno-71-8" name="__codelineno-71-8" href="#__codelineno-71-8"></a><span class="w">  </span>&gt;<span class="w"> </span>/backup/nautobot/monthly/2025-02/devices.csv
+</span><span id="__span-71-9"><a id="__codelineno-71-9" name="__codelineno-71-9" href="#__codelineno-71-9"></a>
+</span><span id="__span-71-10"><a id="__codelineno-71-10" name="__codelineno-71-10" href="#__codelineno-71-10"></a><span class="c1"># IP Addresses</span>
+</span><span id="__span-71-11"><a id="__codelineno-71-11" name="__codelineno-71-11" href="#__codelineno-71-11"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Token YOUR_TOKEN&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-71-12"><a id="__codelineno-71-12" name="__codelineno-71-12" href="#__codelineno-71-12"></a><span class="w">  </span><span class="s2">&quot;https://nautobot.skynet.bd/api/ipam/ip-addresses/?limit=0&amp;format=csv&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-71-13"><a id="__codelineno-71-13" name="__codelineno-71-13" href="#__codelineno-71-13"></a><span class="w">  </span>&gt;<span class="w"> </span>/backup/nautobot/monthly/2025-02/ip-addresses.csv
+</span><span id="__span-71-14"><a id="__codelineno-71-14" name="__codelineno-71-14" href="#__codelineno-71-14"></a>
+</span><span id="__span-71-15"><a id="__codelineno-71-15" name="__codelineno-71-15" href="#__codelineno-71-15"></a><span class="c1"># (similarly for other object types)</span>
+</span></code></pre></div>
+<p>এগুলো Google Drive এ backup করা হয়।</p>
+<hr />
+<h3 id="_6">চ্যাপ্টার সারাংশ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>এই চ্যাপ্টারে আমরা শিখলাম:</p>
+<p><strong>Location Hierarchy:</strong>
+- Location Types তৈরি করা (Zone, Cluster, POP, Rack)
+- Actual Locations তৈরি করা
+- Hierarchy সঠিকভাবে সেটআপ করা</p>
+<p><strong>Roles Setup:</strong>
+- Unified Roles সিস্টেম (Nautobot 3.0)
+- Content Types দিয়ে specify করা
+- Device roles তৈরি করা</p>
+<p><strong>Device Management:</strong>
+- Manufacturers যোগ করা
+- Device Types তৈরি করা
+- Interface Templates এর গুরুত্ব
+- Actual Devices এন্ট্রি করা
+- Racks এ device position করা</p>
+<p><strong>IP এবং VLAN:</strong>
+- IP Namespaces
+- Prefixes (hierarchical)
+- IP Addresses assign করা
+- VLANs তৈরি করা
+- VLAN Groups</p>
+<p><strong>Physical Connectivity:</strong>
+- Cables তৈরি করা
+- Cable Trace ব্যবহার করা
+- Color coding</p>
+<p><strong>Upstream Connectivity:</strong>
+- Providers
+- Circuit Types
+- Circuits
+- Circuit Terminations</p>
+<p><strong>Data Quality:</strong>
+- Validation checks
+- Common mistakes এবং সমাধান
+- Naming conventions
+- Export/Backup</p>
+<p>SkyNets Bangladesh এখন তাদের মিরপুর এবং উত্তরা পপের প্রায় সম্পূর্ণ নেটওয়ার্ক Nautobot এ ডকুমেন্ট করে ফেলেছে। পরের চ্যাপ্টারে আমরা দেখব কীভাবে এই setup কে scale করা যায় যখন নতুন পপ যুক্ত হয়, আরো ডিভাইস আসে, এবং কীভাবে advanced features ব্যবহার করতে হয়।</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../datamodel/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Nautobot ডেটা মডেল - নেটওয়ার্কের যোগসুত্র">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Nautobot ডেটা মডেল - নেটওয়ার্কের যোগসুত্র
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../connectivity_adv/" class="md-footer__link md-footer__link--next" aria-label="Next: কানেক্টিভিটি এবং এডভান্সড ফিচার">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                কানেক্টিভিটি এবং এডভান্সড ফিচার
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      সৃজনশীল লাইসেন্সিং ২০২৩ - ২০২৬ &copy; রকিবুল হাসান
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/raqueeb" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://m.me/raqueeb" target="_blank" rel="noopener" title="m.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256.6 8C116.6 8 8 110.3 8 248.6c0 72.3 29.7 134.8 78.1 177.9 8.3 7.5 6.6 11.9 8 58.2.1 3.2 1 6.4 2.6 9.2s3.9 5.2 6.7 6.9 5.9 2.8 9.1 3 6.5-.3 9.5-1.6c52.9-23.2 53.6-25 62.6-22.6 153.2 42.2 319.4-55.9 319.4-231C504 110.3 396.6 8 256.6 8m149.2 185.1-73 115.6c-2.8 4.3-6.4 8.1-10.6 11s-9.1 4.8-14.1 5.8-10.3.8-15.3-.4-9.7-3.4-13.8-6.4l-58.1-43.5c-2.6-1.9-5.8-3-9-3s-6.4 1.1-9 3l-78.4 59.4c-10.5 7.9-24.2-4.6-17.1-15.7l73-115.6c2.8-4.3 6.4-8.1 10.6-11s9.1-4.8 14.1-5.8 10.3-.8 15.3.4 9.7 3.4 13.9 6.4l58.1 43.5c2.6 1.9 5.8 3 9 3s6.4-1.1 9-3l78.4-59.4c10.4-8 24.1 4.5 17.1 15.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="tel:+8801713095767" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157m-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6m101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/raqueeb" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/raqueeb/" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://instagram.com/raqueeb" target="_blank" rel="noopener" title="instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://facebook.com/raqueeb" target="_blank" rel="noopener" title="facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
