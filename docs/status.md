@@ -3,45 +3,45 @@
 ## শুরুতেই লিংকড টেকনোলজি টিম  
 যাদের হেল্প পেয়েছি এই বইটা লিখতে
 
-```
+
 টেকনোলজির হাতে-কলমে একটি উদ্যোগ এমনভাবে গড়ে ওঠে না, এতে অনেকের সরাসরি অবদান থাকে। এই প্রকল্পের ল্যাব এনভায়রনমেন্ট তৈরি ও ডেভেলপমেন্টে কবিরুল আলম, মেহেদী হাসান লিংকন, সবুজ মিস্ত্রি, জাবের বিন আহমেদ ভূঁইয়া, মাহাদী হাসান, ফরহাদুল ইসলাম, সামিহা রহমান, প্রমি দেব, জেবা ফারিয়া, মাহেদী হাসান, তারিকুল ইসলাম, বাদল চন্দ্র ঘোষ, সুমন ফরিদুল ইসলাম, ফয়সাল খান, নজরুল ইসলাম, সুব্রত সরকার, উজ্জ্বল বিশ্বাস, নিপন, দিনবন্ধু সাহা, কানিজ ফাতেমা, মোহাম্মদ আনোয়ার হোসেন ও আনোয়ার হোসেন গুরুত্বপূর্ণ ভূমিকা রেখেছেন।
 
 এই উদ্যোগকে বাস্তব রূপ দিতে সংশ্লিষ্ট সবার অবদান ও সহযোগিতা বিশেষভাবে স্বীকৃত।
-```
+
 ---
 
 এই বইটার পাশাপাশি নিচের রিসোর্সগুলো দেখতে পারেন। গুগল করুন নিচের কিওয়ার্ডগুলো:
 
-## ১. Cisco DevNet Certifications
+### ১. Cisco DevNet Certifications
 (আমার পছন্দের সাইট। হাজারো জিনিস আছে এখানে। হারিয়ে যেতে পারেন। সেকারণে এই বই।)
 
-## ২. Coursera DevOps for Network Automation (NetDevOps)  
+### ২. Coursera DevOps for Network Automation (NetDevOps)  
 (সিসকো লার্নিং এর সার্টিফিকেশন থেকে এসেছে। বেসিকের জন্য অসাধারণ লার্নিং প্ল্যাটফর্ম।)
 
-## ৩. Automating and Orchestrating Networks with NetDevOps 
+### ৩. Automating and Orchestrating Networks with NetDevOps 
 (বইটা চমৎকার। তবে, শুরুতে কঠিন মনে হতে পারে।)
 
-## ৪. Network Programmability and Automation: Skills for the Next-Generation Network Engineer
+### ৪. Network Programmability and Automation: Skills for the Next-Generation Network Engineer
 
 একটা অসাধারণ বই এবং ভেতরে ঢোকার জন্য একটা ভালো রিসোর্স। তবে, অনেক অনেক মোটা — প্রায় ৮২৫ পৃষ্ঠা। ৫০ ডলারের বই। সমস্যা হচ্ছে, বাংলাদেশে মোটা বই লেখা যায় না।
 
-## ৫. Network Automation Cookbook | Cloud & Networking
+### ৫. Network Automation Cookbook | Cloud & Networking
 
 বইটা ক্লাউড কভার করেছে।
 
-## ৬. Mastering Python Networking
+### ৬. Mastering Python Networking
 
 সব আছে এর মধ্যে। দেখতে পারেন। প্রোগ্রাম্যাটিক্যালি।
 
-## ৭. Python for Security and Networking
+### ৭. Python for Security and Networking
 
 একদম সময়োপযোগী বই। সিকিউরিটি ওরিয়েন্টেড।
 
-## ৮. Python Learning for Network Engineers Automation Masterclass
+### ৮. Python Learning for Network Engineers Automation Masterclass
 
 একটা অসাধারণ ইউডেমি কোর্স। আমাদের সাথে যায়।
 
-## ৯. নেটওয়ার্ক এবং আইএসপি অটোমেশন
+### ৯. নেটওয়ার্ক এবং আইএসপি অটোমেশন
 
 সঙ্গে ইন্টেলিজেন্ট ওয়াইফাই ম্যানেজমেন্ট
 
