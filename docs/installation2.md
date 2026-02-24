@@ -356,7 +356,7 @@ http://your-server-ip:8080
 নির্ভর কমিউনিকেশনের ক্ষেত্রে:
 
 ```
-http://10.10.0.36:8080
+https://nautobot.nirvor.bd:8080
 ```
 
 `creds.env`-এ দেওয়া admin username ও password দিয়ে লগইন করুন।

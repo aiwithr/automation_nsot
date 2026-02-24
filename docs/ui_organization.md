@@ -11,7 +11,7 @@
 ব্রাউজারে যান:
 
 ```
-https://nautobot.nirvor.bd.8080
+https://nautobot.nirvor.bd:8080
 ```
 
 লগইন করুন:
