@@ -77,7 +77,7 @@
 
 **সমাধান - অটোমেশন শুরু:**
 
-**PyNautobot Scripts:**
+**পাইনটবট Scripts:**
 
 - বাল্ক ডিভাইস ইমপোর্ট স্ক্রিপ্ট
 - CSV থেকে আইপি এসাইন
@@ -136,17 +136,17 @@
 
 **সমাধান - এডভান্সড অটোমেশন:**
 
-**Ansible Integration:**
+**আনসিবল Integration:**
 
 - সব নতুন ডিভাইস অটো-কনফিগার
 - Standard templates ব্যবহার
 - Day-0 automation (ডিভাইস যুক্ত হওয়ার সাথে সাথে কনফিগ)
 
-**Golden Config:**
+**গোল্ডেন কনফিগ:**
 
 - সব ডিভাইসের কনফিগ ব্যাকআপ
 - Compliance checking
-- Drift detection
+- ড্রিফট detection
 
 **Advanced RBAC:**
 
@@ -163,7 +163,7 @@
 **সফলতার মাপকাঠি:**
 
 - নতুন সাইট যুক্ত করতে ১ দিন
-- কনফিগ drift ০% (সব স্ট্যান্ডার্ড মেনে চলছে)
+- কনফিগ ড্রিফট ০% (সব স্ট্যান্ডার্ড মেনে চলছে)
 - ৭০%+ কাজ অটোমেটেড
 - টিম প্রোডাক্টিভিটি ৩x বৃদ্ধি
 
@@ -173,7 +173,7 @@
 
 - 2 জন Automation Engineer (৳১,০০,০০০/মাস)
 - Server upgrade (16GB RAM, 8 cores): ৳৩,০০,০০০
-- Ansible/automation tools training: ৳৩,০০,০০০
+- আনসিবল/automation tools training: ৳৩,০০,০০০
 
 ---
 
@@ -224,7 +224,7 @@ Code Change → Tests → Staging → Production
           Validation  Review   Deployment
 ```
 
-**Monitoring Integration:**
+**মনিটরিং ইন্টিগ্রেশন:**
 
 - Prometheus/Grafana থেকে Nautobot sync
 - Automatic incident creation

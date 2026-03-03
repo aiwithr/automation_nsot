@@ -432,7 +432,7 @@
 ---
 
 ## অধ্যায় ১১: API এবং অটোমেশনের শুরু
-### PyNautobot পরিচিতি
+### পাইনটবট পরিচিতি
 
 - ইনস্টলেশন
 - API Token তৈরি
@@ -504,15 +504,15 @@
 ---
 
 ## অধ্যায় ১২: এডভান্সড অটোমেশন এবং ১ লক্ষ কাস্টমারের পথে
-### Ansible ইন্টিগ্রেশন
+### আনসিবল ইন্টিগ্রেশন
 
 **সেটআপ:**
 
-- Ansible ইনস্টল
+- আনসিবল ইনস্টল
 - Nautobot Inventory Plugin
 - Configuration
 
-**Playbooks:**
+**প্লেবুকs:**
 
 - NTP Configuration
 - SNMP Setup
@@ -521,11 +521,11 @@
 
 **Workflow:**
 
-- Nautobot এ ডিভাইস Add
-- Ansible Playbook রান
+- Nautobot এ ডিভাইস অ্যাড
+- আনসিবল প্লেবুক রান
 - Auto-configuration
 
-### Golden Config Management
+### গোল্ডেন কনফিগ ম্যানেজমেন্ট
 **Plugin সেটআপ:**
 
 - Installation
@@ -536,16 +536,16 @@
 
 - **Config Backup:** Daily Job
 - **Compliance Checking:** Template-based
-- **Drift Detection:** Change Tracking
+- **ড্রিফট Detection:** Change Tracking
 - **Remediation:** Auto-fix
 
 **Compliance Reports:**
 
 - Compliant Devices
 - Non-compliant Issues
-- Drift History
+- ড্রিফট History
 
-### Monitoring Integration
+### মনিটরিং ইন্টিগ্রেশন
 **Prometheus + Grafana:**
 
 - Nautobot থেকে Device Sync
@@ -653,7 +653,7 @@
 
 **Solutions:**
 
-- PyNautobot scripts
+- পাইনটবট scripts
 - CSV bulk import
 - Daily automated reports
 - API integration (billing, CRM)
@@ -686,8 +686,8 @@
 
 **Solutions:**
 
-- Ansible auto-config
-- Golden Config (backup, compliance, drift)
+- আনসিবল auto-config
+- গোল্ডেন কনফিগ (backup, compliance, ড্রিফট)
 - Advanced RBAC
 - PostgreSQL tuning
 - Redis caching
@@ -695,7 +695,7 @@
 **Success Metrics:**
 
 - New site: ১ day
-- ০% drift
+- ০% ড্রিফট
 - ৭০%+ automated
 - ৩x productivity
 
@@ -725,7 +725,7 @@
 
 - **Infrastructure as Code:** Git → Review → Deploy
 - **CI/CD Pipeline:** Automated testing
-- **Monitoring Integration:** Auto-discovery
+- **মনিটরিং ইন্টিগ্রেশন:** Auto-discovery
 - **Self-service Portal:** Internal teams
 - **Multi-region Architecture**
 
@@ -916,7 +916,7 @@ System:
 **Human:**
 
 - Resistance to change
-- Skill gap (Python, Ansible, API)
+- Skill gap (Python, আনসিবল, API)
 - Process change (manual → automated)
 
 **Solutions:**
@@ -967,7 +967,7 @@ System:
 
 - **Book 3: "এডভান্সড নেটওয়ার্ক অটোমেশন" (২০২৮)**
 - 
-  - Ansible deep dive
+  - আনসিবল deep dive
   - Python networking
   - CI/CD for networks
   - Infrastructure as Code
@@ -999,8 +999,8 @@ System:
 
 - Nautobot UI Navigation
 - Common API Calls
-- PyNautobot Cheatsheet
-- Ansible Playbook Examples
+- পাইনটবট Cheatsheet
+- আনসিবল প্লেবুক Examples
 - SQL Queries
 
 ### পরিশিষ্ট C: নেমিং কনভেনশন টেমপ্লেট

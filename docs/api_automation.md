@@ -1,43 +1,43 @@
 আগের তেরোটা চ্যাপ্টারে আমরা নটবটের ওয়েব ইন্টারফেস দিয়ে সব কাজ করেছি। সাইট তৈরি করেছি, ডিভাইস এড করেছি, আইপি ম্যানেজ করেছি - সবকিছু ম্যানুয়ালি। কিন্তু এখন সময় এসেছে পরের লেভেলে যাওয়ার। 
 
-যখন আপনার নেটওয়ার্ক বড় হতে থাকে, তখন ম্যানুয়াল কাজ করা সম্ভব না। কল্পনা করুন - প্রতিদিন ২০০টা নতুন কাস্টমার যুক্ত হচ্ছে। প্রতিটার জন্য আইপি অ্যালোকেট করতে হবে, ডকুমেন্ট করতে হবে। UI থেকে একটা একটা করে করলে পুরো দিন চলে যাবে। এজন্যই দরকার অটোমেশন। আর অটোমেশনের চাবি হলো API।
+যখন আপনার নেটওয়ার্ক বড় হতে থাকে, তখন ম্যানুয়াল কাজ করা সম্ভব না। কল্পনা করুন - প্রতিদিন ২০০টা নতুন কাস্টমার যুক্ত হচ্ছে। প্রতিটার জন্য আইপি অ্যালোকেট করতে হবে, ডকুমেন্ট করতে হবে। ইউআই থেকে একটা একটা করে করলে পুরো দিন চলে যাবে। এজন্যই দরকার অটোমেশন। আর অটোমেশনের চাবি হলো এপিআই।
 
-API কী জিনিস? সহজ ভাষায় বলতে গেলে, API (Application Programming Interface) হলো একটা সিস্টেমের সাথে অন্য সিস্টেম বা প্রোগ্রাম কথা বলার মাধ্যম। আপনি যেমন নটবটের ওয়েব ইন্টারফেসে ক্লিক করে কাজ করেন, API দিয়ে একই কাজ করা যায় কোড লিখে। ধরুন আপনি একটা Python স্ক্রিপ্ট লিখলেন যেটা নটবটকে বলল "Mirpur POP-এর সব ডিভাইসের লিস্ট দাও"। নটবট তখন API-এর মাধ্যমে সেই তথ্য পাঠিয়ে দেবে। আমাদের আগের বই "বাংলাদেশি আইএসপি এবং নেটওয়ার্ক অটোমেশন" বইতে REST API সম্পর্কে বিস্তারিত আলোচনা আছে - HTTP methods, JSON, authentication এসব নিয়ে। এই বইয়ে আমরা সরাসরি PyNautobot লাইব্রেরি ব্যবহার করব, কারণ এটা API ইউজ করাকে অনেক সহজ করে দেয়। আপনাকে REST API-এর সব টেকনিক্যাল ডিটেইলস জানতে হবে না - PyNautobot ব্যাকগ্রাউন্ডে সব সামলাবে। আগের বই "নেটওয়ার্ক এবং আইএসপি অটোমেশন" এ দুটো চ্যাপ্টার আছে এটা নিয়ে।
+এপিআই কী জিনিস? সহজ ভাষায় বলতে গেলে, এপিআই (অ্যাপ্লিকেশন প্রোগ্রামিং ইন্টারফেস) হলো একটা সিস্টেমের সাথে অন্য সিস্টেম বা প্রোগ্রাম কথা বলার মাধ্যম। আপনি যেমন নটবটের ওয়েব ইন্টারফেসে ক্লিক করে কাজ করেন, এপিআই দিয়ে একই কাজ করা যায় কোড লিখে। ধরুন আপনি একটা পাইথন স্ক্রিপ্ট লিখলেন যেটা নটবটকে বলল "মিরপুর পপ-এর সব ডিভাইসের লিস্ট দাও"। নটবট তখন এপিআই-এর মাধ্যমে সেই তথ্য পাঠিয়ে দেবে। আমাদের আগের বই "বাংলাদেশি আইএসপি এবং নেটওয়ার্ক অটোমেশন" বইতে রেস্ট এপিআই সম্পর্কে বিস্তারিত আলোচনা আছে - এইচটিটিপি মেথডস, জেসন, অথেন্টিকেশন এসব নিয়ে। এই বইয়ে আমরা সরাসরি পাইনটবট লাইব্রেরি ব্যবহার করব, কারণ এটা এপিআই ইউজ করাকে অনেক সহজ করে দেয়। আপনাকে REST এপিআই-এর সব টেকনিক্যাল ডিটেইলস জানতে হবে না - পাইনটবট ব্যাকগ্রাউন্ডে সব সামলাবে। আগের বই "নেটওয়ার্ক এবং আইএসপি অটোমেশন" এ দুটো চ্যাপ্টার আছে এটা নিয়ে।
 
-এই চ্যাপ্টারে আমরা দেখব কীভাবে Python দিয়ে নটবটের সাথে কথা বলতে হয়, কীভাবে ডেটা পড়তে হয়, কীভাবে নতুন জিনিস যোগ করতে হয়। শুরু করি PyNautobot দিয়ে।
+এই চ্যাপ্টারে আমরা দেখব কীভাবে Python দিয়ে নটবটের সাথে কথা বলতে হয়, কীভাবে ডেটা পড়তে হয়, কীভাবে নতুন জিনিস যোগ করতে হয়। শুরু করি পাইনটবট দিয়ে।
 
-## PyNautobot দিয়ে অটোমেশন
+## পাইনটবট দিয়ে অটোমেশন
 
-নির্ভর কমিউনিকেশন এখন ৫০ হাজার কাস্টমারে পৌঁছেছে। নটবটের ওয়েব UI দিয়ে সব কাজ করছে - ডিভাইস যোগ করা, আইপি এসাইন করা, রিপোর্ট দেখা। কিন্তু একদিন জাহাঙ্গীর সাহেব একটা সমস্যার মুখোমুখি হলেন।
+নির্ভর কমিউনিকেশন এখন ৫০ হাজার কাস্টমারে পৌঁছেছে। নটবটের ওয়েব ইউআই দিয়ে সব কাজ করছে - ডিভাইস যোগ করা, আইপি এসাইন করা, রিপোর্ট দেখা। কিন্তু একদিন জাহাঙ্গীর সাহেব একটা সমস্যার মুখোমুখি হলেন।
 
 গত সপ্তাহে নতুন একটা বিল্ডিংয়ে ২০টা এক্সেস সুইচ ইনস্টল করা হয়েছে। প্রতিটা সুইচের জন্য:
 - নটবটে ডিভাইস এন্ট্রি করতে হবে
 - ম্যানেজমেন্ট আইপি এসাইন করতে হবে
 
-আসিফ UI থেকে একটা একটা করে করছিল। একটা ডিভাইস এন্ট্রি করতে ৫-৭ মিনিট লাগছে। ২০টায় প্রায় ২ ঘণ্টা!
+আসিফ ইউআই থেকে একটা একটা করে করছিল। একটা ডিভাইস এন্ট্রি করতে ৫-৭ মিনিট লাগছে। ২০টায় প্রায় ২ ঘণ্টা!
 
-জাহাঙ্গীর সাহেব বললেন, "এভাবে চলবে না। আমাদের অটোমেশন দরকার। Python স্ক্রিপ্ট লিখে নটবট API দিয়ে কাজ করা যায়।"
+জাহাঙ্গীর সাহেব বললেন, "এভাবে চলবে না। আমাদের অটোমেশন দরকার। পাইথন স্ক্রিপ্ট লিখে নটবট এপিআই দিয়ে কাজ করা যায়।"
 
-### PyNautobot - Python থেকে Nautobot
+### পাইনটবট - পাইথন থেকে নটবট
 
-PyNautobot হলো একটা Python লাইব্রেরি যেটা নটবট API এর সাথে কাজ করা সহজ করে দেয়।
+পাইনটবট হলো একটা পাইথন লাইব্রেরি যেটা নটবট এপিআই এর সাথে কাজ করা সহজ করে দেয়।
 
-### Python Environment সেটআপ
+### পাইথন এনভায়রনমেন্ট সেটআপ
 
-**Windows-এ:**
-১. python.org থেকে Python ডাউনলোড করুন (৩.১১+)
-২. ইনস্টল করার সময় "Add Python to PATH" চেক করুন
-৩. Command Prompt এ চেক করুন: `python --version`
+**উইন্ডোজ-এ:**
+১. python.org থেকে পাইথন ডাউনলোড করুন (৩.১১+)
+২. ইনস্টল করার সময় "অ্যাড পাইথন টু পাথ" চেক করুন
+৩. কমান্ড প্রম্পট এ চেক করুন: `python --version`
 
-**PyNautobot ইনস্টল:**
+**পাইনটবট ইনস্টল:**
 
 ```bash
 pip install pynautobot
 ```
 
-### API Token তৈরি করা
+### এপিআই টোকেন তৈরি করা
 
-Nautobot → Profile → API Tokens → + Add Token
+নটবট → প্রোফাইল → এপিআই টোকেনস → + অ্যাড টোকেন
 
 ```
 Description: Python Scripts
@@ -48,20 +48,20 @@ Write Enabled: ✓
 
 ⚠️ এটা পাসওয়ার্ডের মতো - কাউকে দেবেন না!
 
-### প্রথম Python স্ক্রিপ্ট
+### প্রথম পাইথন স্ক্রিপ্ট
 
 `hello_nautobot.py` ফাইল তৈরি করুন:
 
 ```python
 from pynautobot import api
 
-## Nautobot connection
+## নটবট কানেকশন 
 nb = api(
     url="https://nautobot.nirvor.bd",
     token="your-api-token"
 )
 
-## Test connection
+## টেস্ট কানেকশন
 print(f"Connected to Nautobot: {nb.version}")
 ```
 
@@ -110,11 +110,11 @@ from pynautobot import api
 
 ## Nautobot connection
 nb = api(url="https://nautobot.nirvor.bd",token="your-api-token")
-## শুধু Mirpur POP এর ডিভাইস
+## শুধু মিরপুর পপ এর ডিভাইস
 mirpur_devices = nb.dcim.devices.filter(location="Mirpur POP")
 print(f"Mirpur devices: {len(mirpur_devices)}")
 
-## শুধু Core Routers
+## শুধু কোর রাউটারস 
 core_routers = nb.dcim.devices.filter(role="Core Router")
 print(f"Core Routers: {len(core_routers)}")
 
@@ -196,7 +196,7 @@ print(f"✓ Created: {new_device.name}")
 
 ### বাল্ক ডিভাইস তৈরি - আসিফের সমস্যা সমাধান
 
-CSV ফাইল থেকে:
+সিএসভি ফাইল থেকে:
 
 `new_devices.csv`:
 
@@ -236,7 +236,7 @@ with open('new_devices.csv', 'r') as f:
 
 ২০টা ডিভাইস ২ মিনিটে তৈরি! ২ ঘন্টার কাজ ২ মিনিটে শেষ।
 
-### IP Address Assignment
+### আইপি অ্যাড্রেস অ্যাসাইনমেন্ট
 
 নতুন ডিভাইসে আইপি এসাইন করা:
 
@@ -248,8 +248,8 @@ nb = api(url="https://nautobot.nirvor.bd", token="your-api-token")
 ## ডিভাইস খুঁজুন
 device = nb.dcim.devices.get(name="SW-DN-GUL-ACC-26")
 
-## Interface খুঁজুন (বা তৈরি করুন)
-## প্রথমে দেখুন vlan10 interface আছে কিনা
+## ইন্টারফেস খুঁজুন (বা তৈরি করুন)
+## প্রথমে দেখুন vlan10 ইন্টারফেস আছে কিনা
 interfaces = nb.dcim.interfaces.filter(device_id=device.id, name="vlan10")
 
 if not interfaces:
@@ -265,9 +265,9 @@ if not interfaces:
 else:
     interface = interfaces[0]
 
-## এখন IP assign করুন
+## এখন আইপি অ্যাসাইন করুন
 new_ip = nb.ipam.ip_addresses.create(
-    address="10.10.12.26/24",  ## Gulshan POP management network
+    address="10.10.12.26/24",  ## গুলশান পপ ম্যানেজমেন্ট নেটওয়ার্ক 
     status="active",
     assigned_object_type="dcim.interface",
     assigned_object_id=interface.id,
@@ -290,7 +290,7 @@ nb = api(url="https://nautobot.nirvor.bd", token="your-api-token")
 ## ডিভাইস খুঁজুন
 device = nb.dcim.devices.get(name="SW-DN-GUL-ACC-26")
 
-## Status আপডেট করুন
+## স্ট্যাটাস আপডেট করুন
 device.status = "offline"
 device.comments = "Under maintenance - scheduled completion: 2027-02-15"
 device.save()
@@ -319,7 +319,7 @@ except:
 gulshan_devices = nb.dcim.devices.filter(location="Gulshan POP")
 
 for device in gulshan_devices:
-    ## Check if tag already exists
+    ## চেক ইফ ট্যাগ অলরেডি এক্সিস্টস
     tag_names = [tag.name for tag in device.tags]
     if "production" not in tag_names:
         device.tags.append(production_tag)
@@ -344,7 +344,7 @@ print(f"Nirvor Communication Bangladesh - Daily Network Report")
 print(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print("=" * 70)
 
-## 1. Overall Statistics
+## ১. ওভারঅল স্ট্যাটিস্টিকস
 print("\n OVERALL STATISTICS")
 print("-" * 70)
 
@@ -365,7 +365,7 @@ print(f"Total Devices: {total_devices}")
 print(f"  ├─ Active: {active_devices}")
 print(f"  └─ Offline: {offline_devices}")
 
-## 2. Per-Location Breakdown
+## ২. পার-লোকেশন ব্রেকডাউন
 print("\n LOCATION BREAKDOWN")
 print("-" * 70)
 
@@ -374,7 +374,7 @@ for location in locations:
     device_count = nb.dcim.devices.filter(location=location.name).count()
     print(f"{location.name}: {device_count} devices")
 
-## 3. IP Utilization Alerts
+## ৩. আইপি ইউটিলাইজেশন অ্যালার্টস
 print("\n  IP UTILIZATION ALERTS")
 print("-" * 70)
 
@@ -395,7 +395,7 @@ if high_util:
 else:
     print("✓ All prefixes have healthy utilization")
 
-## 4. Devices Under Maintenance
+## ৪. ডিভাইসেস আন্ডার মেইনটেন্যান্স
 print("\n🔧 MAINTENANCE STATUS")
 print("-" * 70)
 
@@ -407,7 +407,7 @@ if maintenance_devices:
 else:
     print("✓ No devices under maintenance")
 
-## 5. Data Quality Issues
+## ৫. ডাটা কোয়ালিটি ইস্যুস
 print("\n DATA QUALITY CHECK")
 print("-" * 70)
 
@@ -464,17 +464,17 @@ Report completed successfully
 
 ##### রিপোর্ট অটোমেট করা
 
-**Windows Task Scheduler:**
+**উইন্ডোজ টাস্ক স্কেজুলার:**
 
-১. Task Scheduler ওপেন করুন
-২. Create Basic Task → Name: "Nautobot Daily Report"
-৩. Trigger: Daily, 8:00 AM
-৪. Action: Start a program
-   - Program: `python`
-   - Arguments: `C:\nautobot-scripts\daily_report.py`
-৫. Finish
+১. টাস্ক স্কেজুলার ওপেন করুন
+২. ক্রিয়েট বেসিক টাস্ক → নেম: "Nautobot Daily Report"
+৩. ট্রিগার: Daily, 8:00 AM
+৪. অ্যাকশন: Start a program
+   - প্রোগ্রাম: `python`
+   - আর্গুমেন্টস: `C:\nautobot-scripts\daily_report.py`
+৫. ফিনিশ
 
-**Linux Cron:**
+**লিনাক্স ক্রন:**
 
 ```bash
 ## crontab -e
@@ -483,7 +483,7 @@ Report completed successfully
 
 এখন প্রতিদিন সকাল ৮টায় অটোমেটিক রিপোর্ট জেনারেট হবে।
 
-### Error Handling - ভুল সামলানো
+### এরর হ্যান্ডলিং
 
 স্ক্রিপ্ট লেখার সময় Error Handling করা জরুরি।
 
@@ -502,26 +502,26 @@ except Exception as e:
     print(f"Error: {e}")
 ```
 
-### Best Practices
+### বেস্ট প্র্যাকটিসেস
 
-**১. Token সিকিউরিটি - হার্ডকোড করবেন না:**
+**১. টোকেন সিকিউরিটি - হার্ডকোড করবেন না:**
 
 ```python
 ##  খারাপ
 token = "abc123..."
 
-##  ভালো - Environment variable
+##  ভালো - এনভায়রনমেন্ট ভ্যারিয়েবল
 import os
 token = os.environ.get('NAUTOBOT_TOKEN')
 
-## অথবা config ফাইল
+## অথবা কনফিগ ফাইল
 import configparser
 config = configparser.ConfigParser()
 config.read('config.ini')
 token = config['nautobot']['token']
 ```
 
-**২. Logging যোগ করুন:**
+**২. লগিং যোগ করুন:**
 
 ```python
 import logging
@@ -537,19 +537,19 @@ devices = nb.dcim.devices.all()
 logging.info(f"Retrieved {len(devices)} devices") 
 ```
 
-**৩. Rate Limiting - একবারে হাজার হাজার রিকোয়েস্ট পাঠাবেন না:** 
+**৩. রেট লিমিটিং - একবারে হাজার হাজার রিকোয়েস্ট পাঠাবেন না:** 
 
 ```python
 import time
 
 for device in large_list:
     process_device(device)
-    time.sleep(0.1)  ## ১০০ms delay
+    time.sleep(0.1)  ## ১০০ms ডিলে
 ```
 
 নির্ভর কমিউনিকেশন এখন নটবটকে অটোমেট করতে পারছে। আসিফ আর ম্যানুয়ালি ক্লিক করে সময় নষ্ট করে না। একটা স্ক্রিপ্ট লিখে সে ৫০টা ডিভাইস ৫ মিনিটে যোগ করতে পারে।
 
-পরবর্তী স্টেপ হলো আরো এডভান্সড অটোমেশন - Ansible integration, Golden Config management, এবং ১ লক্ষ কাস্টমারের দিকে যাত্রা।
+পরবর্তী স্টেপ হলো আরো এডভান্সড অটোমেশন - আনসিবল ইন্টিগ্রেশন, গোল্ডেন কনফিগ ম্যানেজমেন্ট, এবং ১ লক্ষ কাস্টমারের দিকে যাত্রা।
 
 ---
 
