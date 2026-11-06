@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block site_meta %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="author" content="Rakibul Hassan (রকিবুল হাসান)">
+  <meta name="creator" content="Rakibul Hassan">
+  <meta name="publisher" content="Rakibul Hassan">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="keywords" content="নেটওয়ার্ক সোর্স অব ট্রুথ, নেটওয়ার্ক সোর্স অফ ট্রুথ, NSoT, Network Source of Truth, আইএসপি অটোমেশন, ISP automation, Nautobot, NetBox, নেটওয়ার্ক অটোমেশন, রোড টু হাইটেক ইন্ডাস্ট্রি, রকিবুল হাসান, Rakibul Hassan, aiwithr">
+  <meta name="description" content="{% if page and page.meta and page.meta.description %}{{ page.meta.description | e }}{% elif page and page.title and not page.is_homepage %}{{ page.title | e }} — নেটওয়ার্ক ও আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT) — রকিবুল হাসান (Rakibul Hassan)।{% else %}{{ config.site_description | e }}{% endif %}">
+  {% if page.canonical_url %}
+    <link rel="canonical" href="{{ page.canonical_url }}">
+  {% endif %}
+  {% if page.previous_page %}
+    <link rel="prev" href="{{ page.previous_page.url | url }}">
+  {% endif %}
+  {% if page.next_page %}
+    <link rel="next" href="{{ page.next_page.url | url }}">
+  {% endif %}
+{% endblock %}
+
+{% block extrahead %}
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:site_name" content="নেটওয়ার্ক ও আইএসপি অটোমেশন: NSoT | রকিবুল হাসান">
+  <meta property="og:type" content="{% if page.is_homepage %}book{% else %}article{% endif %}">
+  <meta property="og:title" content="{% if page and page.meta and page.meta.title %}{{ page.meta.title | e }}{% elif page and page.title and not page.is_homepage %}{{ page.title | e }} | নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT){% else %}নেটওয়ার্ক ও আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT) | রকিবুল হাসান{% endif %}">
+  <meta property="og:description" content="{% if page and page.meta and page.meta.description %}{{ page.meta.description | e }}{% elif page and page.title and not page.is_homepage %}{{ page.title | e }} — নেটওয়ার্ক ও আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT) — রকিবুল হাসান (Rakibul Hassan)।{% else %}{{ config.site_description | e }}{% endif %}">
+  <meta property="og:url" content="{{ page.canonical_url }}">
+  <meta property="og:locale" content="bn_BD">
+  <meta property="og:image" content="https://aiwithr.github.io/automation_nsot/covers/million.png">
+  <meta property="og:image:alt" content="নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT) — Rakibul Hassan">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@raqueeb">
+  <meta name="twitter:creator" content="@raqueeb">
+  <meta name="twitter:title" content="{% if page and page.meta and page.meta.title %}{{ page.meta.title | e }}{% elif page and page.title and not page.is_homepage %}{{ page.title | e }} | নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT){% else %}নেটওয়ার্ক ও আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT) | রকিবুল হাসান{% endif %}">
+  <meta name="twitter:description" content="{% if page and page.meta and page.meta.description %}{{ page.meta.description | e }}{% elif page and page.title and not page.is_homepage %}{{ page.title | e }} — নেটওয়ার্ক ও আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT) — রকিবুল হাসান (Rakibul Hassan)।{% else %}{{ config.site_description | e }}{% endif %}">
+  <meta name="twitter:image" content="https://aiwithr.github.io/automation_nsot/covers/million.png">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://aiwithr.github.io/#website",
+        "url": "https://aiwithr.github.io/",
+        "name": "কৃত্রিম বুদ্ধিমত্তা | বাংলায়",
+        "description": "রকিবুল হাসানের AI/ML সাইট — ইন্টেলিজেন্ট সিস্টেমের সন্ধানে: বাংলায় কৃত্রিম বুদ্ধিমত্তা, বই, ভিডিও, রোডম্যাপ ও ওয়ার্কশপ।",
+        "publisher": {
+          "@id": "https://aiwithr.github.io/#author"
+        },
+        "inLanguage": ["bn", "en"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://aiwithr.github.io/#author",
+        "name": "Rakibul Hassan",
+        "alternateName": ["রকিবুল হাসান", "Rakibul Hasan", "raqueeb"],
+        "jobTitle": "Director AI Business and Transformation",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Link3 Technologies Limited",
+          "url": "https://www.link3.net/"
+        },
+        "description": "First author of Bengali machine learning books (11+ titles including the হাতেকলমে মেশিন লার্নিং series, publishers Adarsha and Tamralipi), regular columnist for Prothom Alo, The Daily Star, and bdnews24.com, TEDxRUET speaker, former Director of BTRC, and Director of AI Business and Transformation at Link3 Technologies.",
+        "image": "https://aiwithr.github.io/images/rakibul-hassan.jpg",
+        "url": "https://aiwithr.github.io/",
+        "mainEntityOfPage": "https://aiwithr.github.io/about/",
+        "sameAs": [
+          "https://aiwithr.github.io/about/",
+          "https://www.linkedin.com/in/raqueeb/",
+          "https://github.com/raqueeb",
+          "https://github.com/aiwithr",
+          "https://twitter.com/raqueeb",
+          "https://www.facebook.com/raqueeb",
+          "https://raqueeb.wordpress.com/",
+          "https://medium.com/@raqueeb/",
+          "https://www.youtube.com/@aiwithr",
+          "https://www.youtube.com/@raqueebhassan",
+          "https://www.tedxruet.org/speakers/rakibul-hasan",
+          "https://bangla.thedailystar.net/author/%E0%A6%B0%E0%A6%95%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B2-%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%A8",
+          "https://bangla.bdnews24.com/author/rakibul-hassan",
+          "https://www.rokomari.com/book/author/61248/rakibul-hassan",
+          "https://www.facebook.com/profile.php?id=61576673663332"
+        ]
+      },
+      {
+      "@type": "Book",
+      "@id": "https://aiwithr.github.io/automation_nsot/#book",
+      "name": "নেটওয়ার্ক ও আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT)",
+      "alternateName": [
+            "আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ",
+            "Network & ISP Automation: Network Source of Truth (NSoT)",
+            "রোড টু হাইটেক ইন্ডাস্ট্রি: আইএসপি অটোমেশন ২"
+      ],
+      "url": "https://aiwithr.github.io/automation_nsot/",
+      "image": "https://aiwithr.github.io/automation_nsot/covers/million.png",
+      "inLanguage": "bn",
+      "bookFormat": "https://schema.org/EBook",
+      "genre": [
+            "Network Automation",
+            "Telecommunications",
+            "ISP Infrastructure",
+            "Artificial Intelligence"
+      ],
+      "description": "নেটওয়ার্ক ও আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT) — Nautobot, ইনটেন্ডেড বনাম অ্যাকচুয়াল স্টেট, ডেটা মডেল, API অটোমেশন এবং ১ মিলিয়ন গ্রাহকের স্কেলেবল আইএসপি আর্কিটেকচার। লেখক: রকিবুল হাসান (Rakibul Hassan)।",
+      "sameAs": "https://github.com/aiwithr/automation_nsot",
+      "author": {
+            "@id": "https://aiwithr.github.io/#author"
+      },
+      "isPartOf": {
+            "@id": "https://aiwithr.github.io/#website"
+      }
+}{% if page and page.title and not page.is_homepage %},
+      {
+        "@type": "Chapter",
+        "@id": "{{ page.canonical_url }}#chapter",
+        "url": "{{ page.canonical_url }}",
+        "name": {{ page.title | tojson }},
+        "inLanguage": "bn",
+        "isPartOf": {
+          "@type": "Book",
+          "@id": "https://aiwithr.github.io/automation_nsot/#book",
+          "name": "নেটওয়ার্ক ও আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT)",
+          "url": "https://aiwithr.github.io/automation_nsot/"
+        },
+        "author": {
+          "@id": "https://aiwithr.github.io/#author"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "{{ page.canonical_url }}#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "কৃত্রিম বুদ্ধিমত্তা | বাংলায়",
+            "item": "https://aiwithr.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT)",
+            "item": "https://aiwithr.github.io/automation_nsot/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": {{ page.title | tojson }},
+            "item": "{{ page.canonical_url }}"
+          }
+        ]
+      }{% endif %}
+    ]
+  }
+  </script>
+{% endblock %}

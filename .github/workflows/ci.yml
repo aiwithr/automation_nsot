@@ -1,24 +1,52 @@
-name: ci 
+name: ci
+
 on:
   push:
     branches:
-      - master 
+      - master
       - main
+  workflow_dispatch:
+
 permissions:
   contents: write
+
+concurrency:
+  group: pages-gh-deploy
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          python-version: 3.x
-      - uses: actions/cache@v3
+          fetch-depth: 0
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          key: ${{ github.ref }}
-          path: .cache
-      - run: pip install mkdocs-material
-#      - run: pip install mkdocs-exporter
-      - run: pip install pillow cairosvg
-      - run: mkdocs gh-deploy --force
+          python-version: "3.12"
+
+      - name: Cache MkDocs Material
+        uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ hashFiles('mkdocs.yml', 'overrides/**/*.html', 'docs/**/*.md') }}
+          path: |
+            ~/.cache/pip
+            ~/.cache/mkdocs_material
+          restore-keys: |
+            mkdocs-material-
+
+      - name: Install MkDocs Material
+        run: pip install mkdocs-material pymdown-extensions pillow cairosvg
+
+      - name: Build and deploy to gh-pages
+        run: mkdocs gh-deploy --force --clean
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

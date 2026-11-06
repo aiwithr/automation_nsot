@@ -1,25 +1,23 @@
 site_name: 'আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অফ ট্রুথ'
-theme:
-  name: material
-  language: bn
 
 # Project information
 site_url: https://aiwithr.github.io/automation_nsot/
-site_author: রকিবুল হাসান
+site_author: Rakibul Hassan (রকিবুল হাসান)
 site_description: >-
-   রোড টু হাইটেক ইন্ডাস্ট্রি:আইএসপি অটোমেশন ২
+  নেটওয়ার্ক ও আইএসপি অটোমেশন: নেটওয়ার্ক সোর্স অব ট্রুথ (NSoT) — Nautobot, ডেটা মডেল, API ও ১ মিলিয়ন গ্রাহকের আইএসপি অটোমেশন। লেখক: রকিবুল হাসান।
 # Repository
 repo_name: raqueeb/mltraining
 repo_url: https://github.com/raqueeb/mltraining/
 edit_uri: ""
 
 # Copyright
-copyright: সৃজনশীল লাইসেন্সিং ২০২৩ - ২০২৬ &copy; রকিবুল হাসান
+copyright: "সৃজনশীল লাইসেন্সিং &copy; Rakibul Hassan (রকিবুল হাসান) &middot; <a href='https://aiwithr.github.io/'>aiwithr.github.io</a> &middot; <a href='https://aiwithr.github.io/resources/'>সব বই (All Books)</a> &middot; <a href='https://aiwithr.github.io/about/'>লেখক পরিচিতি</a>"
 
 # Configuration
 theme:
   name: material
-#  custom_dir: material/overrides
+  language: bn
+  custom_dir: overrides
   features:
 #    - navigation.tabs
     - navigation.sections
@@ -98,8 +96,12 @@ extra:
     property: !ENV GOOGLE_ANALYTICS_KEY
 # Customization
   social:
+    - icon: fontawesome/brands/git-alt
+      link: https://github.com/aiwithr/automation_nsot
     - icon: fontawesome/brands/github
       link: https://github.com/raqueeb
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@aiwithr
     - icon: fontawesome/brands/facebook-messenger
       link: http://m.me/raqueeb
     - icon: fontawesome/brands/whatsapp
